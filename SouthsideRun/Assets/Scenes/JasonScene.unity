@@ -414,8 +414,8 @@ GameObject:
   - component: {fileID: 2142272328}
   - component: {fileID: 2142272327}
   - component: {fileID: 2142272326}
-  - component: {fileID: 2142272330}
   - component: {fileID: 2142272325}
+  - component: {fileID: 2142272330}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -524,4 +524,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34468063752bfca4d927988d61bf8b8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 10
+  jumpForce: 7
