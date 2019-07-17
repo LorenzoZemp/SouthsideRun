@@ -7,6 +7,11 @@ public class Player : MonoBehaviour
     Rigidbody rb;
     public float movementSpeed = 5.0f;
 
+    // PUBLIC
+    public float jumpForce = 10.0f;
+
+    // PRIVATE
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,5 +43,21 @@ public class Player : MonoBehaviour
         movement = Vector3.Normalize(movement);
         movement = movement * movementSpeed;
         rb.MovePosition(transform.position + movement * Time.fixedDeltaTime);
+        if (Input.GetKeyDown("space"))
+        {
+            bool canJump = (Physics.Raycast(transform.position, Vector3.down, 1.0f));
+            if (canJump)
+            {
+                //Debug.Log(jumpForce);
+                //GetComponent<Rigidbody>().AddForce(new Vector3(0.0f, jumpForce, 0.0f));
+                //rb.velocity = (new Vector3(0.0f, jumpForce, 0.0f));
+                rb.velocity = (new Vector3(rb.velocity.x, jumpForce, rb.velocity.y));
+            }
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        
     }
 }
