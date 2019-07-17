@@ -9,12 +9,14 @@ public class Player : MonoBehaviour
 
     // PUBLIC
     public float jumpForce = 10.0f;
+    public static Player CurrentPlayer;
 
     // PRIVATE
 
     // Start is called before the first frame update
     void Start()
     {
+        CurrentPlayer = this;
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
     }
@@ -51,7 +53,7 @@ public class Player : MonoBehaviour
                 //Debug.Log(jumpForce);
                 //GetComponent<Rigidbody>().AddForce(new Vector3(0.0f, jumpForce, 0.0f));
                 //rb.velocity = (new Vector3(0.0f, jumpForce, 0.0f));
-                rb.velocity = (new Vector3(rb.velocity.x, jumpForce, rb.velocity.y));
+                rb.velocity = (new Vector3(rb.velocity.x, jumpForce, rb.velocity.z));
             }
         }
     }
