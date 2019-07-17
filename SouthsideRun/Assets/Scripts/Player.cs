@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
     // PUBLIC
     public float jumpForce = 10.0f;
+    public static Player CurrentPlayer;
 
     // PRIVATE
     private Rigidbody rb;
@@ -13,6 +14,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        CurrentPlayer = this;
         rb = GetComponent<Rigidbody>();
     }
 
