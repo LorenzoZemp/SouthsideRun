@@ -10,8 +10,12 @@ public class Player : MonoBehaviour
     // PUBLIC
     public float jumpForce = 10.0f;
     public static Player CurrentPlayer;
+    public Cops copScript;
 
     // PRIVATE
+    // For numbers that have been collected
+    int[] numsCollected;
+  
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +23,7 @@ public class Player : MonoBehaviour
         CurrentPlayer = this;
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
+        numsCollected = new int[10];
     }
 
     // Update is called once per frame
@@ -56,10 +61,44 @@ public class Player : MonoBehaviour
                 rb.velocity = (new Vector3(rb.velocity.x, jumpForce, rb.velocity.z));
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.LeftShift)) // to call the bois
+        {
+            // ACTUALLY CALL THE BOIS
+            if (numsCollected[1] >= 3)
+            {
+                Debug.Log("Bois were called!");
+                numsCollected[1] -= 3;
+            }
+            // DIALLED A BLANK
+            else
+            {
+                Debug.Log("Dialled a blank!");
+            }
+        };
     }
 
     private void FixedUpdate()
     {
         
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Cops") // get caught by cops
+        {
+            Debug.Log("You got caught");
+            copScript.setChasing(false);
+        }
+
+        if (other.tag == "Number")
+        {
+            int numFound = other.gameObject.GetComponent<NumberScript>().thisNumber;
+            numsCollected[numFound]++;
+            Debug.Log("Found a Number ! --> " + numFound);
+            Debug.Log("You now have " + numsCollected[numFound] + "x " + numFound);
+            Destroy(other.gameObject);
+        }
+
     }
 }
