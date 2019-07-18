@@ -13,11 +13,12 @@ public class Player : MonoBehaviour
     public float jumpForce = 10.0f;
     public static Player CurrentPlayer;
     public Cops copScript;
+    public int[] numsCollected;
+
 
     // PRIVATE
     // For numbers that have been collected
-    int[] numsCollected;
-  
+
 
     // Start is called before the first frame update
     void Start()
