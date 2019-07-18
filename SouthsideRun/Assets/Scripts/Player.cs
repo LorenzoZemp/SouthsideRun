@@ -8,6 +8,8 @@ public class Player : MonoBehaviour
     public float movementSpeed = 5.0f;
 
     // PUBLIC
+    public float fallMultiplier = 2.5f;
+    public float lowJumpMultiplier = 2f;
     public float jumpForce = 10.0f;
     public static Player CurrentPlayer;
     public Cops copScript;
@@ -50,9 +52,10 @@ public class Player : MonoBehaviour
         movement = Vector3.Normalize(movement);
         movement = movement * movementSpeed;
         rb.MovePosition(transform.position + movement * Time.fixedDeltaTime);
+
         if (Input.GetKeyDown("space"))
         {
-            bool canJump = (Physics.Raycast(transform.position, Vector3.down, 1.0f));
+            bool canJump = (Physics.Raycast(transform.position, Vector3.down, 1.1f));
             if (canJump)
             {
                 //Debug.Log(jumpForce);
@@ -60,6 +63,15 @@ public class Player : MonoBehaviour
                 //rb.velocity = (new Vector3(0.0f, jumpForce, 0.0f));
                 rb.velocity = (new Vector3(rb.velocity.x, jumpForce, rb.velocity.z));
             }
+        }
+
+        if (rb.velocity.y < 0)
+        {
+            rb.velocity += Vector3.up * Physics.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+        }
+        else if (rb.velocity.y > 0 && !Input.GetKeyDown("space"))
+        {
+            rb.velocity += Vector3.up * Physics.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
         }
 
         if (Input.GetKeyDown(KeyCode.LeftShift)) // to call the bois
