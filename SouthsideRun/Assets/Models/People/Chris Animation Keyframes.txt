@@ -1,0 +1,8 @@
+Chris Animation Keyframes
+
+Run : 0 - 30
+Idle : 31 -51
+Jump : 52 -85
+Fall : 86 - 112
+
+// Watch this Youtube Video (https://www.youtube.com/watch?v=TeXtMSQJaOw) at 6:47 for Unity use.
