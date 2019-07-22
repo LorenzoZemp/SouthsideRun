@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+    //Animation stuff
+    Animator PlayerAni;
+    bool caught;
+
     Rigidbody rb;
     public float movementSpeed = 5.0f;
 
@@ -28,6 +32,8 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
         numsCollected = new int[10];
+        PlayerAni = this.GetComponent<Animator>();
+        caught = false;
     }
 
     // Update is called once per frame
@@ -37,18 +43,22 @@ public class Player : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W))
         {
+            Run();
             movement = movement + transform.forward;
         }
         if (Input.GetKey(KeyCode.S))
         {
+            Run();
             movement = movement - transform.forward;
         }
         if (Input.GetKey(KeyCode.A))
         {
+            Run();
             movement = movement + transform.TransformDirection(Vector3.left);
         }
         if (Input.GetKey(KeyCode.D))
         {
+            Run();
             movement = movement + transform.TransformDirection(Vector3.right);
         }
         movement = Vector3.Normalize(movement);
@@ -63,6 +73,7 @@ public class Player : MonoBehaviour
                 //Debug.Log(jumpForce);
                 //GetComponent<Rigidbody>().AddForce(new Vector3(0.0f, jumpForce, 0.0f));
                 //rb.velocity = (new Vector3(0.0f, jumpForce, 0.0f));
+                Jump();
                 rb.velocity = (new Vector3(rb.velocity.x, jumpForce, rb.velocity.z));
             }
         }
@@ -96,6 +107,15 @@ public class Player : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+
+       if ((!(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKeyDown("space")) && !(caught)))
+       {
+           Idle();
+       }
+       else if (caught)
+       {
+            Fall();
+       }
     }
 
     private void FixedUpdate()
@@ -108,6 +128,7 @@ public class Player : MonoBehaviour
         if (other.tag == "Cops") // get caught by cops
         {
             Debug.Log("You got caught");
+            caught = true;
             copScript.setChasing(false);
         }
 
@@ -120,5 +141,37 @@ public class Player : MonoBehaviour
             Destroy(other.gameObject);
         }
 
+    }
+
+    private void Run()
+    {
+        PlayerAni.SetBool("Run", true);
+        PlayerAni.SetBool("Idle", false);
+        PlayerAni.SetBool("Jump", false);
+        PlayerAni.SetBool("Fall", false);
+    }
+
+    private void Idle()
+    {
+        PlayerAni.SetBool("Idle", true);
+        PlayerAni.SetBool("Run", false);
+        PlayerAni.SetBool("Jump", false);
+        PlayerAni.SetBool("Fall", false);
+    }
+
+    private void Jump()
+    {
+        PlayerAni.SetBool("Jump", true);
+        PlayerAni.SetBool("Idle", false);
+        PlayerAni.SetBool("Run", false);
+        PlayerAni.SetBool("Fall", false);
+    }
+
+    private void Fall()
+    {
+        PlayerAni.SetBool("Fall", true);
+        PlayerAni.SetBool("Run", false);
+        PlayerAni.SetBool("Idle", false);
+        PlayerAni.SetBool("Jump", false);
     }
 }
