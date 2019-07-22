@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
     public static Player CurrentPlayer;
     public Cops copScript;
     public int[] numsCollected;
+    public GameObject BoyzPrefab;
 
 
     // PRIVATE
@@ -94,6 +95,7 @@ public class Player : MonoBehaviour
             {
                 Debug.Log("Bois were called!");
                 numsCollected[1] -= 3;
+                Instantiate(BoyzPrefab, transform);
             }
             // DIALLED A BLANK
             else
