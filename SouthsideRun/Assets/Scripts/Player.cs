@@ -18,11 +18,13 @@ public class Player : MonoBehaviour
     public float jumpForce = 10.0f;
     public static Player CurrentPlayer;
     public Cops copScript;
+    public int[] numsCollected;
+    public GameObject BoyzPrefab;
+
 
     // PRIVATE
     // For numbers that have been collected
-    int[] numsCollected;
-  
+
 
     // Start is called before the first frame update
     void Start()
@@ -93,6 +95,7 @@ public class Player : MonoBehaviour
             {
                 Debug.Log("Bois were called!");
                 numsCollected[1] -= 3;
+                Instantiate(BoyzPrefab, transform);
             }
             // DIALLED A BLANK
             else
