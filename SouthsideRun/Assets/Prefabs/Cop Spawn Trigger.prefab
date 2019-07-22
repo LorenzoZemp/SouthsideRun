@@ -105,6 +105,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4593a2e37acd0a242b81461d1b928e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  copPrefab: {fileID: 8448477075616371594, guid: abf244b7211cbe54d9468f10c391762d,
+  copPrefab: {fileID: 8418163711116736770, guid: 25c1f443732f72b4ca41bb8ee6b38981,
     type: 3}
   spawnDistance: 100
