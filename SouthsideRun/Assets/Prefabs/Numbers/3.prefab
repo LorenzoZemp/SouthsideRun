@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 738609267455258081}
   - component: {fileID: 738609267213150077}
   m_Layer: 0
-  m_Name: Number 1
+  m_Name: 3
   m_TagString: Number
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42,7 +42,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 738609267455258092}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: -6614935718013168841, guid: 3e9cf518384c9fc44b6de0d63fa719fa, type: 3}
 --- !u!23 &738609267455258094
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 099f7ad56970b7041bf17b9d2c32e40d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thisNumber: 1
+  thisNumber: 3
 --- !u!95 &738609267213150077
 Animator:
   serializedVersion: 3
