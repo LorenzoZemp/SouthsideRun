@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     //Animation stuff
     Animator PlayerAni;
     bool caught;
+    bool disableMovement;
 
     Rigidbody rb;
     public float movementSpeed = 5.0f;
@@ -35,6 +36,7 @@ public class Player : MonoBehaviour
         numsCollected = new int[10];
         PlayerAni = this.GetComponent<Animator>();
         caught = false;
+        disableMovement = false;
     }
 
     // Update is called once per frame
@@ -42,7 +44,7 @@ public class Player : MonoBehaviour
     {
         Vector3 movement = Vector3.zero;
 
-        if (!caught)
+        if (!caught && !disableMovement)
         {
             if (Input.GetKey(KeyCode.W))
             {
@@ -99,6 +101,24 @@ public class Player : MonoBehaviour
                     numsCollected[1] -= 3;
                     Instantiate(BoyzPrefab, transform);
                 }
+                // INSTANT WIN
+                if (numsCollected[0] >= 1 && numsCollected[1]  >= 1 && numsCollected[2] >= 1 && numsCollected[3] >= 1 && numsCollected[4] >= 1 && numsCollected[5] >= 1 && numsCollected[6] >= 1
+                    && numsCollected[7] >= 1 && numsCollected[8] >= 1 && numsCollected[9] >= 1)
+                {
+                    Debug.Log("INSTANT WIN!!");
+                    numsCollected[0] -= 1;
+                    numsCollected[1] -= 1;
+                    numsCollected[2] -= 1;
+                    numsCollected[3] -= 1;
+                    numsCollected[4] -= 1;
+                    numsCollected[5] -= 1;
+                    numsCollected[6] -= 1;
+                    numsCollected[7] -= 1;
+                    numsCollected[8] -= 1;
+                    numsCollected[9] -= 1;
+                    disableMovement = true;
+                    copScript.setChasing(false);
+                }
                 // DIALLED A BLANK
                 else
                 {
@@ -113,7 +133,13 @@ public class Player : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
-       if ((!(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKeyDown("space")) && !(caught)))
+        if (transform.position.y < -30)
+        {
+            Debug.Log("Fell off map");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+
+        if ((!(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKeyDown("space")) && !(caught)))
        {
            Idle();
        }
@@ -135,6 +161,13 @@ public class Player : MonoBehaviour
             Debug.Log("You got caught");
             caught = true;
             copScript.setChasing(false);
+        }
+
+        if (other.tag == "Win")
+        {
+            Debug.Log("You ESCAPED!");
+            copScript.setChasing(false);
+            disableMovement = true;
         }
 
         if (other.tag == "Number")
