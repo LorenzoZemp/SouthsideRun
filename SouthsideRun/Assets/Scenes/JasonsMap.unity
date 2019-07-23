@@ -4421,12 +4421,6 @@ PrefabInstance:
       propertyPath: jumpForce
       value: 7.5
       objectReference: {fileID: 0}
-    - target: {fileID: 6642227163309214463, guid: bea80faa0514d454ca39150f933a50ce,
-        type: 3}
-      propertyPath: BoyzPrefab
-      value: 
-      objectReference: {fileID: 2098774924875952249, guid: 37c83301aacc31b42826fbda29f727e9,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bea80faa0514d454ca39150f933a50ce, type: 3}
 --- !u!4 &1108630571 stripped
