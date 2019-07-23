@@ -15,8 +15,8 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 1
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  m_FogMode: 3
+  m_FogColor: {r: 0.735849, g: 0.735849, b: 0.735849, a: 1}
+  m_FogMode: 2
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
@@ -1435,7 +1435,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &106637795
 Transform:
   m_ObjectHideFlags: 0
@@ -17451,7 +17451,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 9
   m_Type: 1
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -17461,7 +17461,7 @@ Light:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 0.446
+    m_Strength: 0.61
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
@@ -17508,13 +17508,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1780728491}
-  m_LocalRotation: {x: 0.44915023, y: -0.13955241, z: 0.07125896, w: 0.87960863}
-  m_LocalPosition: {x: 0.17, y: 3.77, z: -0.53}
+  m_LocalRotation: {x: 0.27330524, y: -0.061941653, z: -0.014203047, w: 0.95982593}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 54.1, y: -18.03, z: 0}
+  m_LocalEulerAnglesHint: {x: 31.526001, y: -8.5460005, z: -4.112}
 --- !u!1001 &1781366228
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21103,7 +21103,7 @@ PrefabInstance:
     - target: {fileID: 5853036519152980733, guid: 5a53e3d43bc9f9e4e903d1425ec1276e,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7449358872002060526, guid: 5a53e3d43bc9f9e4e903d1425ec1276e,
         type: 3}
