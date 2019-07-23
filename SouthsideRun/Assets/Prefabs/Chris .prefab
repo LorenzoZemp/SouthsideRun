@@ -1199,6 +1199,7 @@ GameObject:
   - component: {fileID: 5492353699424471354}
   - component: {fileID: 2948826192586296149}
   - component: {fileID: 4055799579461880709}
+  - component: {fileID: 6921932933148460849}
   m_Layer: 0
   m_Name: 'Chris '
   m_TagString: Untagged
@@ -1308,6 +1309,14 @@ CapsuleCollider:
   m_Height: 1.55
   m_Direction: 1
   m_Center: {x: 0, y: 0.75, z: 0}
+--- !u!81 &6921932933148460849
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5535083473613716666}
+  m_Enabled: 1
 --- !u!1 &5859635503691930141
 GameObject:
   m_ObjectHideFlags: 0
