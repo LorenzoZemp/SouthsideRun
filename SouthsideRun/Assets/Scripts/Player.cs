@@ -42,65 +42,68 @@ public class Player : MonoBehaviour
     {
         Vector3 movement = Vector3.zero;
 
-        if (Input.GetKey(KeyCode.W))
+        if (!caught)
         {
-            Run();
-            movement = movement + transform.forward;
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            Run();
-            movement = movement - transform.forward;
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            Run();
-            movement = movement + transform.TransformDirection(Vector3.left);
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            Run();
-            movement = movement + transform.TransformDirection(Vector3.right);
-        }
-        movement = Vector3.Normalize(movement);
-        movement = movement * movementSpeed;
-        rb.MovePosition(transform.position + movement * Time.fixedDeltaTime);
-
-        if (Input.GetKeyDown("space"))
-        {
-            bool canJump = (Physics.Raycast(transform.position, Vector3.down, 1.1f));
-            if (canJump)
+            if (Input.GetKey(KeyCode.W))
             {
-                //Debug.Log(jumpForce);
-                //GetComponent<Rigidbody>().AddForce(new Vector3(0.0f, jumpForce, 0.0f));
-                //rb.velocity = (new Vector3(0.0f, jumpForce, 0.0f));
-                Jump();
-                rb.velocity = (new Vector3(rb.velocity.x, jumpForce, rb.velocity.z));
+                Run();
+                movement = movement + transform.forward;
             }
-        }
-
-        if (rb.velocity.y < 0)
-        {
-            rb.velocity += Vector3.up * Physics.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
-        }
-        else if (rb.velocity.y > 0 && !Input.GetKeyDown("space"))
-        {
-            rb.velocity += Vector3.up * Physics.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
-        }
-
-        if (Input.GetKeyDown(KeyCode.LeftShift)) // to call the bois
-        {
-            // ACTUALLY CALL THE BOIS
-            if (numsCollected[1] >= 3)
+            if (Input.GetKey(KeyCode.S))
             {
-                Debug.Log("Bois were called!");
-                numsCollected[1] -= 3;
-                Instantiate(BoyzPrefab, transform);
+                Run();
+                movement = movement - transform.forward;
             }
-            // DIALLED A BLANK
-            else
+            if (Input.GetKey(KeyCode.A))
             {
-                Debug.Log("Dialled a blank!");
+                Run();
+                movement = movement + transform.TransformDirection(Vector3.left);
+            }
+            if (Input.GetKey(KeyCode.D))
+            {
+                Run();
+                movement = movement + transform.TransformDirection(Vector3.right);
+            }
+            movement = Vector3.Normalize(movement);
+            movement = movement * movementSpeed;
+            rb.MovePosition(transform.position + movement * Time.fixedDeltaTime);
+
+            if (Input.GetKeyDown("space"))
+            {
+                bool canJump = (Physics.Raycast(transform.position, Vector3.down, 1.1f));
+                if (canJump)
+                {
+                    //Debug.Log(jumpForce);
+                    //GetComponent<Rigidbody>().AddForce(new Vector3(0.0f, jumpForce, 0.0f));
+                    //rb.velocity = (new Vector3(0.0f, jumpForce, 0.0f));
+                    Jump();
+                    rb.velocity = (new Vector3(rb.velocity.x, jumpForce, rb.velocity.z));
+                }
+            }
+
+            if (rb.velocity.y < 0)
+            {
+                rb.velocity += Vector3.up * Physics.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+            }
+            else if (rb.velocity.y > 0 && !Input.GetKeyDown("space"))
+            {
+                rb.velocity += Vector3.up * Physics.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
+            }
+
+            if (Input.GetKeyDown(KeyCode.LeftShift)) // to call the bois
+            {
+                // ACTUALLY CALL THE BOIS
+                if (numsCollected[1] >= 3)
+                {
+                    Debug.Log("Bois were called!");
+                    numsCollected[1] -= 3;
+                    Instantiate(BoyzPrefab, transform);
+                }
+                // DIALLED A BLANK
+                else
+                {
+                    Debug.Log("Dialled a blank!");
+                }
             }
         }
 
@@ -164,6 +167,7 @@ public class Player : MonoBehaviour
     private void Jump()
     {
         PlayerAni.SetBool("Jump", true);
+        PlayerAni.CrossFade("Jump", 0.1f);
         PlayerAni.SetBool("Idle", false);
         PlayerAni.SetBool("Run", false);
         PlayerAni.SetBool("Fall", false);
