@@ -12,7 +12,7 @@ public class SpawnCopTrigger : MonoBehaviour
         if (other.name == "Player")
         {
             Debug.Log("Please spawn");
-            Instantiate(copPrefab, new Vector3(other.transform.position.x, other.transform.position.y + 2, other.transform.position.z + spawnDistance), Quaternion.identity);
+            Instantiate(copPrefab, new Vector3(other.transform.position.x, other.transform.position.y + 2, other.transform.position.z + spawnDistance), Quaternion.Euler(0, 180, 0));
         }
     }
 
