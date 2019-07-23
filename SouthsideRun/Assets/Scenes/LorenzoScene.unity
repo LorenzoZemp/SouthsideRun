@@ -1435,7 +1435,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &106637795
 Transform:
   m_ObjectHideFlags: 0
@@ -13322,7 +13322,7 @@ PrefabInstance:
     - target: {fileID: 8546614495171126191, guid: e5c29aa4e9bef3344b58154e118a9428,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.3409734
+      value: -4.43
       objectReference: {fileID: 0}
     - target: {fileID: 8546614495171126191, guid: e5c29aa4e9bef3344b58154e118a9428,
         type: 3}
@@ -13373,6 +13373,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8546614495171126189, guid: e5c29aa4e9bef3344b58154e118a9428,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5c29aa4e9bef3344b58154e118a9428, type: 3}
@@ -21094,6 +21099,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 'Cop '
+      objectReference: {fileID: 0}
+    - target: {fileID: 5853036519152980733, guid: 5a53e3d43bc9f9e4e903d1425ec1276e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7449358872002060526, guid: 5a53e3d43bc9f9e4e903d1425ec1276e,
         type: 3}
