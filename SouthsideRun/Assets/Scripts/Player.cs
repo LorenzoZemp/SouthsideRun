@@ -22,7 +22,6 @@ public class Player : MonoBehaviour
     public int[] numsCollected;
     public GameObject BoyzPrefab;
 
-
     // PRIVATE
     // For numbers that have been collected
 
@@ -37,6 +36,8 @@ public class Player : MonoBehaviour
         PlayerAni = this.GetComponent<Animator>();
         caught = false;
         disableMovement = false;
+        
+        //Debug.DrawRay(transform.position, Vector3.forward * 100.0f, Color.green, 100.0f);
     }
 
     // Update is called once per frame
@@ -49,31 +50,44 @@ public class Player : MonoBehaviour
             if (Input.GetKey(KeyCode.W))
             {
                 Run();
-                movement = movement + transform.forward;
+                //movement = movement + transform.forward; // Local Coord
+                movement = movement + Vector3.forward;
             }
             if (Input.GetKey(KeyCode.S))
             {
                 Run();
-                movement = movement - transform.forward;
+                //movement = movement - transform.forward; // Local Coord
+                movement = movement - Vector3.forward;
             }
             if (Input.GetKey(KeyCode.A))
             {
                 Run();
-                movement = movement + transform.TransformDirection(Vector3.left);
+                //movement = movement + transform.TransformDirection(Vector3.left); // Local coord
+                movement = movement + Vector3.left;
             }
             if (Input.GetKey(KeyCode.D))
             {
                 Run();
-                movement = movement + transform.TransformDirection(Vector3.right);
+                //movement = movement + transform.TransformDirection(Vector3.right); // Local coord
+                movement = movement + Vector3.right;
             }
             movement = Vector3.Normalize(movement);
             movement = movement * movementSpeed;
             rb.MovePosition(transform.position + movement * Time.fixedDeltaTime);
 
+            // Rotate model based on direction of movement
+            transform.rotation = Quaternion.LookRotation(movement);
+
+            Debug.DrawRay(new Vector3(transform.position.x + 0.2f, transform.position.y + 1.0f, transform.position.z), Vector3.down * 1.05f, Color.green);
+            Debug.DrawRay(new Vector3(transform.position.x - 0.2f, transform.position.y + 1.0f, transform.position.z), Vector3.down * 1.05f, Color.green);
             if (Input.GetKeyDown("space"))
             {
-                bool canJump = (Physics.Raycast(transform.position, Vector3.down, 1.1f));
-                if (canJump)
+                //bool canJump = Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 1.0f, transform.position.z), Vector3.down, 1.1f);
+
+                bool leftFootHit = Physics.Raycast(new Vector3(transform.position.x - 0.2f, transform.position.y + 1.0f, transform.position.z), Vector3.down, 1.05f);
+                bool rightFootHit = Physics.Raycast(new Vector3(transform.position.x + 0.2f, transform.position.y + 1.0f, transform.position.z), Vector3.down, 1.05f);
+
+                if (leftFootHit || rightFootHit)
                 {
                     //Debug.Log(jumpForce);
                     //GetComponent<Rigidbody>().AddForce(new Vector3(0.0f, jumpForce, 0.0f));
