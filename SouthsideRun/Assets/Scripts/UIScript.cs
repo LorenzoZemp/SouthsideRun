@@ -8,6 +8,7 @@ public class UIScript : MonoBehaviour
 {
     // PUBLIC
     public TextMeshProUGUI NumbersText;
+    public GameObject LoseText;
     public Player playerScript;
 
     public Image iconGun;
@@ -25,6 +26,7 @@ public class UIScript : MonoBehaviour
     void Start()
     {
         setSelection();
+        LoseText.transform.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
