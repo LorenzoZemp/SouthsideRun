@@ -11818,6 +11818,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: New UI
       objectReference: {fileID: 0}
+    - target: {fileID: 1375029802169956506, guid: d7857b6aa085e674ab3adc97d1e9b969,
+        type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 1561368070}
     - target: {fileID: 1375029802169956510, guid: d7857b6aa085e674ab3adc97d1e9b969,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11923,11 +11928,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1375029802169956506, guid: d7857b6aa085e674ab3adc97d1e9b969,
-        type: 3}
-      propertyPath: playerScript
-      value: 
-      objectReference: {fileID: 1561368070}
     - target: {fileID: 1375029801610224152, guid: d7857b6aa085e674ab3adc97d1e9b969,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -17250,6 +17250,80 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 132beb96006ab0f4fbbd6aa1be39d1ed, type: 3}
+--- !u!1001 &1836548689
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2747648162405211847, guid: e1c0356a3833c9e4a82b87d6448cad54,
+        type: 3}
+      propertyPath: m_Name
+      value: Audio
+      objectReference: {fileID: 0}
+    - target: {fileID: 3118991295857744022, guid: e1c0356a3833c9e4a82b87d6448cad54,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.52300966
+      objectReference: {fileID: 0}
+    - target: {fileID: 3118991295857744022, guid: e1c0356a3833c9e4a82b87d6448cad54,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 26.770485
+      objectReference: {fileID: 0}
+    - target: {fileID: 3118991295857744022, guid: e1c0356a3833c9e4a82b87d6448cad54,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 31.664959
+      objectReference: {fileID: 0}
+    - target: {fileID: 3118991295857744022, guid: e1c0356a3833c9e4a82b87d6448cad54,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3118991295857744022, guid: e1c0356a3833c9e4a82b87d6448cad54,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3118991295857744022, guid: e1c0356a3833c9e4a82b87d6448cad54,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3118991295857744022, guid: e1c0356a3833c9e4a82b87d6448cad54,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3118991295857744022, guid: e1c0356a3833c9e4a82b87d6448cad54,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3118991295857744022, guid: e1c0356a3833c9e4a82b87d6448cad54,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3118991295857744022, guid: e1c0356a3833c9e4a82b87d6448cad54,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3118991295857744022, guid: e1c0356a3833c9e4a82b87d6448cad54,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6733504913862018692, guid: e1c0356a3833c9e4a82b87d6448cad54,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e1c0356a3833c9e4a82b87d6448cad54, type: 3}
 --- !u!4 &1837207387 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7871371798416072345, guid: 1f6ebee82092b99438a1ba4f6662e45c,
