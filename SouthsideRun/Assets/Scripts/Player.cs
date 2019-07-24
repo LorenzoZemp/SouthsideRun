@@ -13,6 +13,11 @@ public class Player : MonoBehaviour
     //audio stuff
     AudioSource audioSource;
     public AudioClip numberPickupClip;
+    public AudioClip shortDialClip;
+    public AudioClip failCall;
+    public AudioClip boostClip;
+    public AudioSource BGM;
+    
 
     //pickup effect
     public GameObject collectEffect;
@@ -170,6 +175,8 @@ public class Player : MonoBehaviour
                     boostTimer = 0.0f;
                     jumpForce = baseJumpForce;
                     movementSpeed = baseMovementSpeed;
+                    audioSource.Stop();
+                    BGM.UnPause();
                 }
             }
 
@@ -194,6 +201,7 @@ public class Player : MonoBehaviour
                     Debug.Log("Called selection " + selected);
                     Instantiate(BoyzPrefab, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
                     DialANumber(phoneBook[selected]);
+                    audioSource.PlayOneShot(shortDialClip, 0.3f);
                 }
                 else if(CheckNumber(selected) && selected == 1)
                 {
@@ -203,15 +211,25 @@ public class Player : MonoBehaviour
                     this.gameObject.layer = 13;
                     movementSpeed = boostSpeed;
                     jumpForce = boostJumpForce;
+                    audioSource.PlayOneShot(shortDialClip, 0.3f);
+                    audioSource.PlayOneShot(boostClip, 0.3f);
+                    BGM.Pause();
+
                 }
                 else if (CheckNumber(selected) && selected == 2)
                 {
                     Debug.Log("Called selection " + selected);
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                    copScript.setChasing(false);
+                    disableMovement = true;
+                    audioSource.PlayOneShot(shortDialClip, 0.3f);
 
                     DialANumber(phoneBook[selected]);
                 }
                 else
                 {
+                    audioSource.PlayOneShot(failCall, 0.3f);
+
                     Debug.Log("Failed to call");
                 }
             }
