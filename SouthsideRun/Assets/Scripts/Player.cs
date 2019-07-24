@@ -21,6 +21,10 @@ public class Player : MonoBehaviour
     public Cops copScript;
     public int[] numsCollected;
     public GameObject BoyzPrefab;
+    public string[] numsCollectedLimited;
+    public UIScript script_UI;
+
+    private string[] phoneBook;
 
     // PRIVATE
     // For numbers that have been collected
@@ -36,8 +40,27 @@ public class Player : MonoBehaviour
         PlayerAni = this.GetComponent<Animator>();
         caught = false;
         disableMovement = false;
-        
-        //Debug.DrawRay(transform.position, Vector3.forward * 100.0f, Color.green, 100.0f);
+
+        // Initialise phone book
+        phoneBook = new string[3];
+        phoneBook[0] = "123";
+        phoneBook[1] = "238";
+        phoneBook[2] = "555";
+
+        // Initialise phone buffer
+        numsCollectedLimited = new string[10];
+        numsCollectedLimited[0] = "1";
+        numsCollectedLimited[1] = "1";
+        numsCollectedLimited[2] = "1";
+        numsCollectedLimited[3] = "-";
+        numsCollectedLimited[4] = "-";
+        numsCollectedLimited[5] = "-";
+        numsCollectedLimited[6] = "-";
+        numsCollectedLimited[7] = "-";
+        numsCollectedLimited[8] = "-";
+        numsCollectedLimited[9] = "-";
+
+        Debug.Log(numsCollectedLimited.Length);
     }
 
     // Update is called once per frame
@@ -45,8 +68,23 @@ public class Player : MonoBehaviour
     {
         Vector3 movement = Vector3.zero;
 
+        if (Input.GetKey("escape"))
+        { 
+            Application.Quit();
+        }
+
         if (!caught && !disableMovement)
         {
+            // PAGER CONTROLS
+            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                script_UI.moveSelectLeft();
+            }
+            if (Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                script_UI.moveSelectRight();
+            }
+
             if (Input.GetKey(KeyCode.W))
             {
                 Run();
@@ -76,7 +114,10 @@ public class Player : MonoBehaviour
             rb.MovePosition(transform.position + movement * Time.fixedDeltaTime);
 
             // Rotate model based on direction of movement
-            transform.rotation = Quaternion.LookRotation(movement);
+            if (movement != Vector3.zero)
+            {
+                transform.rotation = Quaternion.LookRotation(movement);
+            }
 
             Debug.DrawRay(new Vector3(transform.position.x + 0.2f, transform.position.y + 1.0f, transform.position.z), Vector3.down * 1.05f, Color.green);
             Debug.DrawRay(new Vector3(transform.position.x - 0.2f, transform.position.y + 1.0f, transform.position.z), Vector3.down * 1.05f, Color.green);
@@ -106,37 +147,16 @@ public class Player : MonoBehaviour
                 rb.velocity += Vector3.up * Physics.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
             }
 
-            if (Input.GetKeyDown(KeyCode.LeftShift)) // to call the bois
+            if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.UpArrow)) // to call the bois
             {
-                // ACTUALLY CALL THE BOIS
-                if (numsCollected[1] >= 3)
+                Debug.Log("trying to call phonebook " + script_UI.getCurrentSelection());
+                if (DialANumber(phoneBook[script_UI.getCurrentSelection()]))
                 {
-                    Debug.Log("Bois were called!");
-                    numsCollected[1] -= 3;
-                    Instantiate(BoyzPrefab, transform);
+                    Debug.Log("Called selection " + script_UI.getCurrentSelection());
                 }
-                // INSTANT WIN
-                if (numsCollected[0] >= 1 && numsCollected[1]  >= 1 && numsCollected[2] >= 1 && numsCollected[3] >= 1 && numsCollected[4] >= 1 && numsCollected[5] >= 1 && numsCollected[6] >= 1
-                    && numsCollected[7] >= 1 && numsCollected[8] >= 1 && numsCollected[9] >= 1)
-                {
-                    Debug.Log("INSTANT WIN!!");
-                    numsCollected[0] -= 1;
-                    numsCollected[1] -= 1;
-                    numsCollected[2] -= 1;
-                    numsCollected[3] -= 1;
-                    numsCollected[4] -= 1;
-                    numsCollected[5] -= 1;
-                    numsCollected[6] -= 1;
-                    numsCollected[7] -= 1;
-                    numsCollected[8] -= 1;
-                    numsCollected[9] -= 1;
-                    disableMovement = true;
-                    copScript.setChasing(false);
-                }
-                // DIALLED A BLANK
                 else
                 {
-                    Debug.Log("Dialled a blank!");
+                    Debug.Log("Failed to call");
                 }
             }
         }
@@ -187,10 +207,12 @@ public class Player : MonoBehaviour
         if (other.tag == "Number")
         {
             int numFound = other.gameObject.GetComponent<NumberScript>().thisNumber;
-            numsCollected[numFound]++;
+            //numsCollected[numFound]++;
             Debug.Log("Found a Number ! --> " + numFound);
             Debug.Log("You now have " + numsCollected[numFound] + "x " + numFound);
             Destroy(other.gameObject);
+            collectedANumber(numFound);
+
         }
 
     }
@@ -226,5 +248,79 @@ public class Player : MonoBehaviour
         PlayerAni.SetBool("Run", false);
         PlayerAni.SetBool("Idle", false);
         PlayerAni.SetBool("Jump", false);
+    }
+
+    bool DialANumber(string s)
+    {
+        string[] tempString = new string[10];
+        numsCollectedLimited.CopyTo(tempString,0);
+
+        foreach (char c in s)
+        {
+            bool foundTheNumber = false;
+            for (int i = 0; i < numsCollectedLimited.Length; i++)
+            {
+                if (tempString[i] == c.ToString())
+                {
+                    foundTheNumber = true;
+                    //Debug.Log("Got NUMBER!");
+                    tempString[i] = "-";
+                    break;
+                }
+            }
+            if (!foundTheNumber)
+            {
+                return false;
+            }
+            else continue;
+        }
+
+        numsCollectedLimited = tempString;
+        return true;
+    }
+
+    public bool CheckNumber(int phoneBookIndex)
+    {
+        string[] tempString = new string[10];
+        numsCollectedLimited.CopyTo(tempString, 0);
+
+        foreach (char c in phoneBook[phoneBookIndex])
+        {
+            bool foundTheNumber = false;
+            for (int i = 0; i < numsCollectedLimited.Length; i++)
+            {
+                if (tempString[i] == c.ToString())
+                {
+                    foundTheNumber = true;
+                    //Debug.Log("Got NUMBER!");
+                    tempString[i] = "-";
+                    break;
+                }
+            }
+            if (!foundTheNumber)
+            {
+                return false;
+            }
+            else continue;
+        }
+        return true;
+    }
+
+    void collectedANumber(int num)
+    {
+        if (num >= 0 && num <=9)
+        { 
+            // move all the numbers along
+            for (int i = numsCollectedLimited.Length - 1; i > 0; i--)
+            {
+                numsCollectedLimited[i] = numsCollectedLimited[i - 1];
+            }
+
+            numsCollectedLimited[0] = num.ToString();
+        }
+        else
+        {
+            Debug.Log("Number out of range");
+        }
     }
 }
