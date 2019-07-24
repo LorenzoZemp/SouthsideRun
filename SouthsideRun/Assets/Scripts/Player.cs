@@ -249,6 +249,7 @@ public class Player : MonoBehaviour
         if (other.tag == "Cops") // get caught by cops
         {
             Debug.Log("You got caught");
+            script_UI.LoseText.transform.gameObject.SetActive(true);
             caught = true;
             copScript.setChasing(false);
         }
