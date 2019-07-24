@@ -15,6 +15,8 @@ public class UIScript : MonoBehaviour
     public Image iconShoe;
     public Image iconCar;
 
+    public AudioSource blop;
+
     public float iconUnavailableAlpha = 0.25f;
 
     //public GameObject whiteHighlight;
@@ -96,6 +98,7 @@ public class UIScript : MonoBehaviour
     {
         if (currentSelection < totalSelection - 1)
         {
+            blop.Play();
             currentSelection++;
             setSelection();
         }
@@ -104,6 +107,7 @@ public class UIScript : MonoBehaviour
     {
         if (currentSelection > 0)
         {
+            blop.Play();
             currentSelection--;
             setSelection();
 

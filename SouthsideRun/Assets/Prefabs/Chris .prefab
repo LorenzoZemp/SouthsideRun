@@ -1261,6 +1261,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberPickupClip: {fileID: 8300000, guid: e4352e0aafea87245b07a8148d59ba4e, type: 3}
+  shortDialClip: {fileID: 8300000, guid: a4d5bd21cfe1aa3409b2a1642385467e, type: 3}
+  failCall: {fileID: 8300000, guid: 7688635326d2cb4409eb3b97086c0f02, type: 3}
+  boostClip: {fileID: 8300000, guid: 1523cc3fac0323d4f953629fd3e9fae4, type: 3}
   collectEffect: {fileID: 1993132263542158, guid: 14354129da5aad54d8a28acdf5d2dee5,
     type: 3}
   movementSpeed: 7.1
@@ -1270,6 +1273,11 @@ MonoBehaviour:
   copScript: {fileID: 0}
   numsCollected: 
   BoyzPrefab: {fileID: 0}
+  numsCollectedLimited: []
+  script_UI: {fileID: 0}
+  boostSpeed: 12
+  boostJumpForce: 10
+  boostDuration: 3
 --- !u!54 &5492353699424471354
 Rigidbody:
   m_ObjectHideFlags: 0
