@@ -18,7 +18,7 @@ public class UIScript : MonoBehaviour
 
     //public GameObject whiteHighlight;
     public RectTransform whiteHighlight;
-    private int currentSelection = 0;
+    [SerializeField] private int currentSelection = 0;
     private int totalSelection = 3;
 
     // Start is called before the first frame update

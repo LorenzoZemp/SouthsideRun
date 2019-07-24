@@ -28,8 +28,16 @@ public class Player : MonoBehaviour
     public Cops copScript;
     public int[] numsCollected;
     public GameObject BoyzPrefab;
-    public string[] numsCollectedLimited;
+    [SerializeField] public string[] numsCollectedLimited;
     public UIScript script_UI;
+
+    public float boostSpeed = 12.0f;
+    public float boostJumpForce = 10.0f;
+    public float boostDuration = 3.0f;
+    private float boostTimer = 0.0f;
+    bool boostingIt = false;
+    private float baseMovementSpeed;
+    private float baseJumpForce;
 
     private string[] phoneBook;
 
@@ -47,6 +55,10 @@ public class Player : MonoBehaviour
         PlayerAni = this.GetComponent<Animator>();
         caught = false;
         disableMovement = false;
+
+        // Boost
+        baseJumpForce = jumpForce;
+        baseMovementSpeed = movementSpeed;
 
         // Initialise phone book
         phoneBook = new string[3];
@@ -147,6 +159,21 @@ public class Player : MonoBehaviour
                 }
             }
 
+            // BOOSTING
+            if (boostingIt)
+            {
+                boostTimer += Time.deltaTime;
+                if (boostTimer >= boostDuration)
+                {
+                    this.gameObject.layer = 12;
+                    boostingIt = false;
+                    boostTimer = 0.0f;
+                    jumpForce = baseJumpForce;
+                    movementSpeed = baseMovementSpeed;
+                }
+            }
+
+
             if (rb.velocity.y < 0)
             {
                 rb.velocity += Vector3.up * Physics.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
@@ -156,13 +183,32 @@ public class Player : MonoBehaviour
                 rb.velocity += Vector3.up * Physics.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
             }
 
+
+            // CALLING
             if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.UpArrow)) // to call the bois
             {
-                Debug.Log("trying to call phonebook " + script_UI.getCurrentSelection());
-                if (DialANumber(phoneBook[script_UI.getCurrentSelection()]))
+                int selected = script_UI.getCurrentSelection();
+                Debug.Log("trying to call phonebook " + selected);
+                if (CheckNumber(selected)&& selected == 0)
                 {
-                    Debug.Log("Called selection " + script_UI.getCurrentSelection());
+                    Debug.Log("Called selection " + selected);
                     Instantiate(BoyzPrefab, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+                    DialANumber(phoneBook[selected]);
+                }
+                else if(CheckNumber(selected) && selected == 1)
+                {
+                    Debug.Log("Called selection " + selected);
+                    DialANumber(phoneBook[selected]);
+                    boostingIt = true;
+                    this.gameObject.layer = 13;
+                    movementSpeed = boostSpeed;
+                    jumpForce = boostJumpForce;
+                }
+                else if (CheckNumber(selected) && selected == 2)
+                {
+                    Debug.Log("Called selection " + selected);
+
+                    DialANumber(phoneBook[selected]);
                 }
                 else
                 {
@@ -217,13 +263,13 @@ public class Player : MonoBehaviour
 
         if (other.tag == "Number")
         {
+           
+            Destroy(other.gameObject);
             audioSource.PlayOneShot(numberPickupClip, 0.3f);
             Instantiate(collectEffect, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
             int numFound = other.gameObject.GetComponent<NumberScript>().thisNumber;
+            Debug.Log("Found a " + numFound);
             //numsCollected[numFound]++;
-            Debug.Log("Found a Number ! --> " + numFound);
-            Debug.Log("You now have " + numsCollected[numFound] + "x " + numFound);
-            Destroy(other.gameObject);
             collectedANumber(numFound);
 
         }
