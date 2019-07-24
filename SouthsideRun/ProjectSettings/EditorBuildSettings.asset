@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LorenzoScene.unity
     guid: 9f1f4d75986eb794389ae48dfbaefb34
+  - enabled: 1
+    path: Assets/Scenes/WinScreen.unity
+    guid: b73346c90f49cc84dabfea14d0724176
   m_configObjects: {}

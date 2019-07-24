@@ -1357,7 +1357,7 @@ MonoBehaviour:
 
     Left and Right Arrow Key to change Number
 
-    Shift key to call'
+    Shift or Up Arrow Key to call'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1426,10 +1426,10 @@ MonoBehaviour:
   m_margin: {x: -176.41364, y: 0, z: -172.82405, w: -37.154778}
   m_textInfo:
     textComponent: {fileID: 1293667703}
-    characterCount: 72
+    characterCount: 84
     spriteCount: 0
-    spaceCount: 14
-    wordCount: 15
+    spaceCount: 17
+    wordCount: 18
     linkCount: 0
     lineCount: 3
     pageCount: 1
