@@ -1261,6 +1261,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberPickupClip: {fileID: 8300000, guid: e4352e0aafea87245b07a8148d59ba4e, type: 3}
+  collectEffect: {fileID: 1993132263542158, guid: 14354129da5aad54d8a28acdf5d2dee5,
+    type: 3}
   movementSpeed: 7.1
   fallMultiplier: 2.5
   lowJumpMultiplier: 2
