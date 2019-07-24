@@ -10,6 +10,13 @@ public class Player : MonoBehaviour
     bool caught;
     bool disableMovement;
 
+    //audio stuff
+    AudioSource audioSource;
+    public AudioClip numberPickupClip;
+
+    //pickup effect
+    public GameObject collectEffect;
+
     Rigidbody rb;
     public float movementSpeed = 5.0f;
 
@@ -61,6 +68,8 @@ public class Player : MonoBehaviour
         numsCollectedLimited[9] = "-";
 
         Debug.Log(numsCollectedLimited.Length);
+        audioSource = GetComponent<AudioSource>();
+
     }
 
     // Update is called once per frame
@@ -153,6 +162,7 @@ public class Player : MonoBehaviour
                 if (DialANumber(phoneBook[script_UI.getCurrentSelection()]))
                 {
                     Debug.Log("Called selection " + script_UI.getCurrentSelection());
+                    Instantiate(BoyzPrefab, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
                 }
                 else
                 {
@@ -206,6 +216,8 @@ public class Player : MonoBehaviour
 
         if (other.tag == "Number")
         {
+            audioSource.PlayOneShot(numberPickupClip, 0.3f);
+            Instantiate(collectEffect, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
             int numFound = other.gameObject.GetComponent<NumberScript>().thisNumber;
             //numsCollected[numFound]++;
             Debug.Log("Found a Number ! --> " + numFound);
