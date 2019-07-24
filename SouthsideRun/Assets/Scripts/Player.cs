@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
     public int[] numsCollected;
     public GameObject BoyzPrefab;
     public string[] numsCollectedLimited;
+    public UIScript script_UI;
 
     private string[] phoneBook;
 
@@ -41,21 +42,23 @@ public class Player : MonoBehaviour
         disableMovement = false;
 
         // Initialise phone book
-        phoneBook = new string[2];
-        phoneBook[0] = "111";
+        phoneBook = new string[3];
+        phoneBook[0] = "123";
+        phoneBook[1] = "238";
+        phoneBook[2] = "555";
 
         // Initialise phone buffer
         numsCollectedLimited = new string[10];
         numsCollectedLimited[0] = "1";
         numsCollectedLimited[1] = "1";
         numsCollectedLimited[2] = "1";
-        numsCollectedLimited[3] = "";
-        numsCollectedLimited[4] = "";
-        numsCollectedLimited[5] = "";
-        numsCollectedLimited[6] = "";
-        numsCollectedLimited[7] = "";
-        numsCollectedLimited[8] = "";
-        numsCollectedLimited[9] = "";
+        numsCollectedLimited[3] = "-";
+        numsCollectedLimited[4] = "-";
+        numsCollectedLimited[5] = "-";
+        numsCollectedLimited[6] = "-";
+        numsCollectedLimited[7] = "-";
+        numsCollectedLimited[8] = "-";
+        numsCollectedLimited[9] = "-";
 
         Debug.Log(numsCollectedLimited.Length);
     }
@@ -72,6 +75,16 @@ public class Player : MonoBehaviour
 
         if (!caught && !disableMovement)
         {
+            // PAGER CONTROLS
+            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                script_UI.moveSelectLeft();
+            }
+            if (Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                script_UI.moveSelectRight();
+            }
+
             if (Input.GetKey(KeyCode.W))
             {
                 Run();
@@ -134,11 +147,12 @@ public class Player : MonoBehaviour
                 rb.velocity += Vector3.up * Physics.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
             }
 
-            if (Input.GetKeyDown(KeyCode.LeftShift)) // to call the bois
+            if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.UpArrow)) // to call the bois
             {
-                if (dialANumber(phoneBook[0]))
+                Debug.Log("trying to call phonebook " + script_UI.getCurrentSelection());
+                if (DialANumber(phoneBook[script_UI.getCurrentSelection()]))
                 {
-                    Debug.Log("Called the boyz");
+                    Debug.Log("Called selection " + script_UI.getCurrentSelection());
                 }
                 else
                 {
@@ -267,89 +281,58 @@ public class Player : MonoBehaviour
         PlayerAni.SetBool("Jump", false);
     }
 
-    bool dialANumber(string s)
+    bool DialANumber(string s)
     {
+        string[] tempString = new string[10];
+        numsCollectedLimited.CopyTo(tempString,0);
+
         foreach (char c in s)
         {
-            // check that the player has enough of the number
-            switch (c)
+            bool foundTheNumber = false;
+            for (int i = 0; i < numsCollectedLimited.Length; i++)
             {
-                case '0':
-                    if (numsCollected[0] > 0)
-                    {
-                        numsCollected[0]--;
-                    }
-                    else return false;
+                if (tempString[i] == c.ToString())
+                {
+                    foundTheNumber = true;
+                    //Debug.Log("Got NUMBER!");
+                    tempString[i] = "-";
                     break;
-                case '1':
-                    if (numsCollected[1] > 0)
-                    {
-                        numsCollected[1]--;
-                    }
-                    else return false;
-                    break;
-                case '2':
-                    if (numsCollected[2] > 0)
-                    {
-                        numsCollected[2]--;
-                    }
-                    else return false;
-                    break;
-                case '3':
-                    if (numsCollected[3] > 0)
-                    {
-                        numsCollected[3]--;
-                    }
-                    else return false;
-                    break;
-                case '4':
-                    if (numsCollected[4] > 0)
-                    {
-                        numsCollected[4]--;
-                    }
-                    else return false;
-                    break;
-                case '5':
-                    if (numsCollected[5] > 0)
-                    {
-                        numsCollected[5]--;
-                    }
-                    else return false;
-                    break;
-                case '6':
-                    if (numsCollected[6] > 0)
-                    {
-                        numsCollected[6]--;
-                    }
-                    else return false;
-                    break;
-                case '7':
-                    if (numsCollected[7] > 0)
-                    {
-                        numsCollected[7]--;
-                    }
-                    else return false;
-                    break;
-                case '8':
-                    if (numsCollected[8] > 0)
-                    {
-                        numsCollected[8]--;
-                    }
-                    else return false;
-                    break;
-                case '9':
-                    if (numsCollected[9] > 0)
-                    {
-                        numsCollected[9]--;
-                    }
-                    else return false;
-                    break;
-
-
-
-                default:
-                    return false;
+                }
             }
+            if (!foundTheNumber)
+            {
+                return false;
+            }
+            else continue;
+        }
+
+        numsCollectedLimited = tempString;
+        return true;
+    }
+
+    public bool CheckNumber(int phoneBookIndex)
+    {
+        string[] tempString = new string[10];
+        numsCollectedLimited.CopyTo(tempString, 0);
+
+        foreach (char c in phoneBook[phoneBookIndex])
+        {
+            bool foundTheNumber = false;
+            for (int i = 0; i < numsCollectedLimited.Length; i++)
+            {
+                if (tempString[i] == c.ToString())
+                {
+                    foundTheNumber = true;
+                    //Debug.Log("Got NUMBER!");
+                    tempString[i] = "-";
+                    break;
+                }
+            }
+            if (!foundTheNumber)
+            {
+                return false;
+            }
+            else continue;
         }
         return true;
     }
