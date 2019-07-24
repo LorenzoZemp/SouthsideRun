@@ -158,37 +158,6 @@ public class Player : MonoBehaviour
                 {
                     Debug.Log("Failed to call");
                 }
-
-                //// ACTUALLY CALL THE BOIS
-                //if (numsCollected[1] >= 3)
-                //{
-                //    Debug.Log("Bois were called!");
-                //    numsCollected[1] -= 3;
-                //    Instantiate(BoyzPrefab, transform);
-                //}
-                //// INSTANT WIN
-                //if (numsCollected[0] >= 1 && numsCollected[1]  >= 1 && numsCollected[2] >= 1 && numsCollected[3] >= 1 && numsCollected[4] >= 1 && numsCollected[5] >= 1 && numsCollected[6] >= 1
-                //    && numsCollected[7] >= 1 && numsCollected[8] >= 1 && numsCollected[9] >= 1)
-                //{
-                //    Debug.Log("INSTANT WIN!!");
-                //    numsCollected[0] -= 1;
-                //    numsCollected[1] -= 1;
-                //    numsCollected[2] -= 1;
-                //    numsCollected[3] -= 1;
-                //    numsCollected[4] -= 1;
-                //    numsCollected[5] -= 1;
-                //    numsCollected[6] -= 1;
-                //    numsCollected[7] -= 1;
-                //    numsCollected[8] -= 1;
-                //    numsCollected[9] -= 1;
-                //    disableMovement = true;
-                //    copScript.setChasing(false);
-                //}
-                //// DIALLED A BLANK
-                //else
-                //{
-                //    Debug.Log("Dialled a blank!");
-                //}
             }
         }
 
