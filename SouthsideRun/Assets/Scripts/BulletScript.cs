@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour
 {
+    public GameObject killEffect;
     public float bulletSpeed = 3.0f;
     public float travelDistance = 60.0f;
     public Rigidbody rb;
@@ -37,6 +38,7 @@ public class BulletScript : MonoBehaviour
         if (collision.gameObject.tag == "Cops")
         {
             Debug.Log("Hit a cop");
+            Instantiate(killEffect, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
             Destroy(collision.gameObject);
         }
     }
