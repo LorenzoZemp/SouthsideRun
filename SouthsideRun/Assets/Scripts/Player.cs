@@ -21,6 +21,9 @@ public class Player : MonoBehaviour
     public Cops copScript;
     public int[] numsCollected;
     public GameObject BoyzPrefab;
+    public string[] numsCollectedLimited;
+
+    private string[] phoneBook;
 
     // PRIVATE
     // For numbers that have been collected
@@ -36,14 +39,36 @@ public class Player : MonoBehaviour
         PlayerAni = this.GetComponent<Animator>();
         caught = false;
         disableMovement = false;
-        
-        //Debug.DrawRay(transform.position, Vector3.forward * 100.0f, Color.green, 100.0f);
+
+        // Initialise phone book
+        phoneBook = new string[2];
+        phoneBook[0] = "111";
+
+        // Initialise phone buffer
+        numsCollectedLimited = new string[10];
+        numsCollectedLimited[0] = "1";
+        numsCollectedLimited[1] = "1";
+        numsCollectedLimited[2] = "1";
+        numsCollectedLimited[3] = "";
+        numsCollectedLimited[4] = "";
+        numsCollectedLimited[5] = "";
+        numsCollectedLimited[6] = "";
+        numsCollectedLimited[7] = "";
+        numsCollectedLimited[8] = "";
+        numsCollectedLimited[9] = "";
+
+        Debug.Log(numsCollectedLimited.Length);
     }
 
     // Update is called once per frame
     void Update()
     {
         Vector3 movement = Vector3.zero;
+
+        if (Input.GetKey("escape"))
+        { 
+            Application.Quit();
+        }
 
         if (!caught && !disableMovement)
         {
@@ -76,7 +101,10 @@ public class Player : MonoBehaviour
             rb.MovePosition(transform.position + movement * Time.fixedDeltaTime);
 
             // Rotate model based on direction of movement
-            transform.rotation = Quaternion.LookRotation(movement);
+            if (movement != Vector3.zero)
+            {
+                transform.rotation = Quaternion.LookRotation(movement);
+            }
 
             Debug.DrawRay(new Vector3(transform.position.x + 0.2f, transform.position.y + 1.0f, transform.position.z), Vector3.down * 1.05f, Color.green);
             Debug.DrawRay(new Vector3(transform.position.x - 0.2f, transform.position.y + 1.0f, transform.position.z), Vector3.down * 1.05f, Color.green);
@@ -108,36 +136,45 @@ public class Player : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.LeftShift)) // to call the bois
             {
-                // ACTUALLY CALL THE BOIS
-                if (numsCollected[1] >= 3)
+                if (dialANumber(phoneBook[0]))
                 {
-                    Debug.Log("Bois were called!");
-                    numsCollected[1] -= 3;
-                    Instantiate(BoyzPrefab, transform);
+                    Debug.Log("Called the boyz");
                 }
-                // INSTANT WIN
-                if (numsCollected[0] >= 1 && numsCollected[1]  >= 1 && numsCollected[2] >= 1 && numsCollected[3] >= 1 && numsCollected[4] >= 1 && numsCollected[5] >= 1 && numsCollected[6] >= 1
-                    && numsCollected[7] >= 1 && numsCollected[8] >= 1 && numsCollected[9] >= 1)
-                {
-                    Debug.Log("INSTANT WIN!!");
-                    numsCollected[0] -= 1;
-                    numsCollected[1] -= 1;
-                    numsCollected[2] -= 1;
-                    numsCollected[3] -= 1;
-                    numsCollected[4] -= 1;
-                    numsCollected[5] -= 1;
-                    numsCollected[6] -= 1;
-                    numsCollected[7] -= 1;
-                    numsCollected[8] -= 1;
-                    numsCollected[9] -= 1;
-                    disableMovement = true;
-                    copScript.setChasing(false);
-                }
-                // DIALLED A BLANK
                 else
                 {
-                    Debug.Log("Dialled a blank!");
+                    Debug.Log("Failed to call");
                 }
+
+                //// ACTUALLY CALL THE BOIS
+                //if (numsCollected[1] >= 3)
+                //{
+                //    Debug.Log("Bois were called!");
+                //    numsCollected[1] -= 3;
+                //    Instantiate(BoyzPrefab, transform);
+                //}
+                //// INSTANT WIN
+                //if (numsCollected[0] >= 1 && numsCollected[1]  >= 1 && numsCollected[2] >= 1 && numsCollected[3] >= 1 && numsCollected[4] >= 1 && numsCollected[5] >= 1 && numsCollected[6] >= 1
+                //    && numsCollected[7] >= 1 && numsCollected[8] >= 1 && numsCollected[9] >= 1)
+                //{
+                //    Debug.Log("INSTANT WIN!!");
+                //    numsCollected[0] -= 1;
+                //    numsCollected[1] -= 1;
+                //    numsCollected[2] -= 1;
+                //    numsCollected[3] -= 1;
+                //    numsCollected[4] -= 1;
+                //    numsCollected[5] -= 1;
+                //    numsCollected[6] -= 1;
+                //    numsCollected[7] -= 1;
+                //    numsCollected[8] -= 1;
+                //    numsCollected[9] -= 1;
+                //    disableMovement = true;
+                //    copScript.setChasing(false);
+                //}
+                //// DIALLED A BLANK
+                //else
+                //{
+                //    Debug.Log("Dialled a blank!");
+                //}
             }
         }
 
@@ -187,10 +224,12 @@ public class Player : MonoBehaviour
         if (other.tag == "Number")
         {
             int numFound = other.gameObject.GetComponent<NumberScript>().thisNumber;
-            numsCollected[numFound]++;
+            //numsCollected[numFound]++;
             Debug.Log("Found a Number ! --> " + numFound);
             Debug.Log("You now have " + numsCollected[numFound] + "x " + numFound);
             Destroy(other.gameObject);
+            collectedANumber(numFound);
+
         }
 
     }
@@ -226,5 +265,110 @@ public class Player : MonoBehaviour
         PlayerAni.SetBool("Run", false);
         PlayerAni.SetBool("Idle", false);
         PlayerAni.SetBool("Jump", false);
+    }
+
+    bool dialANumber(string s)
+    {
+        foreach (char c in s)
+        {
+            // check that the player has enough of the number
+            switch (c)
+            {
+                case '0':
+                    if (numsCollected[0] > 0)
+                    {
+                        numsCollected[0]--;
+                    }
+                    else return false;
+                    break;
+                case '1':
+                    if (numsCollected[1] > 0)
+                    {
+                        numsCollected[1]--;
+                    }
+                    else return false;
+                    break;
+                case '2':
+                    if (numsCollected[2] > 0)
+                    {
+                        numsCollected[2]--;
+                    }
+                    else return false;
+                    break;
+                case '3':
+                    if (numsCollected[3] > 0)
+                    {
+                        numsCollected[3]--;
+                    }
+                    else return false;
+                    break;
+                case '4':
+                    if (numsCollected[4] > 0)
+                    {
+                        numsCollected[4]--;
+                    }
+                    else return false;
+                    break;
+                case '5':
+                    if (numsCollected[5] > 0)
+                    {
+                        numsCollected[5]--;
+                    }
+                    else return false;
+                    break;
+                case '6':
+                    if (numsCollected[6] > 0)
+                    {
+                        numsCollected[6]--;
+                    }
+                    else return false;
+                    break;
+                case '7':
+                    if (numsCollected[7] > 0)
+                    {
+                        numsCollected[7]--;
+                    }
+                    else return false;
+                    break;
+                case '8':
+                    if (numsCollected[8] > 0)
+                    {
+                        numsCollected[8]--;
+                    }
+                    else return false;
+                    break;
+                case '9':
+                    if (numsCollected[9] > 0)
+                    {
+                        numsCollected[9]--;
+                    }
+                    else return false;
+                    break;
+
+
+
+                default:
+                    return false;
+            }
+        }
+        return true;
+    }
+
+    void collectedANumber(int num)
+    {
+        if (num >= 0 && num <=9)
+        { 
+            // move all the numbers along
+            for (int i = numsCollectedLimited.Length - 1; i > 0; i--)
+            {
+                numsCollectedLimited[i] = numsCollectedLimited[i - 1];
+            }
+
+            numsCollectedLimited[0] = num.ToString();
+        }
+        else
+        {
+            Debug.Log("Number out of range");
+        }
     }
 }
