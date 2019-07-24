@@ -8332,7 +8332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraHeight: 3.5
-  cameraDistance: -5
+  cameraDistance: -7
 --- !u!1001 &799185353
 PrefabInstance:
   m_ObjectHideFlags: 0

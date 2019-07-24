@@ -10,6 +10,10 @@ public class Player : MonoBehaviour
     bool caught;
     bool disableMovement;
 
+    //audio stuff
+    AudioSource audioSource;
+    public AudioClip numberPickupClip;
+
     Rigidbody rb;
     public float movementSpeed = 5.0f;
 
@@ -36,7 +40,8 @@ public class Player : MonoBehaviour
         PlayerAni = this.GetComponent<Animator>();
         caught = false;
         disableMovement = false;
-        
+        audioSource = GetComponent<AudioSource>();
+
         //Debug.DrawRay(transform.position, Vector3.forward * 100.0f, Color.green, 100.0f);
     }
 
@@ -113,7 +118,7 @@ public class Player : MonoBehaviour
                 {
                     Debug.Log("Bois were called!");
                     numsCollected[1] -= 3;
-                    Instantiate(BoyzPrefab, transform);
+                    Instantiate(BoyzPrefab, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
                 }
                 // INSTANT WIN
                 if (numsCollected[0] >= 1 && numsCollected[1]  >= 1 && numsCollected[2] >= 1 && numsCollected[3] >= 1 && numsCollected[4] >= 1 && numsCollected[5] >= 1 && numsCollected[6] >= 1
@@ -186,6 +191,7 @@ public class Player : MonoBehaviour
 
         if (other.tag == "Number")
         {
+            audioSource.PlayOneShot(numberPickupClip, 0.3f);
             int numFound = other.gameObject.GetComponent<NumberScript>().thisNumber;
             numsCollected[numFound]++;
             Debug.Log("Found a Number ! --> " + numFound);

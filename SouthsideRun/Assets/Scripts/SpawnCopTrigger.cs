@@ -21,7 +21,7 @@ public class SpawnCopTrigger : MonoBehaviour
 
             if (triggerSound != null)
             {
-                audioSource.PlayOneShot(triggerSound, 0.5f);
+                audioSource.PlayOneShot(triggerSound, 0.1f);
             }
         }
     }
