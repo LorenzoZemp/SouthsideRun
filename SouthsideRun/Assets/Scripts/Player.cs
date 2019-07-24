@@ -210,6 +210,7 @@ public class Player : MonoBehaviour
         if (other.tag == "Win")
         {
             Debug.Log("You ESCAPED!");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             copScript.setChasing(false);
             disableMovement = true;
         }
