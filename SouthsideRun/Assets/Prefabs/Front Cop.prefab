@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4794093433329584913}
   - component: {fileID: 3171107337556469355}
-  - component: {fileID: 6440774220166316536}
   - component: {fileID: 1340325142923959062}
   - component: {fileID: 7331405392052482184}
   - component: {fileID: 5875938911492247874}
+  - component: {fileID: 6073091191585739461}
   m_Layer: 10
   m_Name: Front Cop
   m_TagString: Cops
@@ -55,19 +55,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6440774220166316536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8418163711116736770}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27bf1aff59a3fc049964724fecd2c00c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movespeed: -15
 --- !u!65 &1340325142923959062
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -110,6 +97,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &6073091191585739461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8418163711116736770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46be54dc7d830a4428f4bcc80ac64b31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movespeed: -15
+  player: {fileID: 0}
 --- !u!1001 &174139652610611020
 PrefabInstance:
   m_ObjectHideFlags: 0
