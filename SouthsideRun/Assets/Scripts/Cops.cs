@@ -6,6 +6,7 @@ public class Cops : MonoBehaviour
 {
     // PUBLIC
     public float movespeed = 3.3333f;
+    public GameObject player;
 
     // PRIVATE
     private bool chasing = true;
@@ -13,7 +14,7 @@ public class Cops : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        player = GameObject.Find("Player");
     }
 
     private void OnTriggerEnter(Collider other)
@@ -29,7 +30,7 @@ public class Cops : MonoBehaviour
     {
         if (chasing)
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + movespeed * Time.deltaTime);
+            transform.position = new Vector3(player.transform.position.x, transform.position.y, transform.position.z + movespeed * Time.deltaTime);
         }
     }
 

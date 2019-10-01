@@ -11,7 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main Menu.unity
     guid: 9de38b11d1b4ecb4a8a07da7cb56a247
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/LorenzoScene.unity
     guid: 9f1f4d75986eb794389ae48dfbaefb34
+  - enabled: 1
+    path: Assets/Scenes/EteruScene.unity
+    guid: a660ddabc760cb140be37398feda5ea4
+  - enabled: 1
+    path: Assets/Scenes/WinScreen.unity
+    guid: b73346c90f49cc84dabfea14d0724176
   m_configObjects: {}
