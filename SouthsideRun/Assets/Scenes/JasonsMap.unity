@@ -2947,6 +2947,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: New UI
       objectReference: {fileID: 0}
+    - target: {fileID: 1375029802169956506, guid: d7857b6aa085e674ab3adc97d1e9b969,
+        type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 1275118662}
     - target: {fileID: 1375029802169956510, guid: d7857b6aa085e674ab3adc97d1e9b969,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3052,11 +3057,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1375029802169956506, guid: d7857b6aa085e674ab3adc97d1e9b969,
-        type: 3}
-      propertyPath: playerScript
-      value: 
-      objectReference: {fileID: 1275118662}
     - target: {fileID: 1375029801610224152, guid: d7857b6aa085e674ab3adc97d1e9b969,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -4492,6 +4492,11 @@ PrefabInstance:
         type: 3}
       propertyPath: currentPhone
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6921932933148460849, guid: bea80faa0514d454ca39150f933a50ce,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bea80faa0514d454ca39150f933a50ce, type: 3}
@@ -9378,6 +9383,7 @@ MonoBehaviour:
   boostJumpDuration: 5
   boostSpeed: 12
   boostSpeedDuration: 5
+  isShielded: 0
   currentPhone: 0
 --- !u!4 &2143521569 stripped
 Transform:

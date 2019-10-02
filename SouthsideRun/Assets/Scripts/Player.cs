@@ -356,16 +356,39 @@ public class Player : MonoBehaviour
 
         }
 
+        //if (other.tag == "Bullet")
+        //{
+        //    // take off hat
+        //    if (isShielded)
+        //    {
+        //        isShielded = false;
+        //        Debug.Log("Hats off");
+
+        //    }
+        //    else
+        //    {
+        //        //caught = true;
+        //        Debug.Log("You dead");
+        //    }
+        //}
+
+    }
+
+    public void OnTriggerExit(Collider other)
+    {
         if (other.tag == "Bullet")
         {
             // take off hat
             if (isShielded)
             {
                 isShielded = false;
+                Debug.Log("Hats off");
+
             }
             else
             {
-                caught = true;
+                //caught = true;
+                Debug.Log("You dead");
             }
         }
 
