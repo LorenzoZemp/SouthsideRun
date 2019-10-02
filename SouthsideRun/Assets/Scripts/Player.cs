@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
@@ -36,15 +34,21 @@ public class Player : MonoBehaviour
     [SerializeField] public string[] numsCollectedLimited;
     public UIScript script_UI;
 
-    public float boostSpeed = 12.0f;
     public float boostJumpForce = 10.0f;
-    public float boostDuration = 3.0f;
-    private float boostTimer = 0.0f;
-    bool boostingIt = false;
+    public float boostJumpDuration = 5.0f;
+    private float jumpBoostTimer = 0.0f;
+    public float boostSpeed = 15.0f;
+    public float boostSpeedDuration = 5.0f;
+    private float speedBoostTimer = 0.0f;
+    bool speedBoost = false;
+    bool jumpBoost = false;
     private float baseMovementSpeed;
     private float baseJumpForce;
 
+    public bool isShielded = false;
+
     private string[] phoneBook;
+    [SerializeField] PHONE currentPhone = PHONE.NONE;
 
     // PRIVATE
     // For numbers that have been collected
@@ -101,15 +105,15 @@ public class Player : MonoBehaviour
 
         if (!caught && !disableMovement)
         {
-            // PAGER CONTROLS
-            if (Input.GetKeyDown(KeyCode.LeftArrow))
-            {
-                script_UI.moveSelectLeft();
-            }
-            if (Input.GetKeyDown(KeyCode.RightArrow))
-            {
-                script_UI.moveSelectRight();
-            }
+            //// PAGER CONTROLS
+            //if (Input.GetKeyDown(KeyCode.LeftArrow))
+            //{
+            //    script_UI.moveSelectLeft();
+            //}
+            //if (Input.GetKeyDown(KeyCode.RightArrow))
+            //{
+            //    script_UI.moveSelectRight();
+            //}
 
             if (Input.GetKey(KeyCode.W))
             {
@@ -156,30 +160,44 @@ public class Player : MonoBehaviour
 
                 if (leftFootHit || rightFootHit)
                 {
-                    //Debug.Log(jumpForce);
-                    //GetComponent<Rigidbody>().AddForce(new Vector3(0.0f, jumpForce, 0.0f));
-                    //rb.velocity = (new Vector3(0.0f, jumpForce, 0.0f));
                     Jump();
                     rb.velocity = (new Vector3(rb.velocity.x, jumpForce, rb.velocity.z));
                 }
             }
 
             // BOOSTING
-            if (boostingIt)
+            if (speedBoost)
             {
-                boostTimer += Time.deltaTime;
-                if (boostTimer >= boostDuration)
+                speedBoostTimer += Time.deltaTime;
+                if (speedBoostTimer >= boostSpeedDuration)
                 {
-                    this.gameObject.layer = 12;
-                    boostingIt = false;
-                    boostTimer = 0.0f;
-                    jumpForce = baseJumpForce;
+                    //this.gameObject.layer = 12;
+                    speedBoost = false;
+                    speedBoostTimer = 0.0f;
                     movementSpeed = baseMovementSpeed;
-                    audioSource.Stop();
-                    BGM.UnPause();
+                    if (!jumpBoost)
+                    {
+                        audioSource.Stop();
+                        BGM.UnPause();
+                    }
                 }
             }
 
+            if (jumpBoost)
+            {
+                jumpBoostTimer += Time.deltaTime;
+                if (jumpBoostTimer >= boostJumpDuration)
+                {
+                    jumpBoost = false;
+                    jumpBoostTimer = 0.0f;
+                    jumpForce = baseJumpForce;
+                    if (!speedBoost)
+                    {
+                        audioSource.Stop();
+                        BGM.UnPause();
+                    }
+                }
+            }
 
             if (rb.velocity.y < 0)
             {
@@ -194,44 +212,74 @@ public class Player : MonoBehaviour
             // CALLING
             if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.UpArrow)) // to call the bois
             {
-                int selected = script_UI.getCurrentSelection();
-                Debug.Log("trying to call phonebook " + selected);
-                if (CheckNumber(selected)&& selected == 0)
+                switch (currentPhone)
                 {
-                    Debug.Log("Called selection " + selected);
-                    Instantiate(BoyzPrefab, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
-                    DialANumber(phoneBook[selected]);
-                    audioSource.PlayOneShot(shortDialClip, 0.3f);
-                }
-                else if(CheckNumber(selected) && selected == 1)
-                {
-                    Debug.Log("Called selection " + selected);
-                    DialANumber(phoneBook[selected]);
-                    boostingIt = true;
-                    this.gameObject.layer = 13;
-                    movementSpeed = boostSpeed;
-                    jumpForce = boostJumpForce;
-                    audioSource.PlayOneShot(shortDialClip, 0.3f);
-                    audioSource.PlayOneShot(boostClip, 0.3f);
-                    BGM.Pause();
+                    case PHONE.JUMP:
+                        audioSource.PlayOneShot(shortDialClip, 0.3f);
+                        currentPhone = PHONE.NONE;
+                        jumpForce = boostJumpForce;
+                        jumpBoost = true;
+                        audioSource.Stop();
+                        audioSource.PlayOneShot(boostClip, 0.3f);
 
+                        break;
+                    case PHONE.SPEED:
+                        audioSource.PlayOneShot(shortDialClip, 0.3f);
+                        currentPhone = PHONE.NONE;
+                        movementSpeed = boostSpeed;
+                        speedBoost = true;
+                        audioSource.Stop();
+                        audioSource.PlayOneShot(boostClip, 0.3f);
+                        break;
+                    case PHONE.SHIELD:
+                        audioSource.PlayOneShot(shortDialClip, 0.3f);
+                        currentPhone = PHONE.NONE;
+                        isShielded = true;
+                        break;
+                    case PHONE.SNIPER:
+                        audioSource.PlayOneShot(shortDialClip, 0.3f);
+                        currentPhone = PHONE.NONE;
+                        break;
+                    default: break;
                 }
-                else if (CheckNumber(selected) && selected == 2)
-                {
-                    Debug.Log("Called selection " + selected);
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-                    copScript.setChasing(false);
-                    disableMovement = true;
-                    audioSource.PlayOneShot(shortDialClip, 0.3f);
+                //int selected = script_UI.getCurrentSelection();
+                //Debug.Log("trying to call phonebook " + selected);
+                //if (CheckNumber(selected)&& selected == 0)
+                //{
+                //    Debug.Log("Called selection " + selected);
+                //    Instantiate(BoyzPrefab, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+                //    DialANumber(phoneBook[selected]);
+                //    audioSource.PlayOneShot(shortDialClip, 0.3f);
+                //}
+                //else if(CheckNumber(selected) && selected == 1)
+                //{
+                //    Debug.Log("Called selection " + selected);
+                //    DialANumber(phoneBook[selected]);
+                //    boostingIt = true;
+                //    this.gameObject.layer = 13;
+                //    movementSpeed = boostSpeed;
+                //    movementSpeed = boostSpeed;
+                //    audioSource.PlayOneShot(shortDialClip, 0.3f);
+                //    audioSource.PlayOneShot(boostClip, 0.3f);
+                //    BGM.Pause();
 
-                    DialANumber(phoneBook[selected]);
-                }
-                else
-                {
-                    audioSource.PlayOneShot(failCall, 0.3f);
+                //}
+                //else if (CheckNumber(selected) && selected == 2)
+                //{
+                //    Debug.Log("Called selection " + selected);
+                //    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                //    copScript.setChasing(false);
+                //    disableMovement = true;
+                //    audioSource.PlayOneShot(shortDialClip, 0.3f);
 
-                    Debug.Log("Failed to call");
-                }
+                //    DialANumber(phoneBook[selected]);
+                //}
+                //else
+                //{
+                //    audioSource.PlayOneShot(failCall, 0.3f);
+
+                //    Debug.Log("Failed to call");
+                //}
             }
         }
 
@@ -280,17 +328,45 @@ public class Player : MonoBehaviour
             disableMovement = true;
         }
 
-        if (other.tag == "Number")
-        {
+        //if (other.tag == "Number")
+        //{
            
-            Destroy(other.gameObject);
-            audioSource.PlayOneShot(numberPickupClip, 0.3f);
-            Instantiate(collectEffect, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
-            int numFound = other.gameObject.GetComponent<NumberScript>().thisNumber;
-            Debug.Log("Found a " + numFound);
-            //numsCollected[numFound]++;
-            collectedANumber(numFound);
+        //    Destroy(other.gameObject);
+        //    audioSource.PlayOneShot(numberPickupClip, 0.3f);
+        //    Instantiate(collectEffect, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+        //    int numFound = other.gameObject.GetComponent<NumberScript>().thisNumber;
+        //    Debug.Log("Found a " + numFound);
+        //    //numsCollected[numFound]++;
+        //    collectedANumber(numFound);
 
+        //}
+
+        if (other.tag == "Phone")
+        {
+            // If there is no phone currently in use
+            if (currentPhone == PHONE.NONE)
+            {
+                Destroy(other.gameObject);
+                audioSource.PlayOneShot(numberPickupClip, 0.3f);
+                Instantiate(collectEffect, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+                currentPhone = other.gameObject.GetComponent<PhoneScript>().phoneType;
+            }
+           
+           
+
+        }
+
+        if (other.tag == "Bullet")
+        {
+            // take off hat
+            if (isShielded)
+            {
+                isShielded = false;
+            }
+            else
+            {
+                caught = true;
+            }
         }
 
     }

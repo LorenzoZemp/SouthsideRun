@@ -8,6 +8,7 @@ TagManager:
   - Number
   - Bullet
   - Win
+  - Phone
   layers:
   - Default
   - TransparentFX
