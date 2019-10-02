@@ -25,21 +25,21 @@ public class BulletScript : MonoBehaviour
         //transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + bulletSpeed * Time.deltaTime);
 
         // if it's far enoguh then delete it
-        if (transform.position.z - initialPos > travelDistance)
+        if (Mathf.Abs(transform.position.z - initialPos) > travelDistance)
         {
             Debug.Log("Destroy Bullet");
             Destroy(this.gameObject);
         }
     }
 
-    private void OnTriggerEnter(Collider collision)
-    {
-        Debug.Log("Hit Something");
-        if (collision.gameObject.tag == "Cops")
-        {
-            Debug.Log("Hit a cop");
-            Instantiate(killEffect, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
-            Destroy(collision.gameObject);
-        }
-    }
+    //private void OnTriggerEnter(Collider collision)
+    //{
+    //    //Debug.Log("Hit Something");
+    //    //if (collision.gameObject.tag == "Cops")
+    //    //{
+    //    //    Debug.Log("Hit a cop");
+    //    //    Instantiate(killEffect, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+    //    //    Destroy(collision.gameObject);
+    //    //}
+    //}
 }
