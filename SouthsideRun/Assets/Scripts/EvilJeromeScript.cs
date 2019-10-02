@@ -32,6 +32,7 @@ public class EvilJeromeScript : MonoBehaviour
 
         player = GameObject.FindGameObjectWithTag("Player");
         distanceToPlayer = Vector3.Distance(player.transform.position, transform.position);
+        transform.LookAt(player.transform);
         if (distanceToPlayer <= triggerDistance)
         {
             if (muzzleFlash.isStopped)
@@ -46,7 +47,7 @@ public class EvilJeromeScript : MonoBehaviour
             {
                 shotTimer = 0.0f;
                 // fire a bullet
-                Instantiate(bulletsPrefab, new Vector3(transform.position.x, transform.position.y + 1.2f, transform.position.z + 0.4f), Quaternion.Euler(90, 0, 0));
+                Instantiate(bulletsPrefab, new Vector3(transform.position.x, transform.position.y + 1.2f, transform.position.z + 0.4f), Quaternion.Euler(90,0,0));
 
                 shotsFired++;
             }
