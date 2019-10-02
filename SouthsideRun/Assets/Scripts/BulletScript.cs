@@ -8,14 +8,25 @@ public class BulletScript : MonoBehaviour
     public float bulletSpeed = 3.0f;
     public float travelDistance = 60.0f;
     public Rigidbody rb;
+    public bool badBullet = false;
 
     private float initialPos;
 
     // Start is called before the first frame update
     void Start()
     {
-        initialPos = transform.position.z;
-        rb.velocity = new Vector3(0.0f, 0.0f, bulletSpeed);
+        //initialPos = transform.position.z;
+        //if(badBullet == false)
+        //{
+        //    rb.velocity = new Vector3(0.0f, 0.0f, bulletSpeed);
+        //}
+        //else
+        //{
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            rb.velocity = new Vector3(transform.position.x - player.transform.position.x, transform.position.y - player.transform.position.y - 1.0f, transform.position.z - player.transform.position.z);
+            rb.velocity = rb.velocity.normalized;
+            rb.velocity = rb.velocity * bulletSpeed;
+        //}
     }
 
     // Update is called once per frame
