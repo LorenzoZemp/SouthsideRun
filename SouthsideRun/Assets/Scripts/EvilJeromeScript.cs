@@ -76,7 +76,7 @@ public class EvilJeromeScript : MonoBehaviour
             //    }
             //}
         }
-      
+        muzzleFlash.Stop();
     }
 
     int CountBullets(Transform a)
