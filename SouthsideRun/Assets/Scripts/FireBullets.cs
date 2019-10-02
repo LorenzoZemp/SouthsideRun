@@ -33,7 +33,10 @@ public class FireBullets : MonoBehaviour
         {
             shotTimer = 0.0f;
             // fire a bullet
-            Instantiate(bulletsPrefab, new Vector3(transform.position.x, transform.position.y + 1.2f, transform.position.z + 0.4f), Quaternion.Euler(90,0,0));
+            //Instantiate(bulletsPrefab, new Vector3(transform.position.x, transform.position.y + 1.2f, transform.position.z + 0.4f), Quaternion.Euler(90,0,0));
+            GameObject bullet = Instantiate(bulletsPrefab, transform, true);
+            bullet.transform.rotation = Quaternion.Euler(90, 0, 0);
+
             //Instantiate(bulletsPrefab, new Vector3(transform.position.x, transform.position.y, transform.position.z), true);
 
             shotsFired++;
