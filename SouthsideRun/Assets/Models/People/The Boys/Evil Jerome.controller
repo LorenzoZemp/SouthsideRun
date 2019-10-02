@@ -20,7 +20,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 1827226128182048838, guid: 4d1c264924021d846a698873d589cb62,
+  m_Motion: {fileID: 1827226128182048838, guid: c8bb4f0ce43b57c41ad8935b9d2a97de,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -33,7 +33,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Jerome Animations
+  m_Name: Evil Jerome
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers:
