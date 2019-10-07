@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Cops
+  - Number
+  - Bullet
+  - Win
   layers:
   - Default
   - TransparentFX
@@ -13,6 +17,12 @@ TagManager:
   - UI
   - 
   - 
+  - Cop
+  - Boyz
+  - FrontCop
+  - Props
+  - Player
+  - Boosting
   - 
   - 
   - 
@@ -29,13 +39,7 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Post Processing
   - 
   m_SortingLayers:
   - name: Default

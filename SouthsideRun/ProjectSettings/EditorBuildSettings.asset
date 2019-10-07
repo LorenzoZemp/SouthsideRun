@@ -4,5 +4,23 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/TestLevel1.unity
+    guid: 578e376855a3f6b43b5e434e28d42a55
+  - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: 9de38b11d1b4ecb4a8a07da7cb56a247
+  - enabled: 0
+    path: Assets/Scenes/LorenzoScene.unity
+    guid: 9f1f4d75986eb794389ae48dfbaefb34
+  - enabled: 1
+    path: Assets/Scenes/EteruScene.unity
+    guid: a660ddabc760cb140be37398feda5ea4
+  - enabled: 1
+    path: Assets/Scenes/WinScreen.unity
+    guid: b73346c90f49cc84dabfea14d0724176
+  - enabled: 1
+    path: Assets/Scenes/Level1Test.unity
+    guid: de87deefa9da2d1428abde178e71dbf8
   m_configObjects: {}
