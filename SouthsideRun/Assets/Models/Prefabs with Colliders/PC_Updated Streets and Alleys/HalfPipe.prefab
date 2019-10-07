@@ -43,6 +43,9 @@ GameObject:
   - component: {fileID: 832830265364482500}
   - component: {fileID: 3266256070923632828}
   - component: {fileID: 3278294931656370207}
+  - component: {fileID: 8569037926172169125}
+  - component: {fileID: 4845634710427821529}
+  - component: {fileID: 2532825014938193437}
   m_Layer: 0
   m_Name: HalfPipe
   m_TagString: Untagged
@@ -118,8 +121,47 @@ MeshCollider:
   m_GameObject: {fileID: 7523058740870954616}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 2365766001113362914, guid: 983b503901619a04ba84fedffa67a6a8, type: 3}
+--- !u!65 &8569037926172169125
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7523058740870954616}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.4730297, y: 2.5773935, z: 2.2585793}
+  m_Center: {x: -6.779125, y: 0.94851756, z: -0.013372421}
+--- !u!65 &4845634710427821529
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7523058740870954616}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.6072223, y: 2.6356688, z: 2.2395377}
+  m_Center: {x: 3.4562294, y: 0.9776552, z: 0.06615615}
+--- !u!65 &2532825014938193437
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7523058740870954616}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 15.031278, y: 2.29215, z: 1.4958979}
+  m_Center: {x: -6.0124146e-17, y: 0.8058958, z: 0.019855857}

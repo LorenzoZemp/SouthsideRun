@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1784111543954182513}
   - component: {fileID: 4661555760266515423}
   - component: {fileID: 8128879557049201749}
-  - component: {fileID: 4919716836581589785}
   - component: {fileID: 6674518780725514580}
   m_Layer: 0
   m_Name: group2_BuildingPIECES1_BuildF_42
@@ -79,19 +78,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &4919716836581589785
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2752661084340344579}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 9.025151, y: 26.22628, z: 12.971818}
-  m_Center: {x: 0.0000019073486, y: 0, z: 0.00000047683716}
 --- !u!65 &6674518780725514580
 BoxCollider:
   m_ObjectHideFlags: 0
