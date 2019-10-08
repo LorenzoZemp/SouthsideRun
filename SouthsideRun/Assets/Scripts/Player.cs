@@ -251,6 +251,7 @@ public class Player : MonoBehaviour
                         jumpBoost = true;
                         audioSource.Stop();
                         audioSource.PlayOneShot(boostClip, 0.3f);
+                        BGM.Pause();
 
                         break;
                     case PHONE.SPEED:
@@ -260,6 +261,8 @@ public class Player : MonoBehaviour
                         speedBoost = true;
                         audioSource.Stop();
                         audioSource.PlayOneShot(boostClip, 0.3f);
+                        BGM.Pause();
+
                         break;
                     case PHONE.SHIELD:
                         audioSource.PlayOneShot(shortDialClip, 0.3f);
