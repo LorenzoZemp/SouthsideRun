@@ -38,7 +38,7 @@ public class EvilJeromeScript : MonoBehaviour
             if (muzzleFlash.isStopped)
             {
                 muzzleFlash.Play();
-                StartCoroutine(playGunSounds());
+                //StartCoroutine(playGunSounds());
 
             }
             shotTimer += Time.deltaTime;
