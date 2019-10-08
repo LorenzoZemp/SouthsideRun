@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
     public bool invincible = false;
     [SerializeField] float invincibilityTimer;
     public GameObject model;
+    public GameObject fedora;
 
     // sniper
     public bool activeSniper = false;
@@ -80,6 +81,7 @@ public class Player : MonoBehaviour
         PlayerAni = this.GetComponent<Animator>();
         caught = false;
         disableMovement = false;
+        isShielded = true;
 
         // Boost
         baseJumpForce = jumpForce;
@@ -268,6 +270,7 @@ public class Player : MonoBehaviour
                         audioSource.PlayOneShot(shortDialClip, 0.3f);
                         currentPhone = PHONE.NONE;
                         isShielded = true;
+                        fedora.SetActive(isShielded);
                         break;
                     case PHONE.SNIPER:
                         audioSource.PlayOneShot(shortDialClip, 0.3f);
@@ -402,6 +405,7 @@ public class Player : MonoBehaviour
             if (isShielded)
             {
                 isShielded = false;
+                fedora.SetActive(isShielded);
                 Debug.Log("Hats off");
                 invincibilityTimer = invincibilityTime;
                 invincible = true;
