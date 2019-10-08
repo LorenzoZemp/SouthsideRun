@@ -19,11 +19,15 @@ public class EvilJeromeScript : MonoBehaviour
 
     [SerializeField] private int shotsFired = 0;
 
+    Transform t;
+    public float fixedRotation = 0.0f;
+
     // Start is called before the first frame update
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
         muzzleFlash.Stop();
+        t = transform;
     }
 
     // Update is called once per frame
@@ -32,12 +36,13 @@ public class EvilJeromeScript : MonoBehaviour
 
         player = GameObject.FindGameObjectWithTag("Player");
         distanceToPlayer = Vector3.Distance(player.transform.position, transform.position);
+        transform.LookAt(player.transform);
         if (distanceToPlayer <= triggerDistance)
         {
             if (muzzleFlash.isStopped)
             {
                 muzzleFlash.Play();
-                StartCoroutine(playGunSounds());
+                //StartCoroutine(playGunSounds());
 
             }
             shotTimer += Time.deltaTime;
@@ -46,7 +51,7 @@ public class EvilJeromeScript : MonoBehaviour
             {
                 shotTimer = 0.0f;
                 // fire a bullet
-                Instantiate(bulletsPrefab, new Vector3(transform.position.x, transform.position.y + 1.2f, transform.position.z + 0.4f), Quaternion.Euler(90, 0, 0));
+                Instantiate(bulletsPrefab, new Vector3(transform.position.x, transform.position.y + 1.2f, transform.position.z + 0.4f), Quaternion.Euler(90,0,0));
 
                 shotsFired++;
             }
@@ -75,7 +80,8 @@ public class EvilJeromeScript : MonoBehaviour
             //    }
             //}
         }
-      
+        muzzleFlash.Stop();
+        transform.eulerAngles = new Vector3(fixedRotation, transform.eulerAngles.y, fixedRotation);
     }
 
     int CountBullets(Transform a)
