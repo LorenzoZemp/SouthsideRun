@@ -104,6 +104,7 @@ GameObject:
   - component: {fileID: 6818934398551618292}
   - component: {fileID: 5544218170455202379}
   - component: {fileID: 8559954342288241416}
+  - component: {fileID: 9156435579541105144}
   m_Layer: 0
   m_Name: Prop_Streetlamp_Model
   m_TagString: Untagged
@@ -195,5 +196,19 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.4816136, y: 0.5220997, z: 0.19376954}
-  m_Center: {x: 0.6482847, y: 2.6923647, z: 0}
+  m_Size: {x: 1.0318049, y: 0.27959135, z: 0.19376954}
+  m_Center: {x: 0.42338035, y: 2.813621, z: 0}
+--- !u!136 &9156435579541105144
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5088344897963836968}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.31137186
+  m_Height: 0.5396647
+  m_Direction: 1
+  m_Center: {x: 1.1437235, y: 2.6481423, z: 0}
