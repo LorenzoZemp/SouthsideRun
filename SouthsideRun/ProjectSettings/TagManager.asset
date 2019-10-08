@@ -8,6 +8,8 @@ TagManager:
   - Number
   - Bullet
   - Win
+  - Phone
+  - Enemy
   layers:
   - Default
   - TransparentFX
