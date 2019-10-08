@@ -2618,6 +2618,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0472226fe02dc184dbaf1322331547e2, type: 3}
+--- !u!65 &782066527 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 2948826192586296149, guid: bea80faa0514d454ca39150f933a50ce,
+    type: 3}
+  m_PrefabInstance: {fileID: 1102051610}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &798406952
 GameObject:
   m_ObjectHideFlags: 0
@@ -4493,10 +4499,25 @@ PrefabInstance:
       propertyPath: currentPhone
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 6642227163309214463, guid: bea80faa0514d454ca39150f933a50ce,
+        type: 3}
+      propertyPath: bodyBoxCollider
+      value: 
+      objectReference: {fileID: 782066527}
+    - target: {fileID: 6642227163309214463, guid: bea80faa0514d454ca39150f933a50ce,
+        type: 3}
+      propertyPath: model
+      value: 
+      objectReference: {fileID: 1274704365}
     - target: {fileID: 6921932933148460849, guid: bea80faa0514d454ca39150f933a50ce,
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2162810927915679008, guid: bea80faa0514d454ca39150f933a50ce,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bea80faa0514d454ca39150f933a50ce, type: 3}
@@ -5237,6 +5258,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 132beb96006ab0f4fbbd6aa1be39d1ed, type: 3}
+--- !u!1 &1274704365 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2162810927915679008, guid: bea80faa0514d454ca39150f933a50ce,
+    type: 3}
+  m_PrefabInstance: {fileID: 1102051610}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1275118662 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6642227163309214463, guid: bea80faa0514d454ca39150f933a50ce,
@@ -8820,17 +8847,17 @@ PrefabInstance:
     - target: {fileID: 738609267455258080, guid: 24da2b1e37d442e468bb681b71bd865a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.3433143
+      value: 1.44
       objectReference: {fileID: 0}
     - target: {fileID: 738609267455258080, guid: 24da2b1e37d442e468bb681b71bd865a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.2500005
+      value: 1.49
       objectReference: {fileID: 0}
     - target: {fileID: 738609267455258080, guid: 24da2b1e37d442e468bb681b71bd865a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 14.139577
+      value: 3.58
       objectReference: {fileID: 0}
     - target: {fileID: 738609267455258080, guid: 24da2b1e37d442e468bb681b71bd865a,
         type: 3}
@@ -9369,6 +9396,10 @@ MonoBehaviour:
   failCall: {fileID: 0}
   boostClip: {fileID: 0}
   BGM: {fileID: 0}
+  invincibilityTime: 2
+  invincible: 0
+  invincibilityTimer: 0
+  model: {fileID: 0}
   collectEffect: {fileID: 0}
   movementSpeed: 7.1
   fallMultiplier: 2.5
@@ -9488,6 +9519,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Jerome The BAD
+      objectReference: {fileID: 0}
+    - target: {fileID: 2288301202209345256, guid: cfa4096a0821e71438734c9a89fb7a05,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2288301202209345260, guid: cfa4096a0821e71438734c9a89fb7a05,
         type: 3}

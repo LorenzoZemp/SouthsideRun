@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class Player : MonoBehaviour
 {
@@ -15,7 +16,13 @@ public class Player : MonoBehaviour
     public AudioClip failCall;
     public AudioClip boostClip;
     public AudioSource BGM;
-    
+
+    // fedora
+    public float invincibilityTime = 2.0f;
+    public bool invincible = false;
+    [SerializeField] float invincibilityTimer;
+    public GameObject model;
+    private bool isVisible = true;
 
     //pickup effect
     public GameObject collectEffect;
@@ -90,6 +97,7 @@ public class Player : MonoBehaviour
 
         Debug.Log(numsCollectedLimited.Length);
         audioSource = GetComponent<AudioSource>();
+        StartCoroutine("Blink");
 
     }
 
@@ -114,6 +122,18 @@ public class Player : MonoBehaviour
             //{
             //    script_UI.moveSelectRight();
             //}
+
+            if (invincibilityTimer >= 0.0f)
+            {
+                invincibilityTimer -= Time.deltaTime;
+
+            }
+            else
+            {
+                invincible = false;
+                isVisible = true;
+                model.SetActive(true);
+            }
 
             if (Input.GetKey(KeyCode.W))
             {
@@ -376,18 +396,19 @@ public class Player : MonoBehaviour
 
     public void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Bullet")
+        if (other.tag == "Bullet" && !invincible)
         {
             // take off hat
             if (isShielded)
             {
                 isShielded = false;
                 Debug.Log("Hats off");
-
+                invincibilityTimer = invincibilityTime;
+                invincible = true;
             }
             else
             {
-                //caught = true;
+                caught = true;
                 Debug.Log("You dead");
             }
         }
@@ -499,5 +520,27 @@ public class Player : MonoBehaviour
         {
             Debug.Log("Number out of range");
         }
+    }
+
+    void CheckInvincibility()
+    {
+        if (invincible)
+        {
+            Debug.Log("INVSDF");
+            model.SetActive(!model.activeSelf);
+        }
+        else
+        {
+            model.SetActive(true);
+        }
+    }
+
+    IEnumerator Blink()
+    { 
+        CheckInvincibility();
+
+        yield return new WaitForSeconds(0.1f);
+        StartCoroutine("Blink");
+
     }
 }
