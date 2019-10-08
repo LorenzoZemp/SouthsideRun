@@ -22,7 +22,16 @@ public class Player : MonoBehaviour
     public bool invincible = false;
     [SerializeField] float invincibilityTimer;
     public GameObject model;
-    private bool isVisible = true;
+
+    // sniper
+    public bool activeSniper = false;
+    public float sniperTime = 5.0f;
+    public float sniperTimer;
+    public float timeBetweenShots = 1.0f;
+    public float shotTimer;
+    public GameObject reticlePrefab;
+    public float sniperRange = 35.0f;
+
 
     //pickup effect
     public GameObject collectEffect;
@@ -123,6 +132,8 @@ public class Player : MonoBehaviour
             //    script_UI.moveSelectRight();
             //}
 
+            CheckCanShoot();
+
             if (invincibilityTimer >= 0.0f)
             {
                 invincibilityTimer -= Time.deltaTime;
@@ -131,7 +142,6 @@ public class Player : MonoBehaviour
             else
             {
                 invincible = false;
-                isVisible = true;
                 model.SetActive(true);
             }
 
@@ -259,8 +269,11 @@ public class Player : MonoBehaviour
                     case PHONE.SNIPER:
                         audioSource.PlayOneShot(shortDialClip, 0.3f);
                         currentPhone = PHONE.NONE;
+                        activeSniper = true;
+                        sniperTimer = sniperTime;
+                        shotTimer = 0.0f;
                         break;
-                    default: break;
+                    default: audioSource.PlayOneShot(failCall, 0.3f); break;
                 }
                 //int selected = script_UI.getCurrentSelection();
                 //Debug.Log("trying to call phonebook " + selected);
@@ -376,22 +389,6 @@ public class Player : MonoBehaviour
 
         }
 
-        //if (other.tag == "Bullet")
-        //{
-        //    // take off hat
-        //    if (isShielded)
-        //    {
-        //        isShielded = false;
-        //        Debug.Log("Hats off");
-
-        //    }
-        //    else
-        //    {
-        //        //caught = true;
-        //        Debug.Log("You dead");
-        //    }
-        //}
-
     }
 
     public void OnTriggerExit(Collider other)
@@ -408,8 +405,8 @@ public class Player : MonoBehaviour
             }
             else
             {
-                caught = true;
-                Debug.Log("You dead");
+                //caught = true;
+                //Debug.Log("You dead");
             }
         }
 
@@ -526,7 +523,6 @@ public class Player : MonoBehaviour
     {
         if (invincible)
         {
-            Debug.Log("INVSDF");
             model.SetActive(!model.activeSelf);
         }
         else
@@ -543,4 +539,68 @@ public class Player : MonoBehaviour
         StartCoroutine("Blink");
 
     }
+
+    void CheckCanShoot()
+    {
+        
+        if (activeSniper)
+        {
+            sniperTimer -= Time.deltaTime;
+            if (sniperTimer <= 0.0f)
+            {
+                activeSniper = false;
+            }
+            else
+            {
+                shotTimer -= Time.deltaTime;
+                if (shotTimer <= 0.0f) // SHOOT
+                {
+                    float distanceToClosest = Mathf.Infinity;
+                    GameObject closestEnemy = GetClosestEnemy();
+                    // if there are enemies
+                    if (closestEnemy != null)
+                    {
+                        // see if the enemy is in range
+                        distanceToClosest = Vector3.Distance(transform.position, closestEnemy.transform.position);
+                        Debug.Log("Closest enemy is at: " + distanceToClosest);
+
+                        if (distanceToClosest <= sniperRange)
+                        {
+                            Debug.Log("SHOOT");
+
+                            // reset the shot timer
+                            shotTimer = timeBetweenShots;
+                            closestEnemy.GetComponent<BaddieScript>().Shoot();
+                        }
+                    }
+                }
+              
+            }
+           
+        }
+    }
+
+    GameObject GetClosestEnemy ()
+    {
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        GameObject bestTarget = null;
+        float closesDistanceSqr = Mathf.Infinity;
+        Vector3 currentPosition = transform.position;
+        foreach(GameObject potentialTarget in enemies)
+        {
+            Vector3 directionToTarget = potentialTarget.transform.position - currentPosition;
+            float dSqrToTarget = directionToTarget.sqrMagnitude;
+            if (dSqrToTarget < closesDistanceSqr)
+            {
+                closesDistanceSqr = dSqrToTarget;
+                bestTarget = potentialTarget;
+            }
+        }
+        return bestTarget;
+    }
+
+    //IEnumerator Snipe()
+    //{
+
+    //}
 }
