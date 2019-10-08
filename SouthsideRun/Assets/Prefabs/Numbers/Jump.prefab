@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 738609267213150077}
   - component: {fileID: -6308386878961718458}
   m_Layer: 0
-  m_Name: Speed 1
+  m_Name: Jump
   m_TagString: Phone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 91ac2a1cb17ca9d49969e3dfa2a7d252, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
