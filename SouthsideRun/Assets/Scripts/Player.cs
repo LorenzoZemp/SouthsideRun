@@ -117,8 +117,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 movement = Vector3.zero;
-        Vector3 jumpVel = Vector3.zero;
+        
 
         if (Input.GetKey("escape"))
         { 
@@ -149,41 +148,42 @@ public class Player : MonoBehaviour
                 invincible = false;
                 model.SetActive(true);
             }
+            //Vector3 movement = Vector3.zero;
+            
+            //if (Input.GetKey(KeyCode.W))
+            //{
+            //    Run();
+            //    //movement = movement + transform.forward; // Local Coord
+            //    movement = movement + Vector3.forward;
+            //}
+            //if (Input.GetKey(KeyCode.S))
+            //{
+            //    Run();
+            //    //movement = movement - transform.forward; // Local Coord
+            //    movement = movement - Vector3.forward;
+            //}
+            //if (Input.GetKey(KeyCode.A))
+            //{
+            //    Run();
+            //    //movement = movement + transform.TransformDirection(Vector3.left); // Local coord
+            //    movement = movement + Vector3.left;
+            //}
+            //if (Input.GetKey(KeyCode.D))
+            //{
+            //    Run();
+            //    //movement = movement + transform.TransformDirection(Vector3.right); // Local coord
+            //    movement = movement + Vector3.right;
+            //}
+            //movement = Vector3.Normalize(movement);
+            //movement = movement * movementSpeed;
+            ////rb.MovePosition(transform.position + movement * Time.fixedDeltaTime);
+            //rb.velocity = movement * Time.deltaTime;
 
-            if (Input.GetKey(KeyCode.W))
-            {
-                Run();
-                //movement = movement + transform.forward; // Local Coord
-                movement = movement + Vector3.forward;
-            }
-            if (Input.GetKey(KeyCode.S))
-            {
-                Run();
-                //movement = movement - transform.forward; // Local Coord
-                movement = movement - Vector3.forward;
-            }
-            if (Input.GetKey(KeyCode.A))
-            {
-                Run();
-                //movement = movement + transform.TransformDirection(Vector3.left); // Local coord
-                movement = movement + Vector3.left;
-            }
-            if (Input.GetKey(KeyCode.D))
-            {
-                Run();
-                //movement = movement + transform.TransformDirection(Vector3.right); // Local coord
-                movement = movement + Vector3.right;
-            }
-            movement = Vector3.Normalize(movement);
-            movement = movement * movementSpeed;
-            //rb.MovePosition(transform.position + movement * Time.fixedDeltaTime);
-            rb.velocity = movement;
-
-            // Rotate model based on direction of movement
-            if (movement != Vector3.zero)
-            {
-                transform.rotation = Quaternion.LookRotation(movement);
-            }
+            //// Rotate model based on direction of movement
+            //if (movement != Vector3.zero)
+            //{
+            //    transform.rotation = Quaternion.LookRotation(movement);
+            //}
 
             Debug.DrawRay(new Vector3(transform.position.x + 0.2f, transform.position.y + 1.0f, transform.position.z), Vector3.down * 1.05f, Color.green);
             Debug.DrawRay(new Vector3(transform.position.x - 0.2f, transform.position.y + 1.0f, transform.position.z), Vector3.down * 1.05f, Color.green);
@@ -197,7 +197,8 @@ public class Player : MonoBehaviour
                 if (leftFootHit || rightFootHit)
                 {
                     Jump();
-                    rb.velocity = (new Vector3(rb.velocity.x, jumpForce, rb.velocity.z));
+                    //rb.velocity = (new Vector3(rb.velocity.x, jumpForce, rb.velocity.z));
+                    rb.AddForce(new Vector3 (0, jumpForce, 0));
                 }
             }
 
@@ -352,7 +353,46 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+        {
+            Vector3 movement = Vector3.zero;
+            if (Input.GetKey(KeyCode.W))
+            {
+                Run();
+                //movement = movement + transform.forward; // Local Coord
+                movement = movement + Vector3.forward;
+            }
+            if (Input.GetKey(KeyCode.S))
+            {
+                Run();
+                //movement = movement - transform.forward; // Local Coord
+                movement = movement - Vector3.forward;
+            }
+            if (Input.GetKey(KeyCode.A))
+            {
+                Run();
+                //movement = movement + transform.TransformDirection(Vector3.left); // Local coord
+                movement = movement + Vector3.left;
+            }
+            if (Input.GetKey(KeyCode.D))
+            {
+                Run();
+                //movement = movement + transform.TransformDirection(Vector3.right); // Local coord
+                movement = movement + Vector3.right;
+            }
+            movement = Vector3.Normalize(movement);
+            movement = movement * movementSpeed;
+            //rb.MovePosition(transform.position + movement * Time.fixedDeltaTime);
+            rb.velocity = movement * Time.deltaTime + new Vector3(0, rb.velocity.y, 0);
+
+            // Rotate model based on direction of movement
+            if (movement != Vector3.zero)
+            {
+                transform.rotation = Quaternion.LookRotation(movement);
+            }
+        }
+
+
     }
 
     public void OnTriggerEnter(Collider other)
