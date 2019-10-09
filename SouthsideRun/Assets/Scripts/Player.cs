@@ -34,8 +34,9 @@ public class Player : MonoBehaviour
     public float sniperRange = 35.0f;
 
 
-    //pickup effect
+    //pickup
     public GameObject collectEffect;
+    public GameObject modelViewer;
 
     Rigidbody rb;
     public float movementSpeed = 5.0f;
@@ -281,6 +282,8 @@ public class Player : MonoBehaviour
                         break;
                     default: audioSource.PlayOneShot(failCall, 0.3f); break;
                 }
+
+                modelViewer.GetComponent<ItemScript>().SwitchPhone(currentPhone);
                 //int selected = script_UI.getCurrentSelection();
                 //Debug.Log("trying to call phonebook " + selected);
                 //if (CheckNumber(selected)&& selected == 0)
@@ -389,9 +392,11 @@ public class Player : MonoBehaviour
                 audioSource.PlayOneShot(numberPickupClip, 0.3f);
                 Instantiate(collectEffect, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
                 currentPhone = other.gameObject.GetComponent<PhoneScript>().phoneType;
+                modelViewer.GetComponent<ItemScript>().SwitchPhone(currentPhone);
+
             }
-           
-           
+
+
 
         }
 
