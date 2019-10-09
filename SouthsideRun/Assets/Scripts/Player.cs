@@ -37,6 +37,7 @@ public class Player : MonoBehaviour
     //pickup
     public GameObject collectEffect;
     public GameObject modelViewer;
+    int stuffCollected = 0;
 
     Rigidbody rb;
     public float movementSpeed = 5.0f;
@@ -117,6 +118,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         Vector3 movement = Vector3.zero;
+        Vector3 jumpVel = Vector3.zero;
 
         if (Input.GetKey("escape"))
         { 
@@ -174,7 +176,8 @@ public class Player : MonoBehaviour
             }
             movement = Vector3.Normalize(movement);
             movement = movement * movementSpeed;
-            rb.MovePosition(transform.position + movement * Time.fixedDeltaTime);
+            //rb.MovePosition(transform.position + movement * Time.fixedDeltaTime);
+            rb.velocity = movement;
 
             // Rotate model based on direction of movement
             if (movement != Vector3.zero)
@@ -370,18 +373,18 @@ public class Player : MonoBehaviour
             disableMovement = true;
         }
 
-        //if (other.tag == "Number")
-        //{
-           
-        //    Destroy(other.gameObject);
-        //    audioSource.PlayOneShot(numberPickupClip, 0.3f);
-        //    Instantiate(collectEffect, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
-        //    int numFound = other.gameObject.GetComponent<NumberScript>().thisNumber;
-        //    Debug.Log("Found a " + numFound);
-        //    //numsCollected[numFound]++;
-        //    collectedANumber(numFound);
+        if (other.tag == "Number")
+        {
 
-        //}
+            Destroy(other.gameObject);
+            audioSource.PlayOneShot(numberPickupClip, 0.3f);
+            Instantiate(collectEffect, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+            //int numFound = other.gameObject.GetComponent<NumberScript>().thisNumber;
+            //Debug.Log("Found a " + numFound);
+            //numsCollected[numFound]++;
+            //collectedANumber(numFound);
+
+        }
 
         if (other.tag == "Phone")
         {
@@ -411,7 +414,7 @@ public class Player : MonoBehaviour
             {
                 isShielded = false;
                 fedora.SetActive(isShielded);
-                Debug.Log("Hats off");
+                //Debug.Log("Hats off");
                 invincibilityTimer = invincibilityTime;
                 invincible = true;
             }
