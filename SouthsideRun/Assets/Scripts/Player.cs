@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
     public bool invincible = false;
     [SerializeField] float invincibilityTimer;
     public GameObject model;
+    public GameObject fedora;
 
     // sniper
     public bool activeSniper = false;
@@ -33,8 +34,9 @@ public class Player : MonoBehaviour
     public float sniperRange = 35.0f;
 
 
-    //pickup effect
+    //pickup
     public GameObject collectEffect;
+    public GameObject modelViewer;
 
     Rigidbody rb;
     public float movementSpeed = 5.0f;
@@ -80,6 +82,7 @@ public class Player : MonoBehaviour
         PlayerAni = this.GetComponent<Animator>();
         caught = false;
         disableMovement = false;
+        isShielded = true;
 
         // Boost
         baseJumpForce = jumpForce;
@@ -251,6 +254,7 @@ public class Player : MonoBehaviour
                         jumpBoost = true;
                         audioSource.Stop();
                         audioSource.PlayOneShot(boostClip, 0.3f);
+                        BGM.Pause();
 
                         break;
                     case PHONE.SPEED:
@@ -260,11 +264,14 @@ public class Player : MonoBehaviour
                         speedBoost = true;
                         audioSource.Stop();
                         audioSource.PlayOneShot(boostClip, 0.3f);
+                        BGM.Pause();
+
                         break;
                     case PHONE.SHIELD:
                         audioSource.PlayOneShot(shortDialClip, 0.3f);
                         currentPhone = PHONE.NONE;
                         isShielded = true;
+                        fedora.SetActive(isShielded);
                         break;
                     case PHONE.SNIPER:
                         audioSource.PlayOneShot(shortDialClip, 0.3f);
@@ -275,6 +282,8 @@ public class Player : MonoBehaviour
                         break;
                     default: audioSource.PlayOneShot(failCall, 0.3f); break;
                 }
+
+                modelViewer.GetComponent<ItemScript>().SwitchPhone(currentPhone);
                 //int selected = script_UI.getCurrentSelection();
                 //Debug.Log("trying to call phonebook " + selected);
                 //if (CheckNumber(selected)&& selected == 0)
@@ -383,9 +392,11 @@ public class Player : MonoBehaviour
                 audioSource.PlayOneShot(numberPickupClip, 0.3f);
                 Instantiate(collectEffect, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
                 currentPhone = other.gameObject.GetComponent<PhoneScript>().phoneType;
+                modelViewer.GetComponent<ItemScript>().SwitchPhone(currentPhone);
+
             }
-           
-           
+
+
 
         }
 
@@ -399,6 +410,7 @@ public class Player : MonoBehaviour
             if (isShielded)
             {
                 isShielded = false;
+                fedora.SetActive(isShielded);
                 Debug.Log("Hats off");
                 invincibilityTimer = invincibilityTime;
                 invincible = true;
