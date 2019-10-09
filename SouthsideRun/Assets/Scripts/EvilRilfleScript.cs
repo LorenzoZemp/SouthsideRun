@@ -28,7 +28,7 @@ public class EvilRilfleScript : MonoBehaviour
             timeLeft -= Time.deltaTime;
             Debug.Log(timeLeft);
         }
-        if (timeLeft <= 0.0)
+        if (timeLeft <= 0.0f && shot == false)
         {
             fire();
             Debug.Log("shot from evs");
@@ -39,14 +39,15 @@ public class EvilRilfleScript : MonoBehaviour
     {
         //Instantiate(bulletPrefab, new Vector3(transform.position.x, transform.position.y + 1.2f, transform.position.z + 0.4f), Quaternion.Euler(90, 0, 0));
         shot = true;
+        Debug.Log(shot);
         rifleBarrel.GetComponent<LaserScript>().shot = true;
-        timeLeft = timeToShoot;
         rifleBarrel.GetComponent<LaserScript>().toggleLaser();
     }
 
-    void resetRifle()
+    public void resetRifle()
     {
         shot = false;
         rifleBarrel.GetComponent<LaserScript>().toggleLaser();
+        timeLeft = timeToShoot;
     }
 }

@@ -6,6 +6,7 @@ public class LaserScript : MonoBehaviour
 {
     private LineRenderer lineRenderer;
     private GameObject player;
+    private Vector3 laserPosition;
 
     public bool shot = false;
     public GameObject god;
@@ -19,7 +20,19 @@ public class LaserScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.LookAt(new Vector3(player.transform.position.x, player.transform.position.y + (float)1.3, player.transform.position.z));
+        if (god.GetComponent<EvilRilfleScript>().timeLeft >= 1.0f)
+        {
+            laserPosition = new Vector3(player.transform.position.x, player.transform.position.y + (float)1.3, player.transform.position.z);
+            transform.LookAt(laserPosition);
+            lineRenderer.startWidth = lineRenderer.startWidth - (Time.deltaTime * 0.2f);
+            lineRenderer.endWidth = lineRenderer.endWidth - (Time.deltaTime * 0.2f);
+        }
+        else
+        {
+            transform.LookAt(laserPosition);
+        }
+
+        //transform.LookAt(new Vector3(player.transform.position.x, player.transform.position.y + (float)1.3, player.transform.position.z));
         RaycastHit hit;
 
         if (Physics.Raycast(transform.position, transform.forward, out hit))
@@ -30,10 +43,19 @@ public class LaserScript : MonoBehaviour
                 //Debug.Log(hit.collider.name);
                 if (shot == true && god.GetComponent<EvilRilfleScript>().timeLeft <= 0.0f)
                 {
+                    Debug.Log("its in here: LaserScript.46");
                     if (hit.collider.tag == "Player")
                     {
-                        //hit.collider.gameObject.GetComponent<Player>().caught = true;
-                        //shot = false;
+                        if(hit.collider.gameObject.GetComponent<Player>().isShielded == true)
+                        {
+                            hit.collider.gameObject.GetComponent<Player>().isShielded = false;
+                        }
+                        else if (hit.collider.gameObject.GetComponent<Player>().isShielded == false)
+                        {
+                            hit.collider.gameObject.GetComponent<Player>().caught = true;
+                        }
+                        Debug.Log("Player sniped");
+                        shot = false;
                     }
                 }
             }
