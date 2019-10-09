@@ -38,7 +38,7 @@ public class BulletScript : MonoBehaviour
         // if it's far enoguh then delete it
         if (Mathf.Abs(transform.position.z - initialPos) > travelDistance)
         {
-            Debug.Log("Destroy Bullet");
+            //Debug.Log("Destroy Bullet");
             Destroy(this.gameObject);
         }
     }

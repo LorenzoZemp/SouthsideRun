@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1866807855307888492}
   - component: {fileID: 5392131130558442389}
   - component: {fileID: 8438397509041069852}
+  - component: {fileID: 8197891897835805047}
   m_Layer: 0
   m_Name: Prop_Bin_Model
   m_TagString: Untagged
@@ -89,5 +90,21 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.025809847, y: 0.026147418, z: 0.025809849}
-  m_Center: {x: 4.656613e-10, y: 0.013073709, z: -9.313226e-10}
+  m_Size: {x: 0.01955638, y: 0.026147418, z: 0.019317068}
+  m_Center: {x: -0.00008771532, y: 0.013073709, z: -0.00016906676}
+--- !u!54 &8197891897835805047
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5974135670746177353}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
