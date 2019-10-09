@@ -6,6 +6,9 @@ public class LaserScript : MonoBehaviour
 {
     private LineRenderer lineRenderer;
     private GameObject player;
+
+    public bool shot = false;
+    public GameObject god;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,12 +26,26 @@ public class LaserScript : MonoBehaviour
         {
             if (hit.collider)
             {
-                lineRenderer.SetPosition(1, new Vector3(0, 0, hit.distance));
+                lineRenderer.SetPosition(1, new Vector3(0, 0, hit.distance+0.5f));
+                //Debug.Log(hit.collider.name);
+                if (shot == true && god.GetComponent<EvilRilfleScript>().timeLeft <= 0.0f)
+                {
+                    if (hit.collider.tag == "Player")
+                    {
+                        //hit.collider.gameObject.GetComponent<Player>().caught = true;
+                        //shot = false;
+                    }
+                }
             }
             else
             {
                 lineRenderer.SetPosition(1, new Vector3(0, 0, 5000));
             }
         }
+    }
+
+    public void toggleLaser()
+    {
+        lineRenderer.enabled = !lineRenderer.enabled;
     }
 }

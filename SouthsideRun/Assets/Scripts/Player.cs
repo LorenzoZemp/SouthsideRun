@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
 {
     //Animation stuff
     Animator PlayerAni;
-    bool caught;
+    public bool caught;
     bool disableMovement;
 
     //audio stuff
