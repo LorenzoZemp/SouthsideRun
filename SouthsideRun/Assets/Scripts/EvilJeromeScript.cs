@@ -19,11 +19,15 @@ public class EvilJeromeScript : MonoBehaviour
 
     [SerializeField] private int shotsFired = 0;
 
+    Transform t;
+    public float fixedRotation = 0.0f;
+
     // Start is called before the first frame update
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
         muzzleFlash.Stop();
+        t = transform;
     }
 
     // Update is called once per frame
@@ -38,7 +42,7 @@ public class EvilJeromeScript : MonoBehaviour
             if (muzzleFlash.isStopped)
             {
                 muzzleFlash.Play();
-                StartCoroutine(playGunSounds());
+                //StartCoroutine(playGunSounds());
 
             }
             shotTimer += Time.deltaTime;
@@ -77,6 +81,7 @@ public class EvilJeromeScript : MonoBehaviour
             //}
         }
         muzzleFlash.Stop();
+        transform.eulerAngles = new Vector3(fixedRotation, transform.eulerAngles.y, fixedRotation);
     }
 
     int CountBullets(Transform a)
