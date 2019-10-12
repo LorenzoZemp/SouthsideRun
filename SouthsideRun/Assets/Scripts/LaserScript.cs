@@ -7,6 +7,7 @@ public class LaserScript : MonoBehaviour
     private LineRenderer lineRenderer;
     private GameObject player;
     private Vector3 laserPosition;
+    private float originalWidth;
 
     public bool shot = false;
     public GameObject god;
@@ -15,6 +16,7 @@ public class LaserScript : MonoBehaviour
     {
         lineRenderer = gameObject.GetComponent<LineRenderer>();
         player = GameObject.FindGameObjectWithTag("Player");
+        originalWidth = lineRenderer.startWidth;
     }
 
     // Update is called once per frame
@@ -40,7 +42,7 @@ public class LaserScript : MonoBehaviour
             if (hit.collider)
             {
                 lineRenderer.SetPosition(1, new Vector3(0, 0, hit.distance+0.5f));
-                //Debug.Log(hit.collider.name);
+                Debug.Log(hit.collider.name);
                 if (shot == true && god.GetComponent<EvilRilfleScript>().timeLeft <= 0.0f)
                 {
                     Debug.Log("its in here: LaserScript.46");
@@ -55,8 +57,8 @@ public class LaserScript : MonoBehaviour
                             hit.collider.gameObject.GetComponent<Player>().caught = true;
                         }
                         Debug.Log("Player sniped");
-                        shot = false;
                     }
+                        shot = false;
                 }
             }
             else
@@ -68,6 +70,16 @@ public class LaserScript : MonoBehaviour
 
     public void toggleLaser()
     {
-        lineRenderer.enabled = !lineRenderer.enabled;
+        //lineRenderer.enabled = !lineRenderer.enabled;
+        if (lineRenderer.enabled)
+        {
+            lineRenderer.enabled = false;
+        }
+        else
+        {
+            lineRenderer.enabled = true;
+        }
+        lineRenderer.startWidth = originalWidth;
+        lineRenderer.endWidth = originalWidth;
     }
 }

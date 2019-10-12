@@ -48,6 +48,7 @@ public class EvilRilfleScript : MonoBehaviour
     {
         shot = false;
         rifleBarrel.GetComponent<LaserScript>().toggleLaser();
+        Debug.Log("pls toggle");
         timeLeft = timeToShoot;
     }
 }
