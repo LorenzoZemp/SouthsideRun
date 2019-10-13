@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6943470265983127137}
   - component: {fileID: 1673179417157368673}
   - component: {fileID: 6623284395608946186}
+  - component: {fileID: 7145007401685813810}
   m_Layer: 0
   m_Name: SmallBuildingNS
   m_TagString: Untagged
@@ -77,6 +78,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &7145007401685813810
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2532527570593941045}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.8999996, y: 12.421949, z: 6.856408}
+  m_Center: {x: 0, y: 6.2109747, z: -0.0076862574}
 --- !u!1 &3545931065905791393
 GameObject:
   m_ObjectHideFlags: 0

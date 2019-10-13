@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6845250503754375402}
   - component: {fileID: 2568232318755461852}
   - component: {fileID: 8113437883225024037}
+  - component: {fileID: 2834673434535083913}
   m_Layer: 0
   m_Name: Prop_SpeakerStand
   m_TagString: Untagged
@@ -77,3 +78,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &2834673434535083913
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7540273482156806905}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.70197433, y: 3.2012012, z: 0.8370701}
+  m_Center: {x: -0.005670458, y: 1.5212682, z: -0.08818996}
