@@ -37,7 +37,7 @@ public class Player : MonoBehaviour
     //pickup
     public GameObject collectEffect;
     public GameObject modelViewer;
-    int stuffCollected = 0;
+    public int stuffCollected = 0;
 
     Rigidbody rb;
     public float movementSpeed = 5.0f;
