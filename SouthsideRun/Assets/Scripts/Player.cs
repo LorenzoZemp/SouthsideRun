@@ -126,16 +126,6 @@ public class Player : MonoBehaviour
 
         if (!caught && !disableMovement)
         {
-            //// PAGER CONTROLS
-            //if (Input.GetKeyDown(KeyCode.LeftArrow))
-            //{
-            //    script_UI.moveSelectLeft();
-            //}
-            //if (Input.GetKeyDown(KeyCode.RightArrow))
-            //{
-            //    script_UI.moveSelectRight();
-            //}
-
             CheckCanShoot();
 
             if (invincibilityTimer >= 0.0f)
@@ -353,9 +343,10 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
+        Vector3 movement = Vector3.zero;
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
         {
-            Vector3 movement = Vector3.zero;
+
             if (Input.GetKey(KeyCode.W))
             {
                 Run();
@@ -382,15 +373,27 @@ public class Player : MonoBehaviour
             }
             movement = Vector3.Normalize(movement);
             movement = movement * movementSpeed;
-            //rb.MovePosition(transform.position + movement * Time.fixedDeltaTime);
-            rb.velocity = movement * Time.deltaTime + new Vector3(0, rb.velocity.y, 0);
-
-            // Rotate model based on direction of movement
-            if (movement != Vector3.zero)
-            {
-                transform.rotation = Quaternion.LookRotation(movement);
-            }
+         
         }
+
+        // Rotate model based on direction of movement
+        if (movement != Vector3.zero)
+        {
+            transform.rotation = Quaternion.LookRotation(movement);
+        }
+
+        //RaycastHit hit;
+
+        //if (!rb.SweepTest(movement,out hit, movement.magnitude))
+        //{
+        //    //rb.MovePosition(transform.position + movement * Time.fixedDeltaTime);
+        //    rb.velocity = movement + new Vector3(0, rb.velocity.y, 0);
+        //}
+        //else rb.velocity = new Vector3(0, rb.velocity.y, 0);
+
+        rb.velocity = movement + new Vector3(0, rb.velocity.y, 0);
+
+
 
 
     }
