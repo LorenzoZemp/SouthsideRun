@@ -1311,16 +1311,17 @@ MonoBehaviour:
   sniperRange: 35
   collectEffect: {fileID: 1993132263542158, guid: 14354129da5aad54d8a28acdf5d2dee5,
     type: 3}
+  modelViewer: {fileID: 0}
   movementSpeed: 7.1
   fallMultiplier: 2.5
   lowJumpMultiplier: 2
-  jumpForce: 7.5
+  jumpForce: 420
   copScript: {fileID: 0}
   numsCollected: 
   BoyzPrefab: {fileID: 0}
   numsCollectedLimited: []
   script_UI: {fileID: 0}
-  boostJumpForce: 10
+  boostJumpForce: 600
   boostJumpDuration: 5
   boostSpeed: 12
   boostSpeedDuration: 5
@@ -1349,7 +1350,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5535083473613716666}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 8823e29cc87acc54b81be3bb8dd05a55, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -1362,7 +1363,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5535083473613716666}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 8823e29cc87acc54b81be3bb8dd05a55, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
