@@ -6,6 +6,7 @@ public class EvilRilfleScript : MonoBehaviour
 {
     public GameObject rifleBarrel;
     public float timeToShoot = 5.0f;
+    public bool sniperEnabled = false;
 
     private bool shot = false;
     public float timeLeft;
@@ -21,18 +22,20 @@ public class EvilRilfleScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        gameObject.transform.position = new Vector3(transform.position.x, transform.position.y, player.transform.position.z - 8.0f);
+        
+            gameObject.transform.position = new Vector3(transform.position.x, transform.position.y, player.transform.position.z - 8.0f);
 
-        if (shot == false)
-        {
-            timeLeft -= Time.deltaTime;
-            Debug.Log(timeLeft);
-        }
-        if (timeLeft <= 0.0f && shot == false)
-        {
-            fire();
-            Debug.Log("shot from evs");
-        }
+            if (shot == false)
+            {
+                timeLeft -= Time.deltaTime;
+                Debug.Log(timeLeft);
+            }
+            if (timeLeft <= 0.0f && shot == false)
+            {
+                fire();
+                Debug.Log("shot from evs");
+            }
+       
     }
 
     private void fire()
@@ -42,13 +45,14 @@ public class EvilRilfleScript : MonoBehaviour
         Debug.Log(shot);
         rifleBarrel.GetComponent<LaserScript>().shot = true;
         rifleBarrel.GetComponent<LaserScript>().toggleLaser();
+        Debug.Log("FIRED");
+        //sniperEnabled = false;
     }
 
     public void resetRifle()
     {
         shot = false;
-        rifleBarrel.GetComponent<LaserScript>().toggleLaser();
-        Debug.Log("pls toggle");
+        //Debug.Log("pls toggle");
         timeLeft = timeToShoot;
     }
 }

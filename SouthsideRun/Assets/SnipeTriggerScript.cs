@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class SnipeTriggerScript : MonoBehaviour
 {
-    public GameObject rifle;
+    public GameObject sniper;
+    public GameObject laser;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +24,19 @@ public class SnipeTriggerScript : MonoBehaviour
         if (other.tag == "Player")
         {
             Debug.Log("reset sniper");
-            rifle.GetComponent<EvilRilfleScript>().resetRifle();
+            //sniper.GetComponent<EvilRilfleScript>().sniperEnabled = true;
+            sniper.GetComponent<EvilRilfleScript>().resetRifle();
+            laser.GetComponent<LaserScript>().lineRenderer.enabled = true;
+        }
+    }
+
+    //delete the trigger once the player has gone through
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            Debug.Log("i kms");
+            Destroy(gameObject);
         }
     }
 }
