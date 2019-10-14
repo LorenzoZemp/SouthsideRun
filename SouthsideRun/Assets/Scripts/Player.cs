@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
 {
     //Animation stuff
     Animator PlayerAni;
-    bool caught;
+    public bool caught;
     bool disableMovement;
 
     //audio stuff
@@ -37,6 +37,7 @@ public class Player : MonoBehaviour
     //pickup
     public GameObject collectEffect;
     public GameObject modelViewer;
+    int stuffCollected = 0;
 
     Rigidbody rb;
     public float movementSpeed = 5.0f;
@@ -116,7 +117,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 movement = Vector3.zero;
+        
 
         if (Input.GetKey("escape"))
         { 
@@ -125,16 +126,6 @@ public class Player : MonoBehaviour
 
         if (!caught && !disableMovement)
         {
-            //// PAGER CONTROLS
-            //if (Input.GetKeyDown(KeyCode.LeftArrow))
-            //{
-            //    script_UI.moveSelectLeft();
-            //}
-            //if (Input.GetKeyDown(KeyCode.RightArrow))
-            //{
-            //    script_UI.moveSelectRight();
-            //}
-
             CheckCanShoot();
 
             if (invincibilityTimer >= 0.0f)
@@ -147,40 +138,42 @@ public class Player : MonoBehaviour
                 invincible = false;
                 model.SetActive(true);
             }
+            //Vector3 movement = Vector3.zero;
+            
+            //if (Input.GetKey(KeyCode.W))
+            //{
+            //    Run();
+            //    //movement = movement + transform.forward; // Local Coord
+            //    movement = movement + Vector3.forward;
+            //}
+            //if (Input.GetKey(KeyCode.S))
+            //{
+            //    Run();
+            //    //movement = movement - transform.forward; // Local Coord
+            //    movement = movement - Vector3.forward;
+            //}
+            //if (Input.GetKey(KeyCode.A))
+            //{
+            //    Run();
+            //    //movement = movement + transform.TransformDirection(Vector3.left); // Local coord
+            //    movement = movement + Vector3.left;
+            //}
+            //if (Input.GetKey(KeyCode.D))
+            //{
+            //    Run();
+            //    //movement = movement + transform.TransformDirection(Vector3.right); // Local coord
+            //    movement = movement + Vector3.right;
+            //}
+            //movement = Vector3.Normalize(movement);
+            //movement = movement * movementSpeed;
+            ////rb.MovePosition(transform.position + movement * Time.fixedDeltaTime);
+            //rb.velocity = movement * Time.deltaTime;
 
-            if (Input.GetKey(KeyCode.W))
-            {
-                Run();
-                //movement = movement + transform.forward; // Local Coord
-                movement = movement + Vector3.forward;
-            }
-            if (Input.GetKey(KeyCode.S))
-            {
-                Run();
-                //movement = movement - transform.forward; // Local Coord
-                movement = movement - Vector3.forward;
-            }
-            if (Input.GetKey(KeyCode.A))
-            {
-                Run();
-                //movement = movement + transform.TransformDirection(Vector3.left); // Local coord
-                movement = movement + Vector3.left;
-            }
-            if (Input.GetKey(KeyCode.D))
-            {
-                Run();
-                //movement = movement + transform.TransformDirection(Vector3.right); // Local coord
-                movement = movement + Vector3.right;
-            }
-            movement = Vector3.Normalize(movement);
-            movement = movement * movementSpeed;
-            rb.MovePosition(transform.position + movement * Time.fixedDeltaTime);
-
-            // Rotate model based on direction of movement
-            if (movement != Vector3.zero)
-            {
-                transform.rotation = Quaternion.LookRotation(movement);
-            }
+            //// Rotate model based on direction of movement
+            //if (movement != Vector3.zero)
+            //{
+            //    transform.rotation = Quaternion.LookRotation(movement);
+            //}
 
             Debug.DrawRay(new Vector3(transform.position.x + 0.2f, transform.position.y + 1.0f, transform.position.z), Vector3.down * 1.05f, Color.green);
             Debug.DrawRay(new Vector3(transform.position.x - 0.2f, transform.position.y + 1.0f, transform.position.z), Vector3.down * 1.05f, Color.green);
@@ -194,7 +187,8 @@ public class Player : MonoBehaviour
                 if (leftFootHit || rightFootHit)
                 {
                     Jump();
-                    rb.velocity = (new Vector3(rb.velocity.x, jumpForce, rb.velocity.z));
+                    //rb.velocity = (new Vector3(rb.velocity.x, jumpForce, rb.velocity.z));
+                    rb.AddForce(new Vector3 (0, jumpForce, 0));
                 }
             }
 
@@ -349,7 +343,59 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        
+        Vector3 movement = Vector3.zero;
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+        {
+
+            if (Input.GetKey(KeyCode.W))
+            {
+                Run();
+                //movement = movement + transform.forward; // Local Coord
+                movement = movement + Vector3.forward;
+            }
+            if (Input.GetKey(KeyCode.S))
+            {
+                Run();
+                //movement = movement - transform.forward; // Local Coord
+                movement = movement - Vector3.forward;
+            }
+            if (Input.GetKey(KeyCode.A))
+            {
+                Run();
+                //movement = movement + transform.TransformDirection(Vector3.left); // Local coord
+                movement = movement + Vector3.left;
+            }
+            if (Input.GetKey(KeyCode.D))
+            {
+                Run();
+                //movement = movement + transform.TransformDirection(Vector3.right); // Local coord
+                movement = movement + Vector3.right;
+            }
+            movement = Vector3.Normalize(movement);
+            movement = movement * movementSpeed;
+         
+        }
+
+        // Rotate model based on direction of movement
+        if (movement != Vector3.zero)
+        {
+            transform.rotation = Quaternion.LookRotation(movement);
+        }
+
+        //RaycastHit hit;
+
+        //if (!rb.SweepTest(movement,out hit, movement.magnitude))
+        //{
+        //    //rb.MovePosition(transform.position + movement * Time.fixedDeltaTime);
+        //    rb.velocity = movement + new Vector3(0, rb.velocity.y, 0);
+        //}
+        //else rb.velocity = new Vector3(0, rb.velocity.y, 0);
+
+        rb.velocity = movement + new Vector3(0, rb.velocity.y, 0);
+
+
+
+
     }
 
     public void OnTriggerEnter(Collider other)
@@ -370,18 +416,18 @@ public class Player : MonoBehaviour
             disableMovement = true;
         }
 
-        //if (other.tag == "Number")
-        //{
-           
-        //    Destroy(other.gameObject);
-        //    audioSource.PlayOneShot(numberPickupClip, 0.3f);
-        //    Instantiate(collectEffect, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
-        //    int numFound = other.gameObject.GetComponent<NumberScript>().thisNumber;
-        //    Debug.Log("Found a " + numFound);
-        //    //numsCollected[numFound]++;
-        //    collectedANumber(numFound);
+        if (other.tag == "Number")
+        {
 
-        //}
+            Destroy(other.gameObject);
+            audioSource.PlayOneShot(numberPickupClip, 0.3f);
+            Instantiate(collectEffect, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+            //int numFound = other.gameObject.GetComponent<NumberScript>().thisNumber;
+            //Debug.Log("Found a " + numFound);
+            //numsCollected[numFound]++;
+            //collectedANumber(numFound);
+
+        }
 
         if (other.tag == "Phone")
         {
@@ -411,7 +457,7 @@ public class Player : MonoBehaviour
             {
                 isShielded = false;
                 fedora.SetActive(isShielded);
-                Debug.Log("Hats off");
+                //Debug.Log("Hats off");
                 invincibilityTimer = invincibilityTime;
                 invincible = true;
             }

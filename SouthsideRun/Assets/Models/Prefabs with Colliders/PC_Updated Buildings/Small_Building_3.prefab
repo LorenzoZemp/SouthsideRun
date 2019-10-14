@@ -220,7 +220,6 @@ GameObject:
   - component: {fileID: 4403520975860802018}
   - component: {fileID: 1171456692856117032}
   - component: {fileID: 1271228628934805844}
-  - component: {fileID: 8783489235532966127}
   m_Layer: 0
   m_Name: polySurface19
   m_TagString: Untagged
@@ -376,8 +375,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0, y: 4.993791, z: 3.6}
-  m_Center: {x: -1.0141748, y: 1.235862, z: 0}
+  m_Size: {x: 0.19969606, y: 2.6055517, z: 3.6}
+  m_Center: {x: -0.91001105, y: 0.041742265, z: 0}
 --- !u!65 &1271228628934805844
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -389,18 +388,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0, y: 5.018191, z: 3.6}
-  m_Center: {x: 1.0141652, y: 1.2480619, z: 0}
---- !u!65 &8783489235532966127
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5833368235435098248}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.0283399, y: 0, z: 3.6}
-  m_Center: {x: -0.000004887581, y: 2.59767, z: 0}
+  m_Size: {x: 0.17569768, y: 2.6117096, z: 3.6}
+  m_Center: {x: 0.9263163, y: 0.044821203, z: 0}
