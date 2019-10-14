@@ -5,7 +5,8 @@ using UnityEngine;
 public class SnipeTriggerScript : MonoBehaviour
 {
     public GameObject sniper;
-    public GameObject laser;
+    //public GameObject laser;
+    //private bool triggered = false;
 
     // Start is called before the first frame update
     void Start()
@@ -21,13 +22,15 @@ public class SnipeTriggerScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        //triggered = true;
+       /* if (other.tag == "Player")
         {
-            Debug.Log("reset sniper");
             //sniper.GetComponent<EvilRilfleScript>().sniperEnabled = true;
-            sniper.GetComponent<EvilRilfleScript>().resetRifle();
-            laser.GetComponent<LaserScript>().lineRenderer.enabled = true;
-        }
+            //sniper.GetComponent<EvilRilfleScript>().resetRifle();
+            //laser.GetComponent<LaserScript>().lineRenderer.enabled = true;
+            Instantiate(sniper);
+            Debug.Log("spawn sniper");
+        }*/
     }
 
     //delete the trigger once the player has gone through
@@ -35,8 +38,20 @@ public class SnipeTriggerScript : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            Debug.Log("i kms");
+            Debug.Log("spawn sniper");
+            Instantiate(sniper);
             Destroy(gameObject);
         }
     }
+
+    //private IEnumerator OnTriggerEnter(Collider other)
+    //{
+    //    yield return null;
+    //    if (other.tag == "Player")
+    //    {
+    //        Debug.Log("spawn sniper");
+    //        Instantiate(sniper);
+    //        Destroy(gameObject);
+    //    }
+    //}
 }
