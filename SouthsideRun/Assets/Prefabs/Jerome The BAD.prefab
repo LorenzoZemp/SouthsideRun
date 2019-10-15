@@ -6396,8 +6396,9 @@ MonoBehaviour:
   numberOfShots: 5
   bulletsPrefab: {fileID: 2311766693305116076, guid: 9bcfabd0f316bb248893f9c5bf263243,
     type: 3}
-  triggerDistance: 35
+  triggerDistance: 20
   shotsFired: 0
+  fixedRotation: 0
 --- !u!1 &2288301202213784773
 GameObject:
   m_ObjectHideFlags: 0

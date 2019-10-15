@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4098970447906954938}
   - component: {fileID: 5024171484807849100}
   - component: {fileID: 1622976142662539381}
+  - component: {fileID: 7156787856781603738}
   m_Layer: 0
   m_Name: Prop_Speaker
   m_TagString: Untagged
@@ -57,7 +58,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: cc0c1aefcd5a74b40942b2d6b7fb7778, type: 3}
+  - {fileID: 2100000, guid: 989a39b2d15c95141b73e71aa7e9a660, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -77,3 +78,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &7156787856781603738
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1060930036880092329}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7074469, y: 1.4006621, z: 0.728853}
+  m_Center: {x: 0, y: 0.696888, z: 0.037350938}

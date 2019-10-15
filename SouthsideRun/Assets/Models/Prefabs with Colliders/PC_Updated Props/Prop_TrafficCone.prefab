@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 1125491575187681714}
   - component: {fileID: 6038137073799737722}
   - component: {fileID: 9206236659373171427}
-  - component: {fileID: 1791792808649755966}
   m_Layer: 0
   m_Name: Prop_TrafficCone
   m_TagString: Untagged
@@ -60,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: dc7e84efd07cdb047ae1d888dbae0298, type: 3}
+  - {fileID: 2100000, guid: 2e3c743fe8f488344bb31c7649b75ac2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -107,19 +106,3 @@ CapsuleCollider:
   m_Height: 0.7822607
   m_Direction: 1
   m_Center: {x: 0.0062709004, y: 0.43385807, z: 0}
---- !u!54 &1791792808649755966
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1703023197937698158}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0

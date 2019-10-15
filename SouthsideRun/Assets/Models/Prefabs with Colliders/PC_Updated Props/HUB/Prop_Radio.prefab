@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6096975083911343876}
   - component: {fileID: 3010595011084309810}
   - component: {fileID: 8861748561532266955}
-  - component: {fileID: 4889667093029279852}
   - component: {fileID: 2525229962801596952}
   m_Layer: 0
   m_Name: Prop_Radio
@@ -59,7 +58,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: d94cc9fb0bd74e94cb742ef71832daf3, type: 3}
+  - {fileID: 2100000, guid: c48ee143d30849f4b9179521b5725ee7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -79,22 +78,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &4889667093029279852
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7117824113710177559}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!65 &2525229962801596952
 BoxCollider:
   m_ObjectHideFlags: 0
