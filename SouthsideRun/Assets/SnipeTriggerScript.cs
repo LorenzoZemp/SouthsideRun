@@ -6,12 +6,12 @@ public class SnipeTriggerScript : MonoBehaviour
 {
     public GameObject sniper;
     //public GameObject laser;
-    //private bool triggered = false;
+    private bool triggered;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        triggered = false;
     }
 
     // Update is called once per frame
@@ -23,14 +23,15 @@ public class SnipeTriggerScript : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //triggered = true;
-       /* if (other.tag == "Player")
+       if (other.tag == "Player" && triggered == false)
         {
             //sniper.GetComponent<EvilRilfleScript>().sniperEnabled = true;
             //sniper.GetComponent<EvilRilfleScript>().resetRifle();
             //laser.GetComponent<LaserScript>().lineRenderer.enabled = true;
-            Instantiate(sniper);
             Debug.Log("spawn sniper");
-        }*/
+            Instantiate(sniper);
+            triggered = true;
+        }
     }
 
     //delete the trigger once the player has gone through
@@ -38,8 +39,8 @@ public class SnipeTriggerScript : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            Debug.Log("spawn sniper");
-            Instantiate(sniper);
+            Debug.Log("delete trigger");
+            //Instantiate(sniper);
             Destroy(gameObject);
         }
     }
