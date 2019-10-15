@@ -53,4 +53,23 @@ public class BulletScript : MonoBehaviour
     //    //    Destroy(collision.gameObject);
     //    //}
     //}
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Hit Something");
+        if (other.tag == "Props")
+        {
+            StartCoroutine(waitToDestroy());
+        }
+        else if (other.tag == "Player")
+        {
+            StartCoroutine(waitToDestroy());
+        }
+    }
+
+    IEnumerator waitToDestroy()
+    {
+        yield return new WaitForSeconds(0.01f);
+        Destroy(gameObject);
+    }
 }
