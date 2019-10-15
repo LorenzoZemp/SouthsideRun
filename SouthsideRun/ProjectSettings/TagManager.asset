@@ -10,6 +10,9 @@ TagManager:
   - Win
   - Phone
   - Enemy
+  - Trigger
+  - Sniper
+  - Props
   layers:
   - Default
   - TransparentFX
