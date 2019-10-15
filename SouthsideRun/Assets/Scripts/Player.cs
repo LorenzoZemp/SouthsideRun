@@ -37,7 +37,7 @@ public class Player : MonoBehaviour
     //pickup
     public GameObject collectEffect;
     public GameObject modelViewer;
-    int stuffCollected = 0;
+    public int stuffCollected = 0;
 
     Rigidbody rb;
     public float movementSpeed = 5.0f;
@@ -53,6 +53,7 @@ public class Player : MonoBehaviour
     [SerializeField] public string[] numsCollectedLimited;
     public UIScript script_UI;
 
+    public float restartHeight = -30.0f;
     public float boostJumpForce = 10.0f;
     public float boostJumpDuration = 5.0f;
     private float jumpBoostTimer = 0.0f;
@@ -325,7 +326,7 @@ public class Player : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
-        if (transform.position.y < -30)
+        if (transform.position.y <= restartHeight)
         {
             Debug.Log("Fell off map");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -621,7 +622,6 @@ public class Player : MonoBehaviour
                         // see if the enemy is in range
                         distanceToClosest = Vector3.Distance(transform.position, closestEnemy.transform.position);
                         Debug.Log("Closest enemy is at: " + distanceToClosest);
-
                         if (distanceToClosest <= sniperRange)
                         {
                             Debug.Log("SHOOT");

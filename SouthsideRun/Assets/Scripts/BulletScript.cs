@@ -10,12 +10,12 @@ public class BulletScript : MonoBehaviour
     public Rigidbody rb;
     public bool badBullet = false;
 
-    private float initialPos;
+    private Vector3 initialPos;
 
     // Start is called before the first frame update
     void Start()
     {
-        //initialPos = transform.position.z;
+        initialPos = transform.position;
         //if(badBullet == false)
         //{
         //    rb.velocity = new Vector3(0.0f, 0.0f, bulletSpeed);
@@ -36,7 +36,7 @@ public class BulletScript : MonoBehaviour
         //transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + bulletSpeed * Time.deltaTime);
 
         // if it's far enoguh then delete it
-        if (Mathf.Abs(transform.position.z - initialPos) > travelDistance)
+        if (Vector3.Distance(transform.position, initialPos) > travelDistance)
         {
             //Debug.Log("Destroy Bullet");
             Destroy(this.gameObject);
