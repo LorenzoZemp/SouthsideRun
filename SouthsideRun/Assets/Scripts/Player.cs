@@ -621,7 +621,6 @@ public class Player : MonoBehaviour
                         // see if the enemy is in range
                         distanceToClosest = Vector3.Distance(transform.position, closestEnemy.transform.position);
                         Debug.Log("Closest enemy is at: " + distanceToClosest);
-
                         if (distanceToClosest <= sniperRange)
                         {
                             Debug.Log("SHOOT");

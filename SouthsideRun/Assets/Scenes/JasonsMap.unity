@@ -4982,6 +4982,12 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2948826192586296149, guid: bea80faa0514d454ca39150f933a50ce,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 8823e29cc87acc54b81be3bb8dd05a55,
+        type: 2}
     - target: {fileID: 8830372286737911465, guid: bea80faa0514d454ca39150f933a50ce,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5098,12 +5104,6 @@ PrefabInstance:
       propertyPath: m_Drag
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2948826192586296149, guid: bea80faa0514d454ca39150f933a50ce,
-        type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 13400000, guid: 8823e29cc87acc54b81be3bb8dd05a55,
-        type: 2}
     - target: {fileID: 4055799579461880709, guid: bea80faa0514d454ca39150f933a50ce,
         type: 3}
       propertyPath: m_Material
@@ -8009,6 +8009,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Audio
+      objectReference: {fileID: 0}
+    - target: {fileID: 6733504913862018692, guid: e1c0356a3833c9e4a82b87d6448cad54,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 3118991295857744022, guid: e1c0356a3833c9e4a82b87d6448cad54,
         type: 3}
