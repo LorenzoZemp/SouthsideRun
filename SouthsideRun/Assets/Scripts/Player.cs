@@ -53,6 +53,7 @@ public class Player : MonoBehaviour
     [SerializeField] public string[] numsCollectedLimited;
     public UIScript script_UI;
 
+    public float restartHeight = -30.0f;
     public float boostJumpForce = 10.0f;
     public float boostJumpDuration = 5.0f;
     private float jumpBoostTimer = 0.0f;
@@ -325,7 +326,7 @@ public class Player : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
-        if (transform.position.y < -30)
+        if (transform.position.y <= restartHeight)
         {
             Debug.Log("Fell off map");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
