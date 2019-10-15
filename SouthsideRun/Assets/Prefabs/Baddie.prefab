@@ -45,6 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd68c7927d8565a488b15b21769b49a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sniperZoom: {fileID: 8300000, guid: 1db97e5fdd6e52d4b8c48b33f8673178, type: 3}
+  sniperShoot: {fileID: 8300000, guid: ebc718c31ea776e43b159cc1651daa04, type: 3}
   timeBeforeKill: 0.75
   reticle: {fileID: 59035710884772381}
 --- !u!1001 &59035711570635341
