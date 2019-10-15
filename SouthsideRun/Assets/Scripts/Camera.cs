@@ -11,7 +11,7 @@ public class Camera : MonoBehaviour
     void Update()
     {
         float x = Player.CurrentPlayer.transform.position.x;
-        float y = cameraHeight;
+        float y = cameraHeight + Player.CurrentPlayer.transform.position.y;
         float z = Player.CurrentPlayer.transform.position.z + cameraDistance;
 
         transform.position = new Vector3(x, y, z);

@@ -12,6 +12,7 @@ TagManager:
   - Enemy
   - Trigger
   - Sniper
+  - Props
   layers:
   - Default
   - TransparentFX
