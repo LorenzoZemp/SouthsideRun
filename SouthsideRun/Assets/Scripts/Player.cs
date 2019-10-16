@@ -120,10 +120,10 @@ public class Player : MonoBehaviour
     {
         
 
-        if (Input.GetKey("escape"))
-        { 
-            Application.Quit();
-        }
+        //if (Input.GetKey("escape"))
+        //{ 
+        //    Application.Quit();
+        //}
 
         if (!caught && !disableMovement)
         {
@@ -339,6 +339,7 @@ public class Player : MonoBehaviour
        else if (caught)
        {
             Fall();
+            StartCoroutine("Restart");
        }
     }
 
@@ -657,6 +658,11 @@ public class Player : MonoBehaviour
         return bestTarget;
     }
 
+    IEnumerator Restart()
+    {
+        yield return new WaitForSeconds(2.0f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
     //IEnumerator Snipe()
     //{
 

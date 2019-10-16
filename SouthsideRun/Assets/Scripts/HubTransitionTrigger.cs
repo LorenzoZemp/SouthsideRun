@@ -14,7 +14,7 @@ public class HubTransitionTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.name == "Player")
+        if (other.tag == "Player")
         {
             switch(toLevel)
             {
