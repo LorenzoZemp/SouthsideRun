@@ -52,6 +52,7 @@ public class EvilJeromeScript : MonoBehaviour
                 shotTimer = 0.0f;
                 // fire a bullet
                 Instantiate(bulletsPrefab, new Vector3(transform.position.x, transform.position.y + 1.2f, transform.position.z + 0.4f), Quaternion.Euler(90,0,0));
+                audioSource.PlayOneShot(shootingSound, 0.2f);
 
                 shotsFired++;
             }

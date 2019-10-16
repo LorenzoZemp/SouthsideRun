@@ -6390,7 +6390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7aa65b4e12606b4abe303324b40f4e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootingSound: {fileID: 8300000, guid: 2b752f16436723e47a8ebb1aca4f98c1, type: 3}
+  shootingSound: {fileID: 8300000, guid: ab839ca294d33ee41b543704e48d708b, type: 3}
   timeBetweenShots: 0.5
   muzzleFlash: {fileID: 2288301201671734987}
   numberOfShots: 5
