@@ -42,6 +42,7 @@ public class PauseScript : MonoBehaviour
     public void Quit()
     {
         Debug.LogFormat("Quit");
+        Application.Quit();
     }
 
     public void Restart()
