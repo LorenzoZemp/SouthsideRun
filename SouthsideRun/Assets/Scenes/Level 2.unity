@@ -98,7 +98,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 112000000, guid: aa66f5b26c8c5db48a64cf3dba410e1e,
     type: 2}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -293,6 +293,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Closed_Barrel_Model (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 7054996762310184342, guid: 681a0890bfce1eb4890039f228edcdec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 6319460628982497157, guid: 681a0890bfce1eb4890039f228edcdec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -367,6 +372,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Bin_Model (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5974135670746177353, guid: 81383ceeab2e300498a3a0e7acc635f1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 7256210931062287706, guid: 81383ceeab2e300498a3a0e7acc635f1,
         type: 3}
@@ -603,6 +613,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tall_Building (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 2756960275964250616, guid: bb6ab9f8802d5c7449a0463dc713b5b5,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 1160214683263745003, guid: bb6ab9f8802d5c7449a0463dc713b5b5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -671,6 +686,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Barricade_Model (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183386628497770177, guid: 8b8587b0ab800524388b4eb85a4f9f0c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 6191285984155432146, guid: 8b8587b0ab800524388b4eb85a4f9f0c,
         type: 3}
@@ -746,6 +766,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Dumpster_Model (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8805681514764317368, guid: 6c97e78f314c34747aa71728290be814,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 5507701640642609323, guid: 6c97e78f314c34747aa71728290be814,
         type: 3}
@@ -912,6 +937,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Bench_Model
       objectReference: {fileID: 0}
+    - target: {fileID: 950060334709627003, guid: 52ee0fb9eb02ec649985e326ede8dd69,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 4284070104206453352, guid: 52ee0fb9eb02ec649985e326ede8dd69,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -991,6 +1021,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Barricade_Model (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183386628497770177, guid: 8b8587b0ab800524388b4eb85a4f9f0c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 6191285984155432146, guid: 8b8587b0ab800524388b4eb85a4f9f0c,
         type: 3}
@@ -1754,6 +1789,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Small_Building_3 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094143070673063102, guid: e1c013da6902f374b9c7f72fb8791881,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 4140062100149681837, guid: e1c013da6902f374b9c7f72fb8791881,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1999,6 +2039,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Small_Building_3 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094143070673063102, guid: e1c013da6902f374b9c7f72fb8791881,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 4140062100149681837, guid: e1c013da6902f374b9c7f72fb8791881,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2234,6 +2279,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Long_Building (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 7452155546344109490, guid: f57547866c1032f4cbb49f65fa05a680,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 5850182670215727009, guid: f57547866c1032f4cbb49f65fa05a680,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2452,6 +2502,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Closed_Barrel_Model (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7054996762310184342, guid: 681a0890bfce1eb4890039f228edcdec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 6319460628982497157, guid: 681a0890bfce1eb4890039f228edcdec,
         type: 3}
@@ -2747,6 +2802,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Barricade_Model (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7183386628497770177, guid: 8b8587b0ab800524388b4eb85a4f9f0c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 6191285984155432146, guid: 8b8587b0ab800524388b4eb85a4f9f0c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2821,6 +2881,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Bin_Model (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5974135670746177353, guid: 81383ceeab2e300498a3a0e7acc635f1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 7256210931062287706, guid: 81383ceeab2e300498a3a0e7acc635f1,
         type: 3}
@@ -2908,6 +2973,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Bin_Model (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5974135670746177353, guid: 81383ceeab2e300498a3a0e7acc635f1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 7256210931062287706, guid: 81383ceeab2e300498a3a0e7acc635f1,
         type: 3}
@@ -3052,7 +3122,7 @@ Transform:
   - {fileID: 2128897224}
   - {fileID: 1776231335}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &183756648
 PrefabInstance:
@@ -3065,6 +3135,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Bench_Model (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 950060334709627003, guid: 52ee0fb9eb02ec649985e326ede8dd69,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 4284070104206453352, guid: 52ee0fb9eb02ec649985e326ede8dd69,
         type: 3}
@@ -3140,6 +3215,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Bench_Model (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 950060334709627003, guid: 52ee0fb9eb02ec649985e326ede8dd69,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 4284070104206453352, guid: 52ee0fb9eb02ec649985e326ede8dd69,
         type: 3}
@@ -3290,6 +3370,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Scaffolding_Model (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7255064836417940229, guid: f451675576dc16947b563082ccba1347,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 5977528909452318998, guid: f451675576dc16947b563082ccba1347,
         type: 3}
@@ -3457,6 +3542,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Closed_Barrel_Model
       objectReference: {fileID: 0}
+    - target: {fileID: 7054996762310184342, guid: 681a0890bfce1eb4890039f228edcdec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 6319460628982497157, guid: 681a0890bfce1eb4890039f228edcdec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3531,6 +3621,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Car_Model (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8169836066627893606, guid: 631467f0611b76748b71b0eb56a13a2c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 5132501883634666357, guid: 631467f0611b76748b71b0eb56a13a2c,
         type: 3}
@@ -3681,6 +3776,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Streetlamp_Model (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5088344897963836968, guid: 268898b1b29839b48b47d39d3f1126dd,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 8126243468836647995, guid: 268898b1b29839b48b47d39d3f1126dd,
         type: 3}
@@ -3842,6 +3942,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Hydrant_Model (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2247833774935986336, guid: b25e44b8a950c1240b8bfdd6d2d2bca0,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 2984392524056601267, guid: b25e44b8a950c1240b8bfdd6d2d2bca0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3905,6 +4010,85 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 265780609}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &269684148
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8585977836141925348, guid: 0277bcdbafdbd8a4189961cbff4cc777,
+        type: 3}
+      propertyPath: m_Name
+      value: TransitionTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 8585977836141925355, guid: 0277bcdbafdbd8a4189961cbff4cc777,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9.194
+      objectReference: {fileID: 0}
+    - target: {fileID: 8585977836141925355, guid: 0277bcdbafdbd8a4189961cbff4cc777,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.605
+      objectReference: {fileID: 0}
+    - target: {fileID: 8585977836141925355, guid: 0277bcdbafdbd8a4189961cbff4cc777,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 434.261
+      objectReference: {fileID: 0}
+    - target: {fileID: 8585977836141925355, guid: 0277bcdbafdbd8a4189961cbff4cc777,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8585977836141925355, guid: 0277bcdbafdbd8a4189961cbff4cc777,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.10859385
+      objectReference: {fileID: 0}
+    - target: {fileID: 8585977836141925355, guid: 0277bcdbafdbd8a4189961cbff4cc777,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8585977836141925355, guid: 0277bcdbafdbd8a4189961cbff4cc777,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9940862
+      objectReference: {fileID: 0}
+    - target: {fileID: 8585977836141925355, guid: 0277bcdbafdbd8a4189961cbff4cc777,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8585977836141925355, guid: 0277bcdbafdbd8a4189961cbff4cc777,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8585977836141925355, guid: 0277bcdbafdbd8a4189961cbff4cc777,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 12.469001
+      objectReference: {fileID: 0}
+    - target: {fileID: 8585977836141925355, guid: 0277bcdbafdbd8a4189961cbff4cc777,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8585977836141925355, guid: 0277bcdbafdbd8a4189961cbff4cc777,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.9799
+      objectReference: {fileID: 0}
+    - target: {fileID: 8585977836141925349, guid: 0277bcdbafdbd8a4189961cbff4cc777,
+        type: 3}
+      propertyPath: toLevel
+      value: HUB3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0277bcdbafdbd8a4189961cbff4cc777, type: 3}
 --- !u!1001 &272575372
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3916,6 +4100,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Closed_Barrel_Model (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7054996762310184342, guid: 681a0890bfce1eb4890039f228edcdec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 6319460628982497157, guid: 681a0890bfce1eb4890039f228edcdec,
         type: 3}
@@ -4393,6 +4582,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tall_Building
       objectReference: {fileID: 0}
+    - target: {fileID: 2756960275964250616, guid: bb6ab9f8802d5c7449a0463dc713b5b5,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 1160214683263745003, guid: bb6ab9f8802d5c7449a0463dc713b5b5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4461,6 +4655,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Small_Building_2 (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3891488460118897899, guid: c448dd1abcdbdab43bf303638345c904,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 25334921685747448, guid: c448dd1abcdbdab43bf303638345c904,
         type: 3}
@@ -4536,6 +4735,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Small_Building_2 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3891488460118897899, guid: c448dd1abcdbdab43bf303638345c904,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 25334921685747448, guid: c448dd1abcdbdab43bf303638345c904,
         type: 3}
@@ -4762,6 +4966,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Small_Building_4 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5900461408888965228, guid: 0437ff1ec0dd10041bde1f772697613c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 7474286236298689151, guid: 0437ff1ec0dd10041bde1f772697613c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4836,6 +5045,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Closed_Barrel_Model (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7054996762310184342, guid: 681a0890bfce1eb4890039f228edcdec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 6319460628982497157, guid: 681a0890bfce1eb4890039f228edcdec,
         type: 3}
@@ -4996,6 +5210,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Long_Building (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7452155546344109490, guid: f57547866c1032f4cbb49f65fa05a680,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 5850182670215727009, guid: f57547866c1032f4cbb49f65fa05a680,
         type: 3}
@@ -5247,6 +5466,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Barricade_Model (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 7183386628497770177, guid: 8b8587b0ab800524388b4eb85a4f9f0c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 6191285984155432146, guid: 8b8587b0ab800524388b4eb85a4f9f0c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5328,6 +5552,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Long_Building (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 7452155546344109490, guid: f57547866c1032f4cbb49f65fa05a680,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 5850182670215727009, guid: f57547866c1032f4cbb49f65fa05a680,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5402,6 +5631,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Scaffolding_Model (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7255064836417940229, guid: f451675576dc16947b563082ccba1347,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 5977528909452318998, guid: f451675576dc16947b563082ccba1347,
         type: 3}
@@ -5579,7 +5813,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &396657968
 PrefabInstance:
@@ -5592,6 +5826,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Open_Barrel_Model (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3146964659595354057, guid: b5ad9d15fcbd7bc43a469941de5c1605,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 2159223648248229338, guid: b5ad9d15fcbd7bc43a469941de5c1605,
         type: 3}
@@ -5818,6 +6057,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Long_Building (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7452155546344109490, guid: f57547866c1032f4cbb49f65fa05a680,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 5850182670215727009, guid: f57547866c1032f4cbb49f65fa05a680,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5902,6 +6146,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Bin_Model (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 5974135670746177353, guid: 81383ceeab2e300498a3a0e7acc635f1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 7256210931062287706, guid: 81383ceeab2e300498a3a0e7acc635f1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5976,6 +6225,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Bench_Model (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 950060334709627003, guid: 52ee0fb9eb02ec649985e326ede8dd69,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 4284070104206453352, guid: 52ee0fb9eb02ec649985e326ede8dd69,
         type: 3}
@@ -6098,7 +6352,7 @@ Transform:
   - {fileID: 457941154}
   - {fileID: 27562857}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &431239060
 PrefabInstance:
@@ -6111,6 +6365,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Dumpster_Model (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8805681514764317368, guid: 6c97e78f314c34747aa71728290be814,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 5507701640642609323, guid: 6c97e78f314c34747aa71728290be814,
         type: 3}
@@ -6265,6 +6524,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Barricade_Model (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183386628497770177, guid: 8b8587b0ab800524388b4eb85a4f9f0c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 6191285984155432146, guid: 8b8587b0ab800524388b4eb85a4f9f0c,
         type: 3}
@@ -6517,7 +6781,7 @@ Transform:
   - {fileID: 784099334}
   - {fileID: 1916450182}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &445132261
 PrefabInstance:
@@ -6627,6 +6891,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Bench_Model (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 950060334709627003, guid: 52ee0fb9eb02ec649985e326ede8dd69,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 4284070104206453352, guid: 52ee0fb9eb02ec649985e326ede8dd69,
         type: 3}
@@ -6790,6 +7059,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Car_Model (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 8169836066627893606, guid: 631467f0611b76748b71b0eb56a13a2c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 5132501883634666357, guid: 631467f0611b76748b71b0eb56a13a2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6940,6 +7214,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Scaffolding_Model (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7255064836417940229, guid: f451675576dc16947b563082ccba1347,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 5977528909452318998, guid: f451675576dc16947b563082ccba1347,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7014,6 +7293,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tall_Building (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2756960275964250616, guid: bb6ab9f8802d5c7449a0463dc713b5b5,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 1160214683263745003, guid: bb6ab9f8802d5c7449a0463dc713b5b5,
         type: 3}
@@ -7090,6 +7374,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Small_Building_2 (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 3891488460118897899, guid: c448dd1abcdbdab43bf303638345c904,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 25334921685747448, guid: c448dd1abcdbdab43bf303638345c904,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7164,6 +7453,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Open_Barrel_Model (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3146964659595354057, guid: b5ad9d15fcbd7bc43a469941de5c1605,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 2159223648248229338, guid: b5ad9d15fcbd7bc43a469941de5c1605,
         type: 3}
@@ -7389,6 +7683,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Long_Building (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 7452155546344109490, guid: f57547866c1032f4cbb49f65fa05a680,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 5850182670215727009, guid: f57547866c1032f4cbb49f65fa05a680,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7468,6 +7767,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Small_Building_2 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3891488460118897899, guid: c448dd1abcdbdab43bf303638345c904,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 25334921685747448, guid: c448dd1abcdbdab43bf303638345c904,
         type: 3}
@@ -7619,6 +7923,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Closed_Barrel_Model (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 7054996762310184342, guid: 681a0890bfce1eb4890039f228edcdec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 6319460628982497157, guid: 681a0890bfce1eb4890039f228edcdec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7693,6 +8002,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Long_Building
+      objectReference: {fileID: 0}
+    - target: {fileID: 7452155546344109490, guid: f57547866c1032f4cbb49f65fa05a680,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 5850182670215727009, guid: f57547866c1032f4cbb49f65fa05a680,
         type: 3}
@@ -8073,6 +8387,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Dumpster_Model (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8805681514764317368, guid: 6c97e78f314c34747aa71728290be814,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 5507701640642609323, guid: 6c97e78f314c34747aa71728290be814,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8151,6 +8470,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Scaffolding_Model (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7255064836417940229, guid: f451675576dc16947b563082ccba1347,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 5977528909452318998, guid: f451675576dc16947b563082ccba1347,
         type: 3}
@@ -8236,6 +8560,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_TrafficCone (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1703023197937698158, guid: 77a3fdee88c31b346b1630f402ce1e9a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 2447991496243509117, guid: 77a3fdee88c31b346b1630f402ce1e9a,
         type: 3}
@@ -8468,6 +8797,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Closed_Barrel_Model (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 7054996762310184342, guid: 681a0890bfce1eb4890039f228edcdec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 6319460628982497157, guid: 681a0890bfce1eb4890039f228edcdec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8542,6 +8876,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Phone_Model (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7396601218934093635, guid: 163619c0d62e190499dc38db515175ef,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 5835917751027189072, guid: 163619c0d62e190499dc38db515175ef,
         type: 3}
@@ -8702,6 +9041,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Dumpster_Model (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8805681514764317368, guid: 6c97e78f314c34747aa71728290be814,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 5507701640642609323, guid: 6c97e78f314c34747aa71728290be814,
         type: 3}
@@ -8935,7 +9279,7 @@ Transform:
   - {fileID: 1401563225}
   - {fileID: 244845706}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &585327502
 PrefabInstance:
@@ -9285,6 +9629,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Small_Building_3 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094143070673063102, guid: e1c013da6902f374b9c7f72fb8791881,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 4140062100149681837, guid: e1c013da6902f374b9c7f72fb8791881,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9353,6 +9702,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Open_Barrel_Model (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3146964659595354057, guid: b5ad9d15fcbd7bc43a469941de5c1605,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 2159223648248229338, guid: b5ad9d15fcbd7bc43a469941de5c1605,
         type: 3}
@@ -9429,6 +9783,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Long_Building (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7452155546344109490, guid: f57547866c1032f4cbb49f65fa05a680,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 5850182670215727009, guid: f57547866c1032f4cbb49f65fa05a680,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9503,6 +9862,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Small_Building_2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3891488460118897899, guid: c448dd1abcdbdab43bf303638345c904,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 25334921685747448, guid: c448dd1abcdbdab43bf303638345c904,
         type: 3}
@@ -9893,6 +10257,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Small_Building_2 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 3891488460118897899, guid: c448dd1abcdbdab43bf303638345c904,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 25334921685747448, guid: c448dd1abcdbdab43bf303638345c904,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10018,7 +10387,7 @@ Transform:
   - {fileID: 1994023248}
   - {fileID: 1118069786}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &634301244
 PrefabInstance:
@@ -10192,6 +10561,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Small_Building_2
       objectReference: {fileID: 0}
+    - target: {fileID: 3891488460118897899, guid: c448dd1abcdbdab43bf303638345c904,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 25334921685747448, guid: c448dd1abcdbdab43bf303638345c904,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10351,6 +10725,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Bin_Model (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5974135670746177353, guid: 81383ceeab2e300498a3a0e7acc635f1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 7256210931062287706, guid: 81383ceeab2e300498a3a0e7acc635f1,
         type: 3}
@@ -10662,6 +11041,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Small_Building_3 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094143070673063102, guid: e1c013da6902f374b9c7f72fb8791881,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 4140062100149681837, guid: e1c013da6902f374b9c7f72fb8791881,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10730,6 +11114,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Scaffolding_Model (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7255064836417940229, guid: f451675576dc16947b563082ccba1347,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 5977528909452318998, guid: f451675576dc16947b563082ccba1347,
         type: 3}
@@ -10881,6 +11270,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Small_Building_3
       objectReference: {fileID: 0}
+    - target: {fileID: 1094143070673063102, guid: e1c013da6902f374b9c7f72fb8791881,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 4140062100149681837, guid: e1c013da6902f374b9c7f72fb8791881,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10949,6 +11343,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Scaffolding_Model (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7255064836417940229, guid: f451675576dc16947b563082ccba1347,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 5977528909452318998, guid: f451675576dc16947b563082ccba1347,
         type: 3}
@@ -11104,6 +11503,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Streetlamp_Model (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5088344897963836968, guid: 268898b1b29839b48b47d39d3f1126dd,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 8126243468836647995, guid: 268898b1b29839b48b47d39d3f1126dd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11217,7 +11621,7 @@ PrefabInstance:
     - target: {fileID: 4807819303905403839, guid: 7a536f574c1379745b81c922c8e6f132,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4807819303905403839, guid: 7a536f574c1379745b81c922c8e6f132,
         type: 3}
@@ -11302,6 +11706,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Dumpster_Model
+      objectReference: {fileID: 0}
+    - target: {fileID: 8805681514764317368, guid: 6c97e78f314c34747aa71728290be814,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 5507701640642609323, guid: 6c97e78f314c34747aa71728290be814,
         type: 3}
@@ -11463,6 +11872,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Small_Building_3 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094143070673063102, guid: e1c013da6902f374b9c7f72fb8791881,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 4140062100149681837, guid: e1c013da6902f374b9c7f72fb8791881,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11531,6 +11945,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Streetlamp_Model (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5088344897963836968, guid: 268898b1b29839b48b47d39d3f1126dd,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 8126243468836647995, guid: 268898b1b29839b48b47d39d3f1126dd,
         type: 3}
@@ -11607,6 +12026,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Car_Model (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 8169836066627893606, guid: 631467f0611b76748b71b0eb56a13a2c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 5132501883634666357, guid: 631467f0611b76748b71b0eb56a13a2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11681,6 +12105,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Bench_Model (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 950060334709627003, guid: 52ee0fb9eb02ec649985e326ede8dd69,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 4284070104206453352, guid: 52ee0fb9eb02ec649985e326ede8dd69,
         type: 3}
@@ -11761,6 +12190,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Scaffolding_Model
+      objectReference: {fileID: 0}
+    - target: {fileID: 7255064836417940229, guid: f451675576dc16947b563082ccba1347,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 5977528909452318998, guid: f451675576dc16947b563082ccba1347,
         type: 3}
@@ -11911,6 +12345,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Small_Building_1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7962862193812927470, guid: 3e4277f88ce53e54fa31dd8960dc331d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 6402602585421611517, guid: 3e4277f88ce53e54fa31dd8960dc331d,
         type: 3}
@@ -12131,6 +12570,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Phone_Model
       objectReference: {fileID: 0}
+    - target: {fileID: 7396601218934093635, guid: 163619c0d62e190499dc38db515175ef,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 5835917751027189072, guid: 163619c0d62e190499dc38db515175ef,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12211,6 +12655,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Small_Building_2 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3891488460118897899, guid: c448dd1abcdbdab43bf303638345c904,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 25334921685747448, guid: c448dd1abcdbdab43bf303638345c904,
         type: 3}
@@ -12591,6 +13040,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Streetlamp_Model (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 5088344897963836968, guid: 268898b1b29839b48b47d39d3f1126dd,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 8126243468836647995, guid: 268898b1b29839b48b47d39d3f1126dd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12666,6 +13120,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Small_Building_1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7962862193812927470, guid: 3e4277f88ce53e54fa31dd8960dc331d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 6402602585421611517, guid: 3e4277f88ce53e54fa31dd8960dc331d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12740,6 +13199,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Long_Building (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7452155546344109490, guid: f57547866c1032f4cbb49f65fa05a680,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 5850182670215727009, guid: f57547866c1032f4cbb49f65fa05a680,
         type: 3}
@@ -12897,6 +13361,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Closed_Barrel_Model (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7054996762310184342, guid: 681a0890bfce1eb4890039f228edcdec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 6319460628982497157, guid: 681a0890bfce1eb4890039f228edcdec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12971,6 +13440,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Scaffolding_Model (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7255064836417940229, guid: f451675576dc16947b563082ccba1347,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 5977528909452318998, guid: f451675576dc16947b563082ccba1347,
         type: 3}
@@ -13047,6 +13521,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Closed_Barrel_Model (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 7054996762310184342, guid: 681a0890bfce1eb4890039f228edcdec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 6319460628982497157, guid: 681a0890bfce1eb4890039f228edcdec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13121,6 +13600,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Small_Building_3 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094143070673063102, guid: e1c013da6902f374b9c7f72fb8791881,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 4140062100149681837, guid: e1c013da6902f374b9c7f72fb8791881,
         type: 3}
@@ -13272,6 +13756,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Dumpster_Model
       objectReference: {fileID: 0}
+    - target: {fileID: 8805681514764317368, guid: 6c97e78f314c34747aa71728290be814,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 5507701640642609323, guid: 6c97e78f314c34747aa71728290be814,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13350,6 +13839,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Small_Building_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5900461408888965228, guid: 0437ff1ec0dd10041bde1f772697613c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 7474286236298689151, guid: 0437ff1ec0dd10041bde1f772697613c,
         type: 3}
@@ -13665,6 +14159,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Bin_Model (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5974135670746177353, guid: 81383ceeab2e300498a3a0e7acc635f1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 7256210931062287706, guid: 81383ceeab2e300498a3a0e7acc635f1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13815,6 +14314,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tall_Building (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2756960275964250616, guid: bb6ab9f8802d5c7449a0463dc713b5b5,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 1160214683263745003, guid: bb6ab9f8802d5c7449a0463dc713b5b5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13964,6 +14468,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Small_Building_2 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3891488460118897899, guid: c448dd1abcdbdab43bf303638345c904,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 25334921685747448, guid: c448dd1abcdbdab43bf303638345c904,
         type: 3}
@@ -14216,6 +14725,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Closed_Barrel_Model (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 7054996762310184342, guid: 681a0890bfce1eb4890039f228edcdec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 6319460628982497157, guid: 681a0890bfce1eb4890039f228edcdec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14297,6 +14811,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Streetlamp_Model (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 5088344897963836968, guid: 268898b1b29839b48b47d39d3f1126dd,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 8126243468836647995, guid: 268898b1b29839b48b47d39d3f1126dd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14371,6 +14890,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Barricade_Model
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183386628497770177, guid: 8b8587b0ab800524388b4eb85a4f9f0c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 6191285984155432146, guid: 8b8587b0ab800524388b4eb85a4f9f0c,
         type: 3}
@@ -14682,6 +15206,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Small_Building_3 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094143070673063102, guid: e1c013da6902f374b9c7f72fb8791881,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 4140062100149681837, guid: e1c013da6902f374b9c7f72fb8791881,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14832,6 +15361,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Bin_Model (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5974135670746177353, guid: 81383ceeab2e300498a3a0e7acc635f1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 7256210931062287706, guid: 81383ceeab2e300498a3a0e7acc635f1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14907,6 +15441,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Car_Model
       objectReference: {fileID: 0}
+    - target: {fileID: 8169836066627893606, guid: 631467f0611b76748b71b0eb56a13a2c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 5132501883634666357, guid: 631467f0611b76748b71b0eb56a13a2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14975,6 +15514,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Streetlamp_Model (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5088344897963836968, guid: 268898b1b29839b48b47d39d3f1126dd,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 8126243468836647995, guid: 268898b1b29839b48b47d39d3f1126dd,
         type: 3}
@@ -15050,6 +15594,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Medium_Building (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6303069222319768686, guid: e8091077bbae5234db57b1143d48edcd,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 6999255490316711549, guid: e8091077bbae5234db57b1143d48edcd,
         type: 3}
@@ -15166,7 +15715,7 @@ Transform:
   - {fileID: 1384150170}
   - {fileID: 2034814616}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &933651997
 PrefabInstance:
@@ -15179,6 +15728,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Medium_Building (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6303069222319768686, guid: e8091077bbae5234db57b1143d48edcd,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 6999255490316711549, guid: e8091077bbae5234db57b1143d48edcd,
         type: 3}
@@ -15705,6 +16259,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Small_Building_2 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 3891488460118897899, guid: c448dd1abcdbdab43bf303638345c904,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 25334921685747448, guid: c448dd1abcdbdab43bf303638345c904,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16013,6 +16572,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Long_Building (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7452155546344109490, guid: f57547866c1032f4cbb49f65fa05a680,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 5850182670215727009, guid: f57547866c1032f4cbb49f65fa05a680,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16094,6 +16658,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Hydrant_Model (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2247833774935986336, guid: b25e44b8a950c1240b8bfdd6d2d2bca0,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 2984392524056601267, guid: b25e44b8a950c1240b8bfdd6d2d2bca0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16168,6 +16737,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Small_Building_2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3891488460118897899, guid: c448dd1abcdbdab43bf303638345c904,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 25334921685747448, guid: c448dd1abcdbdab43bf303638345c904,
         type: 3}
@@ -16244,6 +16818,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Scaffolding_Model (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 7255064836417940229, guid: f451675576dc16947b563082ccba1347,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 5977528909452318998, guid: f451675576dc16947b563082ccba1347,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16318,6 +16897,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Scaffolding_Model (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7255064836417940229, guid: f451675576dc16947b563082ccba1347,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 5977528909452318998, guid: f451675576dc16947b563082ccba1347,
         type: 3}
@@ -16479,6 +17063,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Barricade_Model (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7183386628497770177, guid: 8b8587b0ab800524388b4eb85a4f9f0c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 6191285984155432146, guid: 8b8587b0ab800524388b4eb85a4f9f0c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16553,6 +17142,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Bin_Model (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5974135670746177353, guid: 81383ceeab2e300498a3a0e7acc635f1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 7256210931062287706, guid: 81383ceeab2e300498a3a0e7acc635f1,
         type: 3}
@@ -16689,7 +17283,7 @@ Transform:
   - {fileID: 1056525485}
   - {fileID: 114310950}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1037742124
 PrefabInstance:
@@ -16777,6 +17371,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Long_Building (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7452155546344109490, guid: f57547866c1032f4cbb49f65fa05a680,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 5850182670215727009, guid: f57547866c1032f4cbb49f65fa05a680,
         type: 3}
@@ -16957,6 +17556,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Small_Building_2 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3891488460118897899, guid: c448dd1abcdbdab43bf303638345c904,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 25334921685747448, guid: c448dd1abcdbdab43bf303638345c904,
         type: 3}
@@ -17499,6 +18103,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Long_Building (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 7452155546344109490, guid: f57547866c1032f4cbb49f65fa05a680,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 5850182670215727009, guid: f57547866c1032f4cbb49f65fa05a680,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17674,6 +18283,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Dumpster_Model (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8805681514764317368, guid: 6c97e78f314c34747aa71728290be814,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 5507701640642609323, guid: 6c97e78f314c34747aa71728290be814,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17748,6 +18362,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Scaffolding_Model (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7255064836417940229, guid: f451675576dc16947b563082ccba1347,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 5977528909452318998, guid: f451675576dc16947b563082ccba1347,
         type: 3}
@@ -17824,6 +18443,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Phone_Model (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7396601218934093635, guid: 163619c0d62e190499dc38db515175ef,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 5835917751027189072, guid: 163619c0d62e190499dc38db515175ef,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17898,6 +18522,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Open_Barrel_Model (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3146964659595354057, guid: b5ad9d15fcbd7bc43a469941de5c1605,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 2159223648248229338, guid: b5ad9d15fcbd7bc43a469941de5c1605,
         type: 3}
@@ -18272,6 +18901,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Long_Building (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7452155546344109490, guid: f57547866c1032f4cbb49f65fa05a680,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 5850182670215727009, guid: f57547866c1032f4cbb49f65fa05a680,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18355,6 +18989,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Bin_Model (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5974135670746177353, guid: 81383ceeab2e300498a3a0e7acc635f1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 7256210931062287706, guid: 81383ceeab2e300498a3a0e7acc635f1,
         type: 3}
@@ -18741,6 +19380,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Phone_Model (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7396601218934093635, guid: 163619c0d62e190499dc38db515175ef,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 5835917751027189072, guid: 163619c0d62e190499dc38db515175ef,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18816,6 +19460,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Dumpster_Model (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8805681514764317368, guid: 6c97e78f314c34747aa71728290be814,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 5507701640642609323, guid: 6c97e78f314c34747aa71728290be814,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18890,6 +19539,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Open_Barrel_Model
+      objectReference: {fileID: 0}
+    - target: {fileID: 3146964659595354057, guid: b5ad9d15fcbd7bc43a469941de5c1605,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 2159223648248229338, guid: b5ad9d15fcbd7bc43a469941de5c1605,
         type: 3}
@@ -19055,6 +19709,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Closed_Barrel_Model (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7054996762310184342, guid: 681a0890bfce1eb4890039f228edcdec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 6319460628982497157, guid: 681a0890bfce1eb4890039f228edcdec,
         type: 3}
@@ -19450,6 +20109,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Scaffolding_Model (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 7255064836417940229, guid: f451675576dc16947b563082ccba1347,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 5977528909452318998, guid: f451675576dc16947b563082ccba1347,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19829,6 +20493,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HighwayBridge (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3666796420186871484, guid: d30a3662d50364946ad2f3b62ec7a65c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 340103351674823855, guid: d30a3662d50364946ad2f3b62ec7a65c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20133,6 +20802,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HighwayBridge
       objectReference: {fileID: 0}
+    - target: {fileID: 3666796420186871484, guid: d30a3662d50364946ad2f3b62ec7a65c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 340103351674823855, guid: d30a3662d50364946ad2f3b62ec7a65c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20351,6 +21025,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tall_Building (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2756960275964250616, guid: bb6ab9f8802d5c7449a0463dc713b5b5,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 1160214683263745003, guid: bb6ab9f8802d5c7449a0463dc713b5b5,
         type: 3}
@@ -20968,6 +21647,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Open_Barrel_Model (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 3146964659595354057, guid: b5ad9d15fcbd7bc43a469941de5c1605,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 2159223648248229338, guid: b5ad9d15fcbd7bc43a469941de5c1605,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -21287,6 +21971,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Bin_Model (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5974135670746177353, guid: 81383ceeab2e300498a3a0e7acc635f1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 7256210931062287706, guid: 81383ceeab2e300498a3a0e7acc635f1,
         type: 3}
@@ -21651,6 +22340,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Small_Building_3 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094143070673063102, guid: e1c013da6902f374b9c7f72fb8791881,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 4140062100149681837, guid: e1c013da6902f374b9c7f72fb8791881,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -21725,6 +22419,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Scaffolding_Model (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7255064836417940229, guid: f451675576dc16947b563082ccba1347,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 5977528909452318998, guid: f451675576dc16947b563082ccba1347,
         type: 3}
@@ -21885,6 +22584,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Closed_Barrel_Model (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7054996762310184342, guid: 681a0890bfce1eb4890039f228edcdec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 6319460628982497157, guid: 681a0890bfce1eb4890039f228edcdec,
         type: 3}
@@ -22125,6 +22829,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Closed_Barrel_Model (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 7054996762310184342, guid: 681a0890bfce1eb4890039f228edcdec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 6319460628982497157, guid: 681a0890bfce1eb4890039f228edcdec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -22199,6 +22908,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Hydrant_Model (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2247833774935986336, guid: b25e44b8a950c1240b8bfdd6d2d2bca0,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 2984392524056601267, guid: b25e44b8a950c1240b8bfdd6d2d2bca0,
         type: 3}
@@ -22350,6 +23064,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Small_Building_2 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 3891488460118897899, guid: c448dd1abcdbdab43bf303638345c904,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 25334921685747448, guid: c448dd1abcdbdab43bf303638345c904,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -22424,6 +23143,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_TrafficCone
+      objectReference: {fileID: 0}
+    - target: {fileID: 1703023197937698158, guid: 77a3fdee88c31b346b1630f402ce1e9a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 2447991496243509117, guid: 77a3fdee88c31b346b1630f402ce1e9a,
         type: 3}
@@ -22510,6 +23234,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Small_Building_3 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094143070673063102, guid: e1c013da6902f374b9c7f72fb8791881,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 4140062100149681837, guid: e1c013da6902f374b9c7f72fb8791881,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -22578,6 +23307,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Streetlamp_Model (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5088344897963836968, guid: 268898b1b29839b48b47d39d3f1126dd,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 8126243468836647995, guid: 268898b1b29839b48b47d39d3f1126dd,
         type: 3}
@@ -22653,6 +23387,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Small_Building_3 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094143070673063102, guid: e1c013da6902f374b9c7f72fb8791881,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 4140062100149681837, guid: e1c013da6902f374b9c7f72fb8791881,
         type: 3}
@@ -22735,6 +23474,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Small_Building_3 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094143070673063102, guid: e1c013da6902f374b9c7f72fb8791881,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 4140062100149681837, guid: e1c013da6902f374b9c7f72fb8791881,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -22809,6 +23553,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Barricade_Model (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183386628497770177, guid: 8b8587b0ab800524388b4eb85a4f9f0c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 6191285984155432146, guid: 8b8587b0ab800524388b4eb85a4f9f0c,
         type: 3}
@@ -22991,6 +23740,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Small_Building_2 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 3891488460118897899, guid: c448dd1abcdbdab43bf303638345c904,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 25334921685747448, guid: c448dd1abcdbdab43bf303638345c904,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -23065,6 +23819,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Streetlamp_Model (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5088344897963836968, guid: 268898b1b29839b48b47d39d3f1126dd,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 8126243468836647995, guid: 268898b1b29839b48b47d39d3f1126dd,
         type: 3}
@@ -23285,6 +24044,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tall_Building (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2756960275964250616, guid: bb6ab9f8802d5c7449a0463dc713b5b5,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 1160214683263745003, guid: bb6ab9f8802d5c7449a0463dc713b5b5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -23359,6 +24123,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Scaffolding_Model (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7255064836417940229, guid: f451675576dc16947b563082ccba1347,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 5977528909452318998, guid: f451675576dc16947b563082ccba1347,
         type: 3}
@@ -23444,6 +24213,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Bin_Model
+      objectReference: {fileID: 0}
+    - target: {fileID: 5974135670746177353, guid: 81383ceeab2e300498a3a0e7acc635f1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 7256210931062287706, guid: 81383ceeab2e300498a3a0e7acc635f1,
         type: 3}
@@ -23676,6 +24450,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Small_Building_2 (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 3891488460118897899, guid: c448dd1abcdbdab43bf303638345c904,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 25334921685747448, guid: c448dd1abcdbdab43bf303638345c904,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -23750,6 +24529,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Small_Building_2 (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3891488460118897899, guid: c448dd1abcdbdab43bf303638345c904,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 25334921685747448, guid: c448dd1abcdbdab43bf303638345c904,
         type: 3}
@@ -23900,6 +24684,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Bench_Model (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 950060334709627003, guid: 52ee0fb9eb02ec649985e326ede8dd69,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 4284070104206453352, guid: 52ee0fb9eb02ec649985e326ede8dd69,
         type: 3}
@@ -24135,6 +24924,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Small_Building_1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7962862193812927470, guid: 3e4277f88ce53e54fa31dd8960dc331d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 6402602585421611517, guid: 3e4277f88ce53e54fa31dd8960dc331d,
         type: 3}
@@ -24541,6 +25335,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Small_Building_3 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094143070673063102, guid: e1c013da6902f374b9c7f72fb8791881,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 4140062100149681837, guid: e1c013da6902f374b9c7f72fb8791881,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -24772,6 +25571,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Streetlamp_Model (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5088344897963836968, guid: 268898b1b29839b48b47d39d3f1126dd,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 8126243468836647995, guid: 268898b1b29839b48b47d39d3f1126dd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -24846,6 +25650,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Streetlamp_Model
+      objectReference: {fileID: 0}
+    - target: {fileID: 5088344897963836968, guid: 268898b1b29839b48b47d39d3f1126dd,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 8126243468836647995, guid: 268898b1b29839b48b47d39d3f1126dd,
         type: 3}
@@ -24922,6 +25731,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Barricade_Model (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 7183386628497770177, guid: 8b8587b0ab800524388b4eb85a4f9f0c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 6191285984155432146, guid: 8b8587b0ab800524388b4eb85a4f9f0c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -24996,6 +25810,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Long_Building (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7452155546344109490, guid: f57547866c1032f4cbb49f65fa05a680,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 5850182670215727009, guid: f57547866c1032f4cbb49f65fa05a680,
         type: 3}
@@ -25094,6 +25913,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Scaffolding_Model (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 7255064836417940229, guid: f451675576dc16947b563082ccba1347,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 5977528909452318998, guid: f451675576dc16947b563082ccba1347,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -25179,6 +26003,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Bench_Model (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 950060334709627003, guid: 52ee0fb9eb02ec649985e326ede8dd69,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 4284070104206453352, guid: 52ee0fb9eb02ec649985e326ede8dd69,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -25263,6 +26092,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Open_Barrel_Model (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3146964659595354057, guid: b5ad9d15fcbd7bc43a469941de5c1605,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 2159223648248229338, guid: b5ad9d15fcbd7bc43a469941de5c1605,
         type: 3}
@@ -25428,6 +26262,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Barricade_Model (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183386628497770177, guid: 8b8587b0ab800524388b4eb85a4f9f0c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 6191285984155432146, guid: 8b8587b0ab800524388b4eb85a4f9f0c,
         type: 3}
@@ -25739,6 +26578,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Long_Building (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7452155546344109490, guid: f57547866c1032f4cbb49f65fa05a680,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 5850182670215727009, guid: f57547866c1032f4cbb49f65fa05a680,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -25889,6 +26733,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Small_Building_3 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094143070673063102, guid: e1c013da6902f374b9c7f72fb8791881,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 4140062100149681837, guid: e1c013da6902f374b9c7f72fb8791881,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -26033,6 +26882,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Dumpster_Model (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 8805681514764317368, guid: 6c97e78f314c34747aa71728290be814,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 5507701640642609323, guid: 6c97e78f314c34747aa71728290be814,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -26117,6 +26971,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Dumpster_Model (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8805681514764317368, guid: 6c97e78f314c34747aa71728290be814,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 5507701640642609323, guid: 6c97e78f314c34747aa71728290be814,
         type: 3}
@@ -26351,6 +27210,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Car_Model
       objectReference: {fileID: 0}
+    - target: {fileID: 8169836066627893606, guid: 631467f0611b76748b71b0eb56a13a2c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 5132501883634666357, guid: 631467f0611b76748b71b0eb56a13a2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -26431,6 +27295,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Dumpster_Model (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8805681514764317368, guid: 6c97e78f314c34747aa71728290be814,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 5507701640642609323, guid: 6c97e78f314c34747aa71728290be814,
         type: 3}
@@ -26608,6 +27477,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Long_Building (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7452155546344109490, guid: f57547866c1032f4cbb49f65fa05a680,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 5850182670215727009, guid: f57547866c1032f4cbb49f65fa05a680,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -26691,6 +27565,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Scaffolding_Model (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7255064836417940229, guid: f451675576dc16947b563082ccba1347,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 5977528909452318998, guid: f451675576dc16947b563082ccba1347,
         type: 3}
@@ -26783,6 +27662,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Closed_Barrel_Model (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 7054996762310184342, guid: 681a0890bfce1eb4890039f228edcdec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 6319460628982497157, guid: 681a0890bfce1eb4890039f228edcdec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -26857,6 +27741,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tall_Building
+      objectReference: {fileID: 0}
+    - target: {fileID: 2756960275964250616, guid: bb6ab9f8802d5c7449a0463dc713b5b5,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 1160214683263745003, guid: bb6ab9f8802d5c7449a0463dc713b5b5,
         type: 3}
@@ -27044,7 +27933,7 @@ Transform:
   - {fileID: 971700487}
   - {fileID: 719044700}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1676986114
 PrefabInstance:
@@ -27057,6 +27946,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Small_Building_2 (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3891488460118897899, guid: c448dd1abcdbdab43bf303638345c904,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 25334921685747448, guid: c448dd1abcdbdab43bf303638345c904,
         type: 3}
@@ -27132,6 +28026,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Side_Stairs
+      objectReference: {fileID: 0}
+    - target: {fileID: 8315756341419301921, guid: 43986bdccb5718849b64457acb1f2e5f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 4989101689507753522, guid: 43986bdccb5718849b64457acb1f2e5f,
         type: 3}
@@ -27286,6 +28185,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Car_Model (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8169836066627893606, guid: 631467f0611b76748b71b0eb56a13a2c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 5132501883634666357, guid: 631467f0611b76748b71b0eb56a13a2c,
         type: 3}
@@ -27512,6 +28416,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Balcony
       objectReference: {fileID: 0}
+    - target: {fileID: 3466709742688969012, guid: d4937e866cbb27e4fbe0642494fcb3be,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 452440222358721319, guid: d4937e866cbb27e4fbe0642494fcb3be,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -27655,6 +28564,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Long_Building (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7452155546344109490, guid: f57547866c1032f4cbb49f65fa05a680,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 5850182670215727009, guid: f57547866c1032f4cbb49f65fa05a680,
         type: 3}
@@ -27816,6 +28730,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Long_Building
       objectReference: {fileID: 0}
+    - target: {fileID: 7452155546344109490, guid: f57547866c1032f4cbb49f65fa05a680,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 5850182670215727009, guid: f57547866c1032f4cbb49f65fa05a680,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -27975,6 +28894,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Streetlamp_Model (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 5088344897963836968, guid: 268898b1b29839b48b47d39d3f1126dd,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 8126243468836647995, guid: 268898b1b29839b48b47d39d3f1126dd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -28050,6 +28974,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Long_Building (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 7452155546344109490, guid: f57547866c1032f4cbb49f65fa05a680,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 5850182670215727009, guid: f57547866c1032f4cbb49f65fa05a680,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -28124,6 +29053,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tall_Building (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2756960275964250616, guid: bb6ab9f8802d5c7449a0463dc713b5b5,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 1160214683263745003, guid: bb6ab9f8802d5c7449a0463dc713b5b5,
         type: 3}
@@ -28503,6 +29437,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Barricade_Model (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7183386628497770177, guid: 8b8587b0ab800524388b4eb85a4f9f0c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 6191285984155432146, guid: 8b8587b0ab800524388b4eb85a4f9f0c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -28835,6 +29774,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Small_Building_3 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094143070673063102, guid: e1c013da6902f374b9c7f72fb8791881,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 4140062100149681837, guid: e1c013da6902f374b9c7f72fb8791881,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -28909,6 +29853,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Small_Building_3 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094143070673063102, guid: e1c013da6902f374b9c7f72fb8791881,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 4140062100149681837, guid: e1c013da6902f374b9c7f72fb8791881,
         type: 3}
@@ -28985,6 +29934,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Bin_Model (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 5974135670746177353, guid: 81383ceeab2e300498a3a0e7acc635f1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 7256210931062287706, guid: 81383ceeab2e300498a3a0e7acc635f1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -29060,6 +30014,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Small_Building_3 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094143070673063102, guid: e1c013da6902f374b9c7f72fb8791881,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 4140062100149681837, guid: e1c013da6902f374b9c7f72fb8791881,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -29134,6 +30093,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Bench_Model (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 950060334709627003, guid: 52ee0fb9eb02ec649985e326ede8dd69,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 4284070104206453352, guid: 52ee0fb9eb02ec649985e326ede8dd69,
         type: 3}
@@ -29214,6 +30178,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Small_Building_2 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3891488460118897899, guid: c448dd1abcdbdab43bf303638345c904,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 25334921685747448, guid: c448dd1abcdbdab43bf303638345c904,
         type: 3}
@@ -29365,6 +30334,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Small_Building_2 (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 3891488460118897899, guid: c448dd1abcdbdab43bf303638345c904,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 25334921685747448, guid: c448dd1abcdbdab43bf303638345c904,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -29439,6 +30413,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_TrafficCone (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1703023197937698158, guid: 77a3fdee88c31b346b1630f402ce1e9a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 2447991496243509117, guid: 77a3fdee88c31b346b1630f402ce1e9a,
         type: 3}
@@ -29609,6 +30588,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Closed_Barrel_Model
+      objectReference: {fileID: 0}
+    - target: {fileID: 7054996762310184342, guid: 681a0890bfce1eb4890039f228edcdec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 6319460628982497157, guid: 681a0890bfce1eb4890039f228edcdec,
         type: 3}
@@ -29835,6 +30819,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Medium_Building (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6303069222319768686, guid: e8091077bbae5234db57b1143d48edcd,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 6999255490316711549, guid: e8091077bbae5234db57b1143d48edcd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -29984,6 +30973,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_TrafficCone (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1703023197937698158, guid: 77a3fdee88c31b346b1630f402ce1e9a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 2447991496243509117, guid: 77a3fdee88c31b346b1630f402ce1e9a,
         type: 3}
@@ -30140,6 +31134,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Small_Building_2 (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 3891488460118897899, guid: c448dd1abcdbdab43bf303638345c904,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 25334921685747448, guid: c448dd1abcdbdab43bf303638345c904,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -30214,6 +31213,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Small_Building_2 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3891488460118897899, guid: c448dd1abcdbdab43bf303638345c904,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 25334921685747448, guid: c448dd1abcdbdab43bf303638345c904,
         type: 3}
@@ -30312,6 +31316,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Bench_Model (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 950060334709627003, guid: 52ee0fb9eb02ec649985e326ede8dd69,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 4284070104206453352, guid: 52ee0fb9eb02ec649985e326ede8dd69,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -30391,6 +31400,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Small_Building_3 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094143070673063102, guid: e1c013da6902f374b9c7f72fb8791881,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 4140062100149681837, guid: e1c013da6902f374b9c7f72fb8791881,
         type: 3}
@@ -30755,7 +31769,7 @@ Transform:
   - {fileID: 1952981148}
   - {fileID: 1222354463}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1884033284
 PrefabInstance:
@@ -30768,6 +31782,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Barricade_Model
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183386628497770177, guid: 8b8587b0ab800524388b4eb85a4f9f0c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 6191285984155432146, guid: 8b8587b0ab800524388b4eb85a4f9f0c,
         type: 3}
@@ -30843,6 +31862,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Bench_Model (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 950060334709627003, guid: 52ee0fb9eb02ec649985e326ede8dd69,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 4284070104206453352, guid: 52ee0fb9eb02ec649985e326ede8dd69,
         type: 3}
@@ -30923,6 +31947,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Small_Building_3 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094143070673063102, guid: e1c013da6902f374b9c7f72fb8791881,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 4140062100149681837, guid: e1c013da6902f374b9c7f72fb8791881,
         type: 3}
@@ -31227,6 +32256,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Long_Building (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 7452155546344109490, guid: f57547866c1032f4cbb49f65fa05a680,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 5850182670215727009, guid: f57547866c1032f4cbb49f65fa05a680,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -31307,6 +32341,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Bin_Model
       objectReference: {fileID: 0}
+    - target: {fileID: 5974135670746177353, guid: 81383ceeab2e300498a3a0e7acc635f1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 7256210931062287706, guid: 81383ceeab2e300498a3a0e7acc635f1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -31375,6 +32414,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Bench_Model (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 950060334709627003, guid: 52ee0fb9eb02ec649985e326ede8dd69,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 4284070104206453352, guid: 52ee0fb9eb02ec649985e326ede8dd69,
         type: 3}
@@ -31601,6 +32645,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Side_Stairs (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8315756341419301921, guid: 43986bdccb5718849b64457acb1f2e5f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 4989101689507753522, guid: 43986bdccb5718849b64457acb1f2e5f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -31675,6 +32724,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Dumpster_Model (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8805681514764317368, guid: 6c97e78f314c34747aa71728290be814,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 5507701640642609323, guid: 6c97e78f314c34747aa71728290be814,
         type: 3}
@@ -31767,6 +32821,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Small_Building_3 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094143070673063102, guid: e1c013da6902f374b9c7f72fb8791881,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 4140062100149681837, guid: e1c013da6902f374b9c7f72fb8791881,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -31841,6 +32900,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Scaffolding_Model (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7255064836417940229, guid: f451675576dc16947b563082ccba1347,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 5977528909452318998, guid: f451675576dc16947b563082ccba1347,
         type: 3}
@@ -31922,6 +32986,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tall_Building (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2756960275964250616, guid: bb6ab9f8802d5c7449a0463dc713b5b5,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 1160214683263745003, guid: bb6ab9f8802d5c7449a0463dc713b5b5,
         type: 3}
@@ -32182,7 +33251,7 @@ Transform:
   - {fileID: 585327503}
   - {fileID: 1488154798}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1992934035
 PrefabInstance:
@@ -32271,6 +33340,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Scaffolding_Model (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 7255064836417940229, guid: f451675576dc16947b563082ccba1347,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 5977528909452318998, guid: f451675576dc16947b563082ccba1347,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -32334,6 +33408,75 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1994023247}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1994040768
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4112898402915481438, guid: e1a283479a310dc42a70c86c7b9e5333,
+        type: 3}
+      propertyPath: m_Name
+      value: TriggerPoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112898402915481443, guid: e1a283479a310dc42a70c86c7b9e5333,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9.096
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112898402915481443, guid: e1a283479a310dc42a70c86c7b9e5333,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.2662095
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112898402915481443, guid: e1a283479a310dc42a70c86c7b9e5333,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 434.509
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112898402915481443, guid: e1a283479a310dc42a70c86c7b9e5333,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112898402915481443, guid: e1a283479a310dc42a70c86c7b9e5333,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112898402915481443, guid: e1a283479a310dc42a70c86c7b9e5333,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112898402915481443, guid: e1a283479a310dc42a70c86c7b9e5333,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112898402915481443, guid: e1a283479a310dc42a70c86c7b9e5333,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112898402915481443, guid: e1a283479a310dc42a70c86c7b9e5333,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112898402915481443, guid: e1a283479a310dc42a70c86c7b9e5333,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112898402915481443, guid: e1a283479a310dc42a70c86c7b9e5333,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e1a283479a310dc42a70c86c7b9e5333, type: 3}
 --- !u!1001 &2000081523
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32430,6 +33573,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Dumpster_Model (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8805681514764317368, guid: 6c97e78f314c34747aa71728290be814,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 5507701640642609323, guid: 6c97e78f314c34747aa71728290be814,
         type: 3}
@@ -32670,6 +33818,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Medium_Building
+      objectReference: {fileID: 0}
+    - target: {fileID: 6303069222319768686, guid: e8091077bbae5234db57b1143d48edcd,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 6999255490316711549, guid: e8091077bbae5234db57b1143d48edcd,
         type: 3}
@@ -32970,6 +34123,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Small_Building_2 (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 3891488460118897899, guid: c448dd1abcdbdab43bf303638345c904,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 25334921685747448, guid: c448dd1abcdbdab43bf303638345c904,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -33120,6 +34278,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Car_Model (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 8169836066627893606, guid: 631467f0611b76748b71b0eb56a13a2c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 5132501883634666357, guid: 631467f0611b76748b71b0eb56a13a2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -33263,6 +34426,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Scaffolding_Model (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7255064836417940229, guid: f451675576dc16947b563082ccba1347,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 5977528909452318998, guid: f451675576dc16947b563082ccba1347,
         type: 3}
@@ -33495,6 +34663,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tall_Building (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 2756960275964250616, guid: bb6ab9f8802d5c7449a0463dc713b5b5,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 1160214683263745003, guid: bb6ab9f8802d5c7449a0463dc713b5b5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -33568,6 +34741,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Scaffolding_Model (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7255064836417940229, guid: f451675576dc16947b563082ccba1347,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 5977528909452318998, guid: f451675576dc16947b563082ccba1347,
         type: 3}
@@ -33660,6 +34838,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Small_Building_3 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094143070673063102, guid: e1c013da6902f374b9c7f72fb8791881,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 4140062100149681837, guid: e1c013da6902f374b9c7f72fb8791881,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -33739,6 +34922,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Closed_Barrel_Model (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7054996762310184342, guid: 681a0890bfce1eb4890039f228edcdec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 6319460628982497157, guid: 681a0890bfce1eb4890039f228edcdec,
         type: 3}
@@ -33906,6 +35094,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Small_Building_1
       objectReference: {fileID: 0}
+    - target: {fileID: 7962862193812927470, guid: 3e4277f88ce53e54fa31dd8960dc331d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 6402602585421611517, guid: 3e4277f88ce53e54fa31dd8960dc331d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -33980,6 +35173,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Small_Building_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094143070673063102, guid: e1c013da6902f374b9c7f72fb8791881,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 4140062100149681837, guid: e1c013da6902f374b9c7f72fb8791881,
         type: 3}
@@ -34285,6 +35483,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Closed_Barrel_Model (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 7054996762310184342, guid: 681a0890bfce1eb4890039f228edcdec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
+      objectReference: {fileID: 0}
     - target: {fileID: 6319460628982497157, guid: 681a0890bfce1eb4890039f228edcdec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -34364,6 +35567,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prop_Hydrant_Model
+      objectReference: {fileID: 0}
+    - target: {fileID: 2247833774935986336, guid: b25e44b8a950c1240b8bfdd6d2d2bca0,
+        type: 3}
+      propertyPath: m_TagString
+      value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 2984392524056601267, guid: b25e44b8a950c1240b8bfdd6d2d2bca0,
         type: 3}
