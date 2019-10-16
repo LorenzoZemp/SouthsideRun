@@ -48,14 +48,15 @@ public class LaserScript : MonoBehaviour
                         Debug.Log("its in here: LaserScript.46");
                         if (hit.collider.tag == "Player")
                         {
-                            if (hit.collider.gameObject.GetComponent<Player>().isShielded == true)
-                            {
-                                hit.collider.gameObject.GetComponent<Player>().isShielded = false;
-                            }
-                            else if (hit.collider.gameObject.GetComponent<Player>().isShielded == false)
-                            {
-                                hit.collider.gameObject.GetComponent<Player>().caught = true;
-                            }
+                        //if (hit.collider.gameObject.GetComponent<Player>().isShielded == true)
+                        //{
+                        //    hit.collider.gameObject.GetComponent<Player>().isShielded = false;
+                        //}
+                        //else if (hit.collider.gameObject.GetComponent<Player>().isShielded == false)
+                        //{
+                        //    hit.collider.gameObject.GetComponent<Player>().caught = true;
+                        //}
+                            hit.collider.gameObject.GetComponent<Player>().GetHit();
                             Debug.Log("Player sniped");
                         }
                         shot = false;

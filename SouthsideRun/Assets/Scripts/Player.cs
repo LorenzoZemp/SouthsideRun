@@ -118,7 +118,8 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+        //fedora.SetActive(isShielded);
 
         //if (Input.GetKey("escape"))
         //{ 
@@ -346,42 +347,46 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         Vector3 movement = Vector3.zero;
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
-        {
 
-            if (Input.GetKey(KeyCode.W))
-            {
-                Run();
-                //movement = movement + transform.forward; // Local Coord
-                movement = movement + Vector3.forward;
-            }
-            if (Input.GetKey(KeyCode.S))
-            {
-                Run();
-                //movement = movement - transform.forward; // Local Coord
-                movement = movement - Vector3.forward;
-            }
-            if (Input.GetKey(KeyCode.A))
-            {
-                Run();
-                //movement = movement + transform.TransformDirection(Vector3.left); // Local coord
-                movement = movement + Vector3.left;
-            }
-            if (Input.GetKey(KeyCode.D))
-            {
-                Run();
-                //movement = movement + transform.TransformDirection(Vector3.right); // Local coord
-                movement = movement + Vector3.right;
-            }
-            movement = Vector3.Normalize(movement);
-            movement = movement * movementSpeed;
-         
-        }
-
-        // Rotate model based on direction of movement
-        if (movement != Vector3.zero)
+        if (!caught)
         {
-            transform.rotation = Quaternion.LookRotation(movement);
+            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+            {
+
+                if (Input.GetKey(KeyCode.W))
+                {
+                    Run();
+                    //movement = movement + transform.forward; // Local Coord
+                    movement = movement + Vector3.forward;
+                }
+                if (Input.GetKey(KeyCode.S))
+                {
+                    Run();
+                    //movement = movement - transform.forward; // Local Coord
+                    movement = movement - Vector3.forward;
+                }
+                if (Input.GetKey(KeyCode.A))
+                {
+                    Run();
+                    //movement = movement + transform.TransformDirection(Vector3.left); // Local coord
+                    movement = movement + Vector3.left;
+                }
+                if (Input.GetKey(KeyCode.D))
+                {
+                    Run();
+                    //movement = movement + transform.TransformDirection(Vector3.right); // Local coord
+                    movement = movement + Vector3.right;
+                }
+                movement = Vector3.Normalize(movement);
+                movement = movement * movementSpeed;
+
+            }
+
+            // Rotate model based on direction of movement
+            if (movement != Vector3.zero)
+            {
+                transform.rotation = Quaternion.LookRotation(movement);
+            }
         }
 
         //RaycastHit hit;
@@ -465,7 +470,7 @@ public class Player : MonoBehaviour
             }
             else
             {
-                //caught = true;
+                caught = true;
                 //Debug.Log("You dead");
             }
         }
@@ -662,6 +667,24 @@ public class Player : MonoBehaviour
     {
         yield return new WaitForSeconds(2.0f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void GetHit()
+    {
+        // take off hat
+        if (isShielded)
+        {
+            isShielded = false;
+            fedora.SetActive(isShielded);
+            //Debug.Log("Hats off");
+            invincibilityTimer = invincibilityTime;
+            invincible = true;
+        }
+        else
+        {
+            caught = true;
+            //Debug.Log("You dead");
+        }
     }
     //IEnumerator Snipe()
     //{
