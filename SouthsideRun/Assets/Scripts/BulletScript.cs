@@ -61,10 +61,6 @@ public class BulletScript : MonoBehaviour
         {
             StartCoroutine(waitToDestroy());
         }
-        else if (other.tag == "Player")
-        {
-            StartCoroutine(waitToDestroy());
-        }
     }
 
     IEnumerator waitToDestroy()

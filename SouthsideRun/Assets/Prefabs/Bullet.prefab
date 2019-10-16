@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   killEffect: {fileID: 1518697306439858, guid: 58fc175aaa0bba94aa5f624d19cee912, type: 3}
-  bulletSpeed: -50
+  bulletSpeed: -25
   travelDistance: 60
   rb: {fileID: 2311766693305116050}
   badBullet: 0
